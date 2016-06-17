@@ -12,7 +12,9 @@ group :production do
 end
 
 gem 'autoprefixer-rails'
-gem 'jbuilder', '~> 2.0'
+gem 'bootstrap', '~> 4.0.0.alpha3'
+gem 'jquery-rails'
+gem 'rails-assets-tether'
 gem 'sass-rails'
 gem 'uglifier'
 
