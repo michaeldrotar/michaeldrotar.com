@@ -16,6 +16,6 @@ gem 'jbuilder', '~> 2.0'
 gem 'sass-rails'
 gem 'uglifier'
 
-gem 'tzinfo', platforms: [:mswin, :mingw, :x64_mingw]
-gem 'tzinfo-data', platforms: [:mswin, :mingw, :x64_mingw]
-gem 'wdm', platforms: [:mswin, :mingw, :x64_mingw]
+gem 'tzinfo', platforms: [:mswin, :mingw]
+gem 'tzinfo-data', platforms: [:mswin, :mingw]
+gem 'wdm', platforms: [:mswin, :mingw]
