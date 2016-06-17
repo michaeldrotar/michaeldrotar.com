@@ -20,3 +20,5 @@ gem 'spring', group: [:development]
 gem 'tzinfo', platforms: [:mswin, :mingw]
 gem 'tzinfo-data', platforms: [:mswin, :mingw]
 gem 'wdm', platforms: [:mswin, :mingw]
+
+gem 'rack', '1.5.2'
