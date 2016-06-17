@@ -11,6 +11,18 @@
     <%= csrf_meta_tags %>
   </head>
   <body class="<%= yield :body_css %>">
+    <nav class="navbar navbar-fixed-top navbar-dark bg-inverse">
+      <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target=".main-nav">
+        &#9776;
+      </button>
+      <div class="main-nav collapse navbar-toggleable-xs">
+        <a class="navbar-brand" href="">michaeldrotar.com</a>
+        <div class="nav navbar-nav">
+          <a class="nav-item nav-link active" href="">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link" href="">Projects</a>
+        </div>
+      </div>
+    </nav>
     <%= yield %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <script>
