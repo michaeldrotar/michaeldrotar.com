@@ -1,3 +1,1 @@
-if Rails.env.development?
-  `rake log:clear`
-end
+`rake log:clear` if Rails.env.development?
