@@ -2,14 +2,9 @@ AllCops:
   Exclude:
     - 'bin/**/*'
 
-Metrics/LineLength:
-  Enabled: false
-
-Metrics/MethodLength:
-  Enabled: false
-
 Style/Documentation:
   Exclude:
     - 'app/controllers/**/*'
     - 'app/helpers/**/*'
+    - 'config/**/*'
     - 'test/**/*'
