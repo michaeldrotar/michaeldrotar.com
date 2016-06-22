@@ -1,0 +1,402 @@
+<%= content_for(:title) do %><%= t('.title') %><% end %>
+
+<a name="backstory"></a>
+<h2>Backstory</h2>
+<p>
+  Orpheus is a small mobile mining colony. The people there earn their livelihood by doing something few are capable of: mining in small, remote, and dangerous areas of space. Their mobile unit is able to go just about anywhere, plunder the goods, and move on to their next assignment so even small ore deposits can turn a healthy profit.
+</p>
+<p>
+  Being so successful, they have some of the best tech and systems that money can buy, and they've also been able to recruit a number of well-trained <a href="#heroes">specialists</a> to protect them in their travels.
+</p>
+<p>
+  Lately they've been reaching out to unexplored areas of the universe hopping along asteroid belts and planetary moons looking for a big score. Today they found it. Unfortunately a <a href="#leviathan">rogue zerg</a> is hot on their ass and its mission is simple: consume and spread. It's eating up this asteroid fast and popping out an assortment of zerg so nasty they'll make your head spin.
+</p>
+<p>
+  I think its time to put these defenses to the test and see if this outfit really is the best in all the stars.
+</p>
+
+<a name="gameplay"></a>
+<h2>Gameplay</h2>
+<p>
+  Orpheus is a Hero Defense style game. At the start, you will pick a <a href="#heroes">hero</a> to play as. Using this hero, you will defend the mining colony until they've gathered all of the available resources and safely gotten away.
+</p>
+<p>
+  The mining colony will provide the heroes with experience based on how much they've mined. They will also provide turrets and other defenses to assist the heroes.
+</p>
+<p>
+  The zerg will spawn units randomly with the intent of getting progressively stronger. You might start off facing down just a dozen zerglings or a handful of mutalisks but it won't be long before the entire swarm is beating down your door.
+</p>
+<p>
+  Every minute for 20 minutes, the game will choose a new wave to start creating or it may evolve an existing wave. Initially the game may choose between simpler waves, like spawning 5 zerglings every 10 seconds or spawning 2 banelings every 5 seconds. As the game progresses, more challenging waves and evolutions will be possible. Once a wave has started spawning, it will continue to do so until the final boss has been defeated.
+</p>
+<p>
+  Periodically, a new zerg mutation will be learned. Unlike in the campaign, a unit may learn all of its mutations.
+</p>
+<p>
+  Halfway through the game, a <a href="#minibosses">mini-boss</a> will spawn. It will have abilities like those found in the campaign, requiring heroes to move out of AoEs and to interrupt channels. There may be numerous mini-bosses created, in which case the game will choose one.
+</p>
+<p>
+  At 20 minutes, the <a href="#leviathan">Leviathan</a> will descend on the base directly while still spawning minions and the players will have to defeat it before it destroys the base in order to achieve victory.
+</p>
+<p>
+  At the 5 minute mark and at the 15 minute mark, a short random event may take place (60-80% chance). This may range from something like lava filling the chasm, requiring the heroes to get on high ground, burrowing/flying enemies attacking the base directly, requiring the heroes to make a hasty retreat to defend it, or nydus worms coming up from the ground, presenting the zerg with a new spawn point until they're destroyed. Events will have a warning to give heroes time to react before it actually happens.
+</p>
+<p>
+  Periodically, the base will research one base upgrade and one unit upgrade to aid in its own defense. The base upgrade may be anything from the Terran campaign, like fortified bunkers or flame turrets. The unit upgrade may be a new unit, like a raven or sentry unit, or an upgrade for an existing unit, such as stim pack.
+</p>
+<div class="table-responsive">
+  <table class="table">
+    <tr><th>Mark</th><th>Zerg</th><th>Colonists</th><th>Environment</th></tr>
+    <tr><td>00:00</td><td>Spawn Wave (500)</td><td></td><td></td></tr>
+    <tr><td>00:30</td><td></td><td></td><td></td></tr>
+    <tr><td>01:00</td><td>Spawn Wave (800)</td><td></td><td></td></tr>
+    <tr><td>01:30</td><td></td><td></td><td></td></tr>
+    <tr><td>02:00</td><td>Spawn Wave (1200)</td><td></td><td></td></tr>
+    <tr><td>02:30</td><td>Mutation</td><td></td><td></td></tr>
+    <tr><td>03:00</td><td>Spawn Wave (1500)</td><td></td><td></td></tr>
+    <tr><td>03:30</td><td></td><td></td><td></td></tr>
+    <tr><td>04:00</td><td>Spawn Wave (2000)</td><td></td><td></td></tr>
+    <tr><td>04:30</td><td>Mutation</td><td></td><td></td></tr>
+    <tr><td>05:00</td><td>Spawn Wave (3000)</td><td>Base + Unit Upgrade</td><td>Event</td></tr>
+    <tr><td>05:30</td><td></td><td></td><td></td></tr>
+    <tr><td>06:00</td><td>Spawn Wave (4000)</td><td></td><td></td></tr>
+    <tr><td>06:30</td><td>Mutation</td><td></td><td></td></tr>
+    <tr><td>07:00</td><td>Spawn Wave (6000) </td><td></td><td></td></tr>
+    <tr><td>07:30</td><td></td><td></td><td></td></tr>
+    <tr><td>08:00</td><td>Spawn Wave (8000)</td><td></td><td></td></tr>
+    <tr><td>08:30</td><td>Mutation</td><td></td><td></td></tr>
+    <tr><td>09:00</td><td>Spawn Wave (1200)</td><td></td><td></td></tr>
+    <tr><td>09:30</td><td>Mutation</td><td></td><td></td></tr>
+    <tr><td>10:00</td><td>Spawn Wave + Mini-boss</td><td>Base + Unit Upgrade</td><td></td></tr>
+    <tr><td>10:30</td><td>Mutation</td><td></td><td></td></tr>
+    <tr><td>11:00</td><td>Spawn Wave (16000)</td><td></td><td></td></tr>
+    <tr><td>11:30</td><td></td><td></td><td></td></tr>
+    <tr><td>12:00</td><td>Spawn Wave (2000)</td><td></td><td></td></tr>
+    <tr><td>12:30</td><td>Mutation</td><td></td><td></td></tr>
+    <tr><td>13:00</td><td>Spawn Wave (32000)</td><td></td><td></td></tr>
+    <tr><td>13:30</td><td>Mutation</td><td></td><td></td></tr>
+    <tr><td>14:00</td><td>Spawn Wave (5000)</td><td></td><td></td></tr>
+    <tr><td>14:30</td><td>Mutation</td><td></td><td></td></tr>
+    <tr><td>15:00</td><td>Spawn Wave (64000)</td><td>Base + Unit Upgrade</td><td>Event</td></tr>
+    <tr><td>15:30</td><td>Mutation</td><td></td><td></td></tr>
+    <tr><td>16:00</td><td>Spawn Wave (96000)</td><td></td><td></td></tr>
+    <tr><td>16:30</td><td>Mutation</td><td></td><td></td></tr>
+    <tr><td>17:00</td><td>Spawn Wave (12800)</td><td></td><td></td></tr>
+    <tr><td>17:30</td><td>Mutation</td><td></td><td></td></tr>
+    <tr><td>18:00</td><td>Spawn Wave (18000)</td><td></td><td></td></tr>
+    <tr><td>18:30</td><td>Mutation</td><td></td><td></td></tr>
+    <tr><td>19:00</td><td>Spawn Wave (25000)</td><td>Base + Unit Upgrade</td><td></td></tr>
+    <tr><td>19:30</td><td>Mutation</td><td></td><td></td></tr>
+    <tr><td>20:00</td><td>Leviathan + Minions</td><td></td><td></td></tr>
+  </table>
+</div>
+<p>
+  (The above time increments are assuming real time. If the game is run in faster mode, the numbers will need to be adjusted.)
+</p>
+
+<a name="new-players"></a>
+<h2>New Players</h2>
+<p>
+  There will be 4 free heroes so that each of the 4 players will have an option to choose. These heroes will start off with well-rounded skills that should be fun but easy to play.
+</p>
+<p>
+  There will also be a tutorial mode which will award players with game points for completing the tutorial their first time. This should allow them to get either a new hero or two, a new skill tier for a hero, or a few lesser talents.
+</p>
+
+<a name="heroes-and-roles"></a>
+<h2>Heroes and Role</h2>
+<p>
+  Unlike traditional games, the heroes don't gain levels in this one. Instead, all stats are purchased with the experience they gain, providing small but frequent progress rather than fighting to get over that next hump.
+</p>
+<p>
+  Each hero's stats will scale differently. For instance, a hero whose power stat scales at a factor of 5 will gain more power per purchase as one whose power stat scales at a factor of 4. It is expected that players will choose a hero based primarily on how well its abilities suit their playstyle, not on the stat scaling as the difference between a 1 and a 5 should ultimately be fairly minor... ie, twice as much stat, not five times as much.
+</p>
+<p>
+  It is also expected that players will find the most success by not excluding any stats.. a high damage dealer may focus primarily on power but should still want maybe half or a third as much health and mastery in order to stay alive and improve his skills.
+</p>
+
+<a name="stats"></a>
+<h2>Stats</h2>
+<p>
+  Each hero has 3 primary stats that can be improved via stat purchases: Power, Health, and Mastery. Power will improve a hero's damage. Also, most skills will have their damage scale with power. Health will improve the amount of life and life regeneration that a hero has and commonly improves the hardiness of a skill by extending its duration or increasing how many units it can affect. Mastery will improve the amount of energy and energy regeneration of a hero and commonly improves some unique attribute of a skill. It's intended that players who want to focus on auto attack damage or really big hits will focus on power, players that want to focus on staying alive or crowd control will focus on health, and players who want to focus on casting and having the more atypical responsibilities will focus on mastery.
+</p>
+
+<a name="game-points"></a>
+<h2>Game Points (GP)</h2>
+<p>
+  For playing well, players will be rewarded with game points (GP). This form of currency may be spent at the beginning of the game to permanently unlock new heroes, skills, and talents.
+</p>
+<p>
+  Unlockable elements of the game will help you to create a fully fleshed out hero, but will not necessarily help to create a more powerful hero. This way, a veteran player should not feel severely hampered playing with novices and novices should not feel useless.
+</p>
+
+<a name="skills"></a>
+<h2>Skills</h2>
+<p>
+  Each hero will have 4 active and 3 passive skills in a skill tier. Heroes come with their first skill tier. The second and third tiers will provide alternative skills and may be unlocked with GP.
+</p>
+<p>
+  At this time it's expected that most skills (except for healing skills) will have no CD and limiting their use will be done through their mana cost so that high mastery heroes may literally be able to cast forever (albeit at the cost of their power stat so their skills won't hurt as much). For skills which have a duration, such as crowd control skills, it may be necessary to make the enemies immune to an individual form of CC after its use so that high mastery heroes cannot simply perma-lock the enemy down.
+</p>
+
+<a name="talents"></a>
+<h2>Lesser and Major Talents</h2>
+<p>
+  Talents are unlocked with GP and come in two flavors: lesser and major. Both are meant to provide a passive which should be beneficial to any hero.
+</p>
+<p>
+  Lesser talents will merely provide a secondary stat boost, such as increased movement speed, attack speed, life regeneration, or possibly attack/casting range. Lesser talents may have more than one level to them so that they can be purchased multiple times in order to increase the effect, but each purchase will be a very minor gain.
+</p>
+<p>
+  Major talents are meant to completely change the way a hero may be played. For instance, the Blood Mage talent permanently sets your max energy to 0, regardless of any effects, and causes skills to cost health instead of energy.
+</p>
+<p>
+  At this time, there's no limit on the number of talents that a hero may have active at one time, and players will be able to simply turn purchased talents on/off during the hero creation process. These are your primary means of getting permanently more powerful, which is why each individual gain must be very small. However it's possible that once the system is more fleshed out and tested that talents will need to be limited in some way, perhaps having a set number of talent points that may be divided up amongst them or by having certain talents not work with other certain talents (like you can have increased range or increased attack speed but not both).
+</p>
+
+<a name="difficulty"></a>
+<h2>Difficulty</h2>
+<p>
+  Since every hero is more or less equal in terms of capability, the game will provide a moderate challenge for most players so much so that it may even adjust itself based on how well the group is doing. However, a difficulty setting may be chosen when creating the game for the lobby. It's recommended to play on Normal difficulty for pub games, but premade groups and those looking for a challenge may choose something more suited to their skills.
+</p>
+
+<a name="income"></a>
+<h2>Income</h2>
+<p>
+  Periodically, players will receive income.. a small amount of experience based on how many minerals the colony has mined thus far, divided evenly amongst the remaining players.
+</p>
+<p>
+  As an example, if income is given out every second equal to 10% of the minerals mined and the colony has mined 80 minerals at a given point in time then each player will receive 2 experience assuming there's 4 players. A solo player would receive 8 and 3 players would each receive 2.666 experience. The display of experience will always be rounded down for simplicity, but the fractional value will count.
+</p>
+<p>
+  There are a few goals accomplished by this system. One is that fewer active players will receive more income so players may stand a chance at playing a solo game if that's how they prefer to play (albeit it would be difficult and the GP reward would not be any greater). The other is that if a team is not performing well, SCVs will be taken away from harvesting in order to perform repairs so the income scaling will slow down or possibly stagnate, providing incentive to keep the fight away from the colony as much as possible.
+</p>
+
+<!--
+
+{{orpheus.heading['Interfaces']}}
+
+{{orpheus.heading['Hero Selection Interface']}}
+<div class="interface">
+  <div class="interface-menu">
+    <ol>
+      <li class="current">Hero</li>
+      <li>Skills</li>
+      <li>Talents</li>
+    </ol>
+  </div>
+</div>
+
+{{orpheus.heading['Skill Selection Interface']}}
+
+{{orpheus.heading['Talent Selection Interface']}}
+
+{{orpheus.heading['Game Interface']}}
+-->
+
+<a name="heroes"></a>
+<h2>Heroes</h2>
+<%= render partial: 'hero', locals: {
+  name: 'Jim Raynor',
+  image_path: 'jim-raynor.png',
+  power: 3,
+  health: 3,
+  mastery: 3
+} %>
+
+<!--
+
+{{orpheus.heading['Skills']}}
+<p>
+  Skill idea: each skill has an elemental alignment.
+  Get 3 skills of a single alignment and unlock that alignment's passive.
+  <br />
+  <br />
+  Air ()<br />
+  &nbsp; Light, sharp
+  <ul>
+    <li></li>
+  </ul>
+  Death ()<br />
+  &nbsp; Decay, slowing, weakening
+  <ul>
+    <li>Raise Dead (Summon)</li>
+  </ul>
+  Earth ()<br />
+  &nbsp; Slow, steady, unmoving
+  <ul>
+    <li></li>
+  </ul>
+  Fire ()<br />
+  &nbsp; Uncontrollable, spreads, consumes
+  <ul>
+    <li></li>
+  </ul>
+  Life ()<br />
+  &nbsp; Healing, empowering
+  <ul>
+    <li></li>
+  </ul>
+  Lightning (Randomly releases bolts at nearby units)<br />
+  &nbsp; Unpredictable, instantaneous, surging
+  <ul>
+    <li>Chain Lightning (Single Target)</li>
+    <li>Forked Lightning</li>
+    <li>Thunderstorm (Area Target)</li>
+  </ul>
+  Nature ()<br />
+  &nbsp; Envelops, grows, persists
+  <ul>
+    <li>Call Familar (Summon)</li>
+  </ul>
+  Water ()<br />
+  &nbsp; Constant, quenches, erodes
+  <ul>
+    <li>Whirlpool (Area Target)</li>
+  </ul>
+</p>
+<div template-source="skills2">
+  <div class="skill-card">
+    <h3 class="skill-name">{{name}}</h3>
+    <div class="skill-cost">{% if something.cost %}{{cost}} <span class="gp">GP</span>{% else %}FREE{% endif %}</div>
+    <div class="skill-description">((translate description))</div>
+    <div class="skill-modifiers">
+      <div class="skill-modifier skill-modifier-power">
+        <h4 class="skill-modifier-name power">{{power.name}}</h4>
+        <div class="skill-modifier-description">((translate power.description))</div>
+      </div>
+      <div class="skill-modifier skill-modifier-health">
+        <h4 class="skill-modifier-name health">{{health.name}}</h4>
+        <div class="skill-modifier-description">((translate health.description))</div>
+      </div>
+      <div class="skill-modifier skill-modifier-mastery">
+        <h4 class="skill-modifier-name mastery">{{mastery.name}}</h4>
+        <div class="skill-modifier-description">((translate mastery.description))</div>
+      </div>
+      <div class="skill-modifier skill-modifier-ultimate">
+        <h4 class="skill-modifier-name ultimate">{{ultimate.name}}</h4>
+        <div class="skill-modifier-description">((translate ultimate.description))</div>
+      </div>
+    </div>
+  </div>
+</div>
+-->
+
+{{orpheus.heading['Enemy Spawns']}}
+{% for spawn in orpheus.spawns %}
+  <div class="spawn-card">
+    {{orpheus.heading[spawn.name]}}
+    <div class="spawn-value">{{spawn.value}}</div>
+    <div class="spawn-description">{{spawn.description}}</div>
+    <div class="spawn-evolutions">
+      {% for evolution in spawn.evolutions %}
+        <div class="spawn-evolution">
+          {{orpheus.heading[evolution.name]}}
+          <div class="spawn-evolution-value">{{evolution.value}}</div>
+          <div class="spawn-evolution-description">
+            {{evolution.description}}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    <div class="spawn-mutations">
+      {% for mutation in mutations %}
+        <div class="spawn-mutation">
+          {{orpheus.heading[mutation.name]}}
+          <div class="spawn-mutation-description">
+            {{mutation.description}}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endfor %}
+
+{{orpheus.heading['Enemy Minions']}}
+{% for minion in orpheus.minions %}
+  <div class="spawn-card">
+    {{orpheus.heading[minion.name]}}
+    <div class="spawn-value">{{minion.value}}</div>
+    <div class="spawn-description">{{minion.description}}</div>
+  </div>
+{% endfor %}
+
+<!--
+<p>
+  01 aberration<br />
+  02 baneling (hunter|splitterling)<br />
+  03 brutalisk<br />
+  04 corruptor<br />
+  05 defiler?<br />
+  06 devourer<br />
+  07 drone<br />
+  08 guardian<br />
+  09 hydralisk (impaler|lurker)<br />
+  10 infestor<br />
+  11 larva (swarm queen larva)<br />
+  12 mutalisk (brood lord|viper)<br />
+  13 overlord (provides a radius buff, creates creep which buffs?)<br />
+  14 overseer (casts a targeted buff?)<br />
+  15 queen (flying?)<br />
+  16 roach (corpser|vile)<br />
+  17 scourge<br />
+  18 swarm host (w/ locust, flying locust, primal flying locust) (carrion|creeper)<br />
+  19 ultralisk (noxious|torrasque)<br />
+  20 zergling (raptor|swarmling)<br />
+  <br />
+  01 alexei stukov<br />
+  02 brakk<br />
+  03 dehaka<br />
+  04 kraith<br />
+  05 slivan<br />
+  06 yagdra (w/ ash worms?)<br />
+  <br />
+  01 mitoscarab?<br />
+  02 primal guardian<br />
+  03 primal hydralisk<br />
+  04 primal larva<br />
+  05 primal mutalisk<br />
+  06 primal roach<br />
+  07 primal ultralisk<br />
+  08 primal zergling<br />
+  09 quillgor?<br />
+  10 ravasaur?<br />
+  111 tyrannozor<br />
+  <br />
+  - use primals as bosses?<br />
+  - use primals in an event?<br />
+  - primals as regular wave spawns?<br />
+</p>
+-->
+
+{{orpheus.heading['Waves']}}
+<div class="horizontal-scroll">
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>Frequency</th>
+        <th>Units</th>
+        <th>Spawn Value</th>
+        <th>Strength</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for wave in orpheus.waves %}
+        <tr>
+          <td>{{wave.frequency}}</td>
+          <td>
+            {% for unit in wave.units %}
+              {{unit.count}}x {{unit.unit.name}}<br />
+            {% endfor %}
+          </td>
+          <td>{{wave.value}}</td>
+          <td>{{wave.strength}}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+{{orpheus.heading['Events']}}
+
+{{orpheus.heading['Bosses']}}

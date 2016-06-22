@@ -1,2 +1,7 @@
 en:
-  hello: "Hello world"
+  orpheus:
+    index:
+      title: 'Orpheus Design Document'
+  welcome:
+    index:
+      title: 'Welcome!'

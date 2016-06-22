@@ -1,0 +1,78 @@
+<div class="hero-card" style="background-image: url('<%= asset_path("orpheus/#{image_path}") %>')">
+  <%= h3_tag(name) %>
+  <div class="hero-cost"><%= defined?(cost) ? "#{cost} GP" : "FREE" %></div>
+  <div class="hero-stats">
+    <div class="hero-stat hero-power">Power <%= render partial: 'meter', locals: { value: power, max: 5 } %></div>
+    <div class="hero-stat hero-health">Health  <%= render partial: 'meter', locals: { value: health, max: 5 } %></div>
+    <div class="hero-stat hero-mastery">Mastery  <%= render partial: 'meter', locals: { value: mastery, max: 5 } %></div>
+  </div>
+  <div class="description">
+    <%= defined?(description) && description %>
+  </div>
+</div>
+<div class="horizontal-scroll">
+  <table class="ability-set-table">
+    <thead>
+      <tr>
+        <th></th>
+        {% for set in hero.abilitySet %}
+          <th>
+            {% if set.cost %}
+              <div class="ability-set-cost">{{ set.cost }} GP</div>
+            {% endif %}
+            Tier {{loop.index}}
+          </th>
+        {% endfor %}
+      </tr>
+    </thead>
+    <tbody>
+      {% set hotkeys = ["Q", "W", "E", "R"] %}
+      {% for row in range(0,7) %}
+        <tr class="ability-row">
+          <th rowspan="2">
+            {% if hotkeys[row] %}
+              {{hotkeys[row]}}
+            {% else %}
+              P<br />A<br />S<br />S<br />I<br />V<br />E
+            {% endif %}
+          </th>
+          {% for i in range(0,3) %}
+            {% set ability = hero.abilitySet[i].ability[row] %}
+            <td>
+              <div class="ability"
+                {% if ability.image %}
+                  style="background-image: url('/orpheus/images/abilities/{{ability.image}}.png"
+                {% endif %}>
+                {% if ability.name %}
+                  <div class="ability-name">
+                    {{orpheus.heading[ability.name]}}
+                  </div>
+                {% endif %}
+                <div class="ability-description">
+                  {{ability.description}}
+                </div>
+              </div>
+            </td>
+          {% endfor %}
+        </tr>
+        <tr class="stat-row">
+          {% for i in range(0,3) %}
+            {% set ability = hero.abilitySet[i].ability[row] %}
+            <td>
+              {% if ability.stat %}
+                <table class="stat-table">
+                  {% for stat in ability.stat %}
+                    <tr class="stat">
+                      <td class="stat-name">{{stat.name}}</td>
+                      <td class="stat-amount">{{stat.amount}}</td>
+                    </tr>
+                  {% endfor %}
+                </table>
+              {% endif %}
+            </td>
+          {% endfor %}
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
