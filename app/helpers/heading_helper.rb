@@ -8,8 +8,7 @@ module HeadingHelper
     render partial: 'helpers/heading', locals: {
       tag: "h#{level}",
       options: options,
-      text: text,
-      anchor: strip_tags(text).strip.gsub(/\W+/, '-').downcase
+      text: text
     }
   end
 
