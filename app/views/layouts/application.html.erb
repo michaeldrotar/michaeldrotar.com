@@ -10,21 +10,19 @@
     <%= stylesheet_link_tag('application', media: 'all', 'data-turbolinks-track' => true) %>
     <%= csrf_meta_tags %>
   </head>
-  <body class="<%= yield :body_css %>">
-    <nav class="navbar navbar-full navbar-light">
-      <button class="navbar-toggler pull-xs-right hidden-sm-up" type="button" data-toggle="collapse" data-target=".main-nav">
-        &#9776;
-      </button>
-      <div class="main-nav collapse navbar-toggleable-xs">
-        <div class="nav navbar-nav">
-          <a class="nav-item nav-link" href="/">Home</a>
-          <a class="nav-item nav-link" href="/">Projects</a>
-        </div>
+  <body class="page page--with-navbar <%= controller_name %>-page <%= controller_name %>-page--<%= action_name %>" data-drawer data-drawer--auto-close>
+    <nav class="navbar">
+      <div class="navbar-bar">
+        <button class="navbar-toggle" type="button" data-drawer-toggle>&#9776;</button>
+      </div>
+      <div class="navbar-items">
+        <a href="/" class="navbar-item">Home</a>
+        <a href="/" class="navbar-item">Projects</a>
       </div>
     </nav>
-    <div class="container-fluid">
+    <div class="container">
       <% if content_for?(:title) %>
-        <h1><%= yield(:title) %></h1>
+        <%= h1_tag { yield(:title) } %>
       <% end %>
       <%= yield %>
     </div>

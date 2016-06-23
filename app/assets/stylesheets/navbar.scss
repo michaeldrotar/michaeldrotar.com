@@ -1,0 +1,76 @@
+@import 'config';
+
+.navbar {
+  position: relative;
+  z-index: 1;
+}
+
+.navbar-bar {
+  background-color: $color-black;
+  color: $color-light;
+  left: 0;
+  padding: .5rem .75rem;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 10;
+}
+
+.page--with-navbar {
+  padding-top: 3.25rem;
+}
+
+.navbar-toggle {
+  background-color: inherit;
+  border-radius: .25em;
+  border-style: none;
+  color: inherit;
+  font-size: 1.25rem;
+  line-height: 1;
+  padding: .5rem .75rem;
+}
+
+.navbar-items {
+  background-color: transparentize($color-black, .1);
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  position: fixed;
+  top: 3.25rem;
+  transform: translateY(-100%);
+  transition: transform .2s, visibility .2s;
+  visibility: hidden;
+  width: 100%;
+}
+
+.page--with-navbar.is-open .navbar-items {
+  transform: translateY(0);
+  visibility: visible;
+}
+
+.navbar-item {
+  display: block;
+  padding: .5rem .75rem;
+  text-decoration: none;
+
+  &:link,
+  &:visited {
+    color: inherit;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.page--with-navbar .container {
+  overflow: auto;
+  transform: translateX(0);
+  transition: transform .2s;
+  width: 100%;
+}
+
+.page--with-navbar.is-open .container {
+  //transform: translateX(80%);
+}
