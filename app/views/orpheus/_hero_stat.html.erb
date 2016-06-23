@@ -1,0 +1,8 @@
+<div class="orpheus-hero__stat orpheus-hero__stat--<%= css %>">
+  <%= name %>
+  <div class="orpheus-hero__stat-bar">
+    <% (1..5).each do |i| %>
+      <div class="orpheus-hero__stat-node <% if i <= value %>is-on<% end %>"></div>
+    <% end %>
+  </div>
+</div>
