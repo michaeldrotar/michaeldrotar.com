@@ -1,11 +1,16 @@
 @import 'config';
 
-.navbar {
-  position: relative;
-  z-index: 1;
+.navbar-container {
+  display: block;
+  height: 3.25rem;
+
+  :link,
+  :visited {
+    color: inherit;
+  }
 }
 
-.navbar-bar {
+.navbar {
   background-color: $color-black;
   color: $color-light;
   left: 0;
@@ -19,10 +24,6 @@
     clear: both;
     content: '';
   }
-}
-
-.page--with-navbar {
-  padding-top: 3.25rem;
 }
 
 @keyframes navbar-brand-grow {
@@ -42,12 +43,10 @@
 }
 
 .navbar-brand {
+  display: block;
+  float: left;
   font-size: 1.2rem;
-  left: 0;
-  padding: .75rem;
-  position: fixed;
-  top: 0;
-  z-index: 2;
+  line-height: 2.25rem;
 }
 
 .navbar-brand:link,
@@ -82,7 +81,18 @@
   padding: .5rem .75rem;
 }
 
-.navbar-items {
+.navbar-subitems {
+  border-top: 1px solid $color-darker;
+}
+
+.navbar-item {
+  display: none;
+  padding: .5rem .75rem;
+  text-align: right;
+  text-decoration: none;
+}
+
+.navbar-flyout {
   background-color: transparentize($color-black, .1);
   bottom: 0;
   left: 0;
@@ -95,38 +105,14 @@
   width: 100%;
 }
 
-.page--with-navbar.is-open .navbar-items {
+.navbar-container.is-open .navbar-flyout {
   transform: translateY(0);
   visibility: visible;
 }
 
-.navbar-subitems {
-  border-top: 1px solid $color-darker;
-}
-
-.navbar-item {
+.navbar-flyout-item {
   display: block;
   padding: .5rem .75rem;
+  text-align: right;
   text-decoration: none;
-
-  &:link,
-  &:visited {
-    color: inherit;
-  }
-}
-
-.container {
-  margin: 0 auto;
-  padding: 0 1rem;
-}
-
-.page--with-navbar .container {
-  overflow: auto;
-  transform: translateX(0);
-  transition: transform .2s;
-  width: 100%;
-}
-
-.page--with-navbar.is-open .container {
-  //transform: translateX(80%);
 }

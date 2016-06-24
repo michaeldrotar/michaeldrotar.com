@@ -9,4 +9,8 @@ class ApplicationController < ActionController::Base
       projects: root_path
     }
   end
+
+  helper_method :subnav
+  def subnav
+  end
 end

@@ -10,23 +10,25 @@
     <%= stylesheet_link_tag('application', media: 'all', 'data-turbolinks-track' => true) %>
     <%= csrf_meta_tags %>
   </head>
-  <body class="page page--with-navbar <%= controller_name %>-page <%= controller_name %>-page--<%= action_name %>" data-drawer data-drawer--auto-close>
-    <nav class="navbar" data-drawer-close>
-      <a href="<%= root_path %>" class="navbar-brand">
-        <% 'michaeldrotar.com'.split('').each do |letter| %>
-          <div class="navbar-brand__letter"><%= letter %></div>
-        <% end %>
-      </a>
-      <div class="navbar-bar">
-        <button class="navbar-toggle" type="button" data-drawer-toggle>&#9776;</button>
-      </div>
-      <div class="navbar-items">
-        <a href="<%= root_path %>" class="navbar-item"><%= t('nav.home') %></a>
+  <body>
+    <div class="navbar-container" data-drawer data-drawer--auto-close>
+      <div class="navbar" data-drawer-close>
+        <a href="<%= root_path %>" class="navbar-brand">
+          <% 'michaeldrotar.com'.split('').each do |letter| %>
+            <div class="navbar-brand__letter"><%= letter %></div>
+          <% end %>
+        </a>
         <% nav.each do |key, href| %>
           <a href="<%= href %>" class="navbar-item"><%= t("nav.#{key}") %></a>
         <% end %>
+        <button class="navbar-toggle" type="button" data-drawer-toggle>&#9776;</button>
       </div>
-    </nav>
+      <div class="navbar-flyout" data-drawer-close>
+        <% nav.each do |key, href| %>
+          <a href="<%= href %>" class="navbar-flyout-item"><%= t("nav.#{key}") %></a>
+        <% end %>
+      </div>
+    </div>
     <div class="container">
       <% if content_for?(:title) %>
         <%= h1_tag { yield(:title) } %>
