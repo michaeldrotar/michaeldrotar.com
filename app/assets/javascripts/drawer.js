@@ -3,7 +3,28 @@
 
   var initialized = [],
       seen = {},
+      drawer_selector =
+        '[data-drawer-open],[data-drawer-close],[data-drawer-toggle],' +
+        '[data-drawer-key],[data-drawer-select]',
       lib;
+
+  function should_suppress_event(owner, event) {
+    var target = event.target,
+        drawer_children,
+        tag;
+
+    if ( owner === target ) return false;
+
+    drawer_children = $(owner).find(drawer_selector)
+    if ( drawer_children.toArray().indexOf(target) > -1 ) return true;
+
+    tag = target.tagName.toLowerCase()
+    if ( tag === 'a' && target[href] ) return true;
+
+    if ( tag === 'button' ) return true;
+
+    return false;
+  }
 
   lib = {
     getDrawerByName: function(name) {
@@ -94,12 +115,10 @@
       }
     },
     init: function(parent) {
+      parent = $(parent || document.body);
+
       // Grab all drawer elements within the parent that need initialization
-      var elements = $(parent || document.body).find(
-            '[data-drawer-open],[data-drawer-close],'
-            +'[data-drawer-toggle],[data-drawer-key],'
-            +'[data-drawer-select]'
-          ).not(initialized);
+      var elements = parent.find(drawer_selector).not(initialized);
 
       if ( !elements.length ) {
         return;
@@ -136,13 +155,16 @@
       });
     },
     on: {
-      open: function() {
+      open: function(e) {
+        if ( should_suppress_event(this, e) ) return;
         lib.open(lib.getDrawerByOpener(this, 'data-drawer-open'));
       },
-      close: function() {
+      close: function(e) {
+        if ( should_suppress_event(this, e) ) return;
         lib.close(lib.getDrawerByOpener(this, 'data-drawer-close'));
       },
-      toggle: function() {
+      toggle: function(e) {
+        if ( should_suppress_event(this, e) ) return;
         lib.toggle(lib.getDrawerByOpener(this, 'data-drawer-toggle'));
       },
       select: function() {
