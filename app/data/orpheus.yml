@@ -1,0 +1,16 @@
+abilities:
+  power_blast:
+    damage: 100
+    range: 3
+    aoe: 2
+heroes:
+  raynor:
+    abilities:
+      - "power_blast"
+  alarak:
+  artanis:
+  dehaka:
+  fenix:
+  stetmann:
+  stukov:
+  swann:

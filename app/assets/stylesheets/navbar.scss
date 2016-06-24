@@ -48,6 +48,10 @@
   visibility: visible;
 }
 
+.navbar-subitems {
+  border-top: 1px solid $color-darker;
+}
+
 .navbar-item {
   display: block;
   padding: .5rem .75rem;

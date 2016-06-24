@@ -1,4 +1,30 @@
 en:
   orpheus:
     index:
-      title: 'Orpheus Design Document'
+      title: "Orpheus"
+    abilities:
+      power_blast:
+        name: "Power Blast"
+        description: "Fires a super-charged blast that damages enemies in a line"
+    heroes:
+      index:
+        title: "Heroes"
+      alarak:
+        name: "Alarak"
+      artanis:
+        name: "Artanis"
+      dehaka:
+        name: "Dehaka"
+      fenix:
+        name: "Fenix"
+      raynor:
+        name: "Raynor"
+      stetmann:
+        name: "Stetmann"
+      stukov:
+        name: "Stukov"
+      swann:
+        name: "Swann"
+    stats:
+      damage: "Damage"
+      aoe: "Impact Area"

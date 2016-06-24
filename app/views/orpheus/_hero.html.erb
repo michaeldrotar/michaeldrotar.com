@@ -1,7 +1,6 @@
-<div class="orpheus-hero">
+<div class="orpheus-hero" style="background-image: url('<%= asset_path("orpheus/#{name.parameterize}.png") %>')">
   <div class="orpheus-hero__name"><%= h3_tag(name) %></div>
   <div class="orpheus-hero__image" style="background-image: url('<%= asset_path("orpheus/#{name.parameterize}.png") %>')"></div>
-  <div class="orpheus-hero__cost"><%= cost > 0 ? "#{cost} GP" : 'FREE' %></div>
   <div class="orpheus-hero__stats">
     <%= render partial: 'hero_stat', locals: { name: 'Power', css: 'power', value: power } %>
     <%= render partial: 'hero_stat', locals: { name: 'Health', css: 'health', value: health } %>

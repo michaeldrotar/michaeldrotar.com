@@ -16,8 +16,10 @@
         <button class="navbar-toggle" type="button" data-drawer-toggle>&#9776;</button>
       </div>
       <div class="navbar-items">
-        <a href="/" class="navbar-item">Home</a>
-        <a href="/" class="navbar-item">Projects</a>
+        <a href="<%= root_path %>" class="navbar-item"><%= t('nav.home') %></a>
+        <% nav.each do |key, href| %>
+          <a href="<%= href %>" class="navbar-item"><%= t("nav.#{key}") %></a>
+        <% end %>
       </div>
     </nav>
     <div class="container">
