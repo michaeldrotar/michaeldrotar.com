@@ -1,11 +1,11 @@
 source 'https://rubygems.org'
-ruby '2.0.0'
+ruby '2.2.4'
 
-gem 'rails', '4.1.4'
-gem 'rake', '~> 0.9.6'
+gem 'rails', '~> 4.2.0'
+gem 'rake', '~> 10.5.0'
 
-gem 'pg', group: [:production]
 gem 'sqlite3', group: [:development, :test]
+gem 'pg', group: [:production]
 
 group :development do
   gem 'guard', '~> 2.2.0', require: false
@@ -14,7 +14,6 @@ group :development do
 end
 
 gem 'autoprefixer-rails'
-gem 'bootstrap', '~> 4.0.0.alpha3'
 gem 'normalize-rails'
 gem 'jquery-rails'
 gem 'rails-assets-tether'
