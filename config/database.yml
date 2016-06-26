@@ -24,13 +24,15 @@ defaults: &defaults
   pool: 5
   timeout: 5000
   encoding: utf8
-  <<: *<%= ENV['RAILS_DB'] || "sqlite" %>
 
 development:
   <<: *defaults
+  <<: *<%= ENV['RAILS_DB'] || "sqlite" %>
 
 test: &test
   <<: *defaults
+  <<: *<%= ENV['RAILS_DB'] || "sqlite" %>
 
 production:
   <<: *defaults
+  <<: *<%= ENV['RAILS_DB'] || "postgresql" %>
