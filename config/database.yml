@@ -27,12 +27,12 @@ defaults: &defaults
 
 development:
   <<: *defaults
-  <<: *<%= ENV['RAILS_DB'] || "sqlite" %>
+  <<: *<%= ENV['RAILS_DB'] || 'sqlite' %>
 
 test: &test
   <<: *defaults
-  <<: *<%= ENV['RAILS_DB'] || "sqlite" %>
+  <<: *<%= ENV['RAILS_DB'] || 'sqlite' %>
 
 production:
   <<: *defaults
-  <<: *<%= ENV['RAILS_DB'] || "postgresql" %>
+  <<: *<%= ENV['RAILS_DB'] || 'postgresql' %>
