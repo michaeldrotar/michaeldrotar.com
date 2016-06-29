@@ -20,6 +20,23 @@ module MichaelDrotarCom
 
     locales_path = Rails.root.join('config', 'locales', '**', '*.{rb,yml}')
     config.i18n.load_path += Dir[locales_path]
-    config.i18n.default_locale = :en
+    config.i18n.default_locale = 'en'
+    config.i18n.enforce_available_locales = true
+    config.i18n.fallbacks = {
+      'en-GB' => 'en',
+      'en-US' => 'en',
+      'es' => 'en',
+      'es-CO' => 'es',
+      'es-ES' => 'es',
+      'es-MX' => 'es',
+      'fr' => 'en',
+      'fr-CA' => 'fr',
+      'fr-FR' => 'fr'
+    }
+    available_locales = config.i18n.fallbacks.map do |locale, _|
+      locale
+    end
+    available_locales << config.i18n.default_locale
+    config.i18n.available_locales = available_locales
   end
 end
