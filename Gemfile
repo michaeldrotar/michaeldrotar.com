@@ -8,8 +8,7 @@ gem 'rake', '~> 10.5.0'
 gem 'puma', '~> 3.4.0'
 gem 'rack-timeout', '~> 0.4.0'
 
-gem 'sqlite3', group: [:development, :test]
-gem 'pg', group: [:production]
+gem 'pg'
 
 group :development do
   gem 'guard', '~> 2.2.0', require: false
