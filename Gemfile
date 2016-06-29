@@ -9,6 +9,7 @@ gem 'puma', '~> 3.4.0'
 gem 'rack-timeout', '~> 0.4.0'
 
 gem 'pg'
+gem 'globalize', '~> 5.0.0'
 
 group :development do
   gem 'guard', '~> 2.2.0', require: false
