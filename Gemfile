@@ -9,6 +9,8 @@ gem 'rack-timeout', '~> 0.4.0'
 gem 'pg'
 gem 'globalize', '~> 5.0.0'
 
+gem 'devise', '~> 4.1.0'
+
 group :development do
   gem 'guard', '~> 2.2.0', require: false
   gem 'guard-livereload', require: false
