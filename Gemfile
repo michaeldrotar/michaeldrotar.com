@@ -5,6 +5,7 @@ gem 'rails', '~> 4.2.0'
 gem 'rake', '~> 10.5.0'
 gem 'puma', '~> 3.4.0'
 gem 'rack-timeout', '~> 0.4.0'
+gem 'figaro', '~> 1.1.0'
 
 gem 'pg'
 gem 'globalize', '~> 5.0.0'
