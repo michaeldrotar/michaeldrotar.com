@@ -13,7 +13,7 @@
   <body>
     <div class="navbar-container" data-drawer data-drawer--auto-close>
       <div class="navbar" data-drawer-close>
-        <a href="<%= root_path %>" class="navbar-brand">
+        <a href="<%= locale_path %>" class="navbar-brand">
           <% 'michaeldrotar.com'.split('').each do |letter| %>
             <div class="navbar-brand__letter"><%= letter %></div>
           <% end %>
@@ -21,6 +21,19 @@
         <% nav.each do |key, href| %>
           <a href="<%= href %>" class="navbar-item"><%= t("nav.#{key}") %></a>
         <% end %>
+        <div style="float: right">
+          <% if user_signed_in? %>
+            <a class="navbar-item"><%= current_user.email %></a>
+            <%= form_tag(destroy_user_session_path, method: :delete) do %>
+              <button type="submit" class="navbar-item btn btn--red">
+                Sign Out
+              </button>
+            <% end %>
+          <% else %>
+            <a href="<%= new_user_session_path %>" class="navbar-item">Sign In</a>
+            <a href="<%= new_user_registration_path %>" class="navbar-item">Create Account</a>
+          <% end %>
+        </div>
         <button class="navbar-toggle" type="button" data-drawer-toggle>&#9776;</button>
       </div>
       <div class="navbar-flyout" data-drawer-close>
