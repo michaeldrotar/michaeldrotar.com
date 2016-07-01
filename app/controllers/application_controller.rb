@@ -6,6 +6,8 @@ class ApplicationController < ActionController::Base
 
   def set_locale
     I18n.locale = params[:locale] || I18n.default_locale
+  rescue I18n::InvalidLocale
+    raise ActionController::RoutingError, 'Not Found'
   end
 
   def default_url_options(options = {})
@@ -13,6 +15,11 @@ class ApplicationController < ActionController::Base
       locale: I18n.locale
     }
     defaults.merge(options)
+  end
+
+  helper_method :current_locale
+  def current_locale
+    I18n.locale
   end
 
   helper_method :nav

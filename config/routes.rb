@@ -1,12 +1,12 @@
 Rails.application.routes.draw do
   locale_constraint = /#{I18n.available_locales.join('|')}/
-  scope '(:locale)', locale: locale_constraint do
+  scope '/:locale' do
     devise_for :users
     get '/orpheus', to: 'orpheus#index'
     namespace :orpheus do
       resources :heroes, only: [:index, :show]
     end
+    get '/', to: 'welcome#index', as: 'locale'
   end
-  get '/:locale', locale: locale_constraint, to: 'welcome#index'
-  root 'welcome#index'
+  root to: redirect("/#{I18n.default_locale}")
 end
