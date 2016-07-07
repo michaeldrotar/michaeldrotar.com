@@ -11,6 +11,9 @@ gem 'pg'
 gem 'globalize', '~> 5.0.0'
 
 gem 'devise', '~> 4.1.0'
+gem 'omniauth', '~> 1.3.0'
+gem 'omniauth-facebook', '~> 3.0.0'
+gem 'omniauth-google-oauth2', '~> 0.4.0'
 
 group :development do
   gem 'guard', '~> 2.2.0', require: false
@@ -38,4 +41,4 @@ gem 'tzinfo', platforms: [:mswin, :mingw]
 gem 'tzinfo-data', platforms: [:mswin, :mingw]
 gem 'wdm', platforms: [:mswin, :mingw]
 
-gem 'rails_12factor', group: :production
+gem 'rails_12factor', group: [:production]

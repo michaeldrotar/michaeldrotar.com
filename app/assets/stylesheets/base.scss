@@ -66,8 +66,8 @@ h6 {
 .sr-only {
   border: 0;
   clip: rect(0, 0, 0, 0);
-  margin: -1px;
   height: 1px;
+  margin: -1px;
   overflow: hidden;
   padding: 0;
   position: absolute;
@@ -77,4 +77,19 @@ h6 {
 .container {
   margin: 0 auto;
   padding: 0 1rem;
+
+  &::before,
+  &::after {
+    clear: both;
+    content: '';
+    display: table;
+  }
+}
+
+.container--xsmall {
+  max-width: 16rem;
+}
+
+.container--small {
+  max-width: 32rem;
 }

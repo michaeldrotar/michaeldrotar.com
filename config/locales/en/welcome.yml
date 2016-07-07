@@ -2,3 +2,5 @@ en:
   welcome:
     index:
       title: 'Welcome!'
+    sign_in:
+      title: 'Sign In'
