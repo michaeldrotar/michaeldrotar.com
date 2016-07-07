@@ -128,17 +128,3 @@
   text-align: center;
   text-decoration: none;
 }
-
-@media (min-width: 600px) {
-  .navbar-item {
-    display: block;
-  }
-
-  .navbar-toggle {
-    display: none;
-  }
-
-  .navbar-flyout {
-    display: none;
-  }
-}
