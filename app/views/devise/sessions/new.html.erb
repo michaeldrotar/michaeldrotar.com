@@ -1,0 +1,32 @@
+<%= form_tag(session_path(:user), class: 'form sign-in-form container container--small') do %>
+  <h1>Choose Your Faction</h1>
+  <div class="container">
+    <div class="faction">
+      <%= link_to 'Facebook', omniauth_authorize_path(:user, :facebook), class: 'faction__action faction__action--facebook' %>
+    </div>
+    <div class="faction">
+      <%= link_to 'Google', omniauth_authorize_path(:user, :google_oauth2), class: 'faction__action faction__action--google' %>
+    </div>
+  </div>
+
+  <label class="form-field">
+    <div class="form-label">Email</div>
+    <input type="email" name="user[email]">
+  </label>
+
+  <label class="form-field">
+    <div class="form-label">Password</div>
+    <input type="password" name="user[password]">
+  </label>
+
+  <label class="form-field">
+    <input type="checkbox" name="user[remember_me]">
+    <div class="form-label">Remember me</div>
+  </label>
+
+  <div class="form-actions">
+    <button type="submit" class="button button--primary">
+      Sign In
+    </button>
+  </div>
+<% end %>
