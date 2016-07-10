@@ -2,8 +2,6 @@
 threads_count = Integer(ENV['RAILS_MAX_THREADS'] || 5)
 threads threads_count, threads_count
 
-ssl_bind 'localhost', '3001', key: 'server.key', cert: 'server.crt'
-
 preload_app!
 
 rackup DefaultRackup
