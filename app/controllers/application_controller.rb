@@ -21,15 +21,4 @@ class ApplicationController < ActionController::Base
   def current_locale
     I18n.locale
   end
-
-  helper_method :nav
-  def nav
-    @nav ||= {
-      projects: root_path
-    }
-  end
-
-  helper_method :subnav
-  def subnav
-  end
 end

@@ -23,20 +23,23 @@
         </div>
       </div>
       <div class="nav-flyout" data-drawer-close>
-        <div class="container container--xsmall">
+        <div class="nav-flyout-item-container">
           <% if user_signed_in? %>
-            <div class="nav-account">
-
-            </div>
+            <%= user.email %>
           <% else %>
-            <div class="nav-account-placeholder">
-              <a href="<%= new_user_session_path %>" class="nav-account-placeholder__action">
-                Create Character
-              </a>
-            </div>
+            <a href="<%= new_user_session_path %>" class="nav-flyout-item nav-flyout-item--prominent">
+              Login
+            </a>
           <% end %>
-          <% nav.each do |key, href| %>
-            <a href="<%= href %>" class="nav-flyout-item"><%= t("nav.#{key}") %></a>
+          <a href="<%= root_path %>" class="nav-flyout-item">
+            Projects
+          </a>
+          <% if user_signed_in? %>
+            <%= form_tag(destroy_user_session_path, method: :delete) do %>
+              <button type="submit" class="nav-flyout-item">
+                Logout
+              </button>
+            <% end %>
           <% end %>
         </div>
       </div>

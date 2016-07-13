@@ -95,8 +95,8 @@
 .nav-flyout {
   background-color: transparentize($color-black, .1);
   bottom: 0;
-  overflow: hidden;
-  padding: 2rem 0;
+  overflow: auto;
+  padding: 1.2rem 0;
   position: fixed;
   right: 0;
   top: 3.25rem;
@@ -111,20 +111,19 @@
   visibility: visible;
 }
 
+.nav-flyout-item-container {
+  float: right;
+}
+
 .nav-flyout-item {
   display: block;
-  padding: .5rem .75rem;
-  text-align: center;
+  padding: .5rem 1rem;
+  text-align: right;
   text-decoration: none;
 }
 
-.nav-account-placeholder {
-  background-color: $color-dark;
-  padding-top: 8rem;
-}
-
-.nav-account-placeholder__action {
-  display: block;
-  text-align: center;
-  text-decoration: none;
+.nav-flyout-item--prominent {
+  font-size: 1.2rem;
+  padding-bottom: .4rem;
+  padding-top: .4rem;
 }
