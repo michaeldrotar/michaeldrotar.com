@@ -19,6 +19,11 @@
               <div class="navbar-brand__letter"><%= letter %></div>
             <% end %>
           </a>
+          <% if content_for?(:title) %>
+            <h1 class="navbar-page-header">
+              <%= yield(:title) %>
+            </h1>
+          <% end %>
           <button class="navbar-toggle" type="button" data-drawer-toggle>&#9776;</button>
         </div>
       </div>
@@ -45,9 +50,6 @@
       </div>
     </div>
     <div class="container">
-      <% if content_for?(:title) %>
-        <%= h1_tag { yield(:title) } %>
-      <% end %>
       <%= yield %>
     </div>
     <%= javascript_include_tag('application', 'data-turbolinks-track' => true) %>

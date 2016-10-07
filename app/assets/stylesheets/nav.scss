@@ -77,6 +77,18 @@
   text-decoration: none;
 }
 
+.navbar-page-header {
+  background-color: $color-darker;
+  border-left: 2px solid $color-blue;
+  border-top: 1px solid $color-dark;
+  display: block;
+  float: left;
+  font-size: 1.2rem;
+  line-height: 2.25rem;
+  margin: 0 0 -.5rem 2rem;
+  padding: 0 2rem .5rem 2rem;
+}
+
 .navbar-toggle {
   background-color: inherit;
   border-radius: .25em;
