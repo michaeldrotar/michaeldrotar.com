@@ -1,0 +1,548 @@
+equipment:
+  hero:
+    damage: 320
+    crit: 1
+  knight:
+    damage: 640
+    crit: 2
+    stone: 350
+  devil_baby:
+    damage: 960
+    crit: 3
+    metal: 400
+  rabbit:
+    damage: 1280
+    crit: 4
+    cloth: 300
+  robin_hood:
+    damage: 1600
+    crit: 5
+    stone: 900
+  rocker:
+    damage: 1920
+    crit: 6
+    blue_diamond: 170
+  chef:
+    damage: 2239
+    crit: 7
+    metal: 1100
+  general:
+    damage: 2560
+    crit: 8
+    bone: 230
+  sergeant:
+    damage: 2880
+    crit: 9
+    stone: 1700
+  native:
+    damage: 3200
+    crit: 10
+    green_elixir: 150
+  soldier:
+    damage: 3520
+    crit: 11
+    cloth: 800
+  lejend:
+    damage: 3840
+    crit: 12
+    blue_dragon_scale: 90
+  frozen_fish:
+    damage: 4160
+    crit: 13
+    green_elixir: 130
+  legend:
+    damage: 4479
+    crit: 14
+    dragon_nail: 70
+  witch:
+    damage: 4800
+    crit: 15
+    blue_diamond: 420
+  wookong:
+    damage: 5120
+    crit: 16
+    yellow_elixir: 40
+  poseidon:
+    damage: 5440
+    crit: 17
+    bone: 380
+  samurai:
+    damage: 5760
+    crit: 18
+    brown_dragon_scale: 30
+  patient:
+    damage: 6079
+    crit: 19
+    green_elixir: 250
+  slugger:
+    damage: 6400
+    crit: 20
+    pink_diamond: 40
+  spartan:
+    damage: 6720
+    crit: 21
+    blue_dragon_scale: 180
+  pikaboo:
+    damage: 7040
+    crit: 22
+    gold: 30
+  kitty_cat:
+    damage: 7359
+    crit: 23
+    cloth: 2000
+  cleaning_man:
+    damage: 7680
+    crit: 24
+    red_dragon_scale: 20
+  miner:
+    damage: 8000
+    crit: 25
+    blue_diamond: 800
+  prince:
+    damage: 8320
+    crit: 26
+    gray_block: 10
+  wong_fei_hung:
+    damage: 8640
+    crit: 27
+    pink_diamond: 50
+  blue_dragon:
+    damage: 8959
+    crit: 28
+    brown_dragon_scale: 50
+  degraded_man:
+    damage: 9280
+    crit: 29
+    blue_dragon_scale: 300
+  rapper:
+    damage: 9600
+    crit: 30
+    blue_bullseye: 15
+  red_dragon:
+    damage: 9920
+    crit: 31
+    yellow_elixir: 90
+  barbarian:
+    damage: 10240
+    crit: 32
+    red_dragon_scale: 15
+  golden_dragon:
+    damage: 10599
+    crit: 33
+    pink_diamond: 50
+  dark_knight:
+    damage: 10880
+    crit: 34
+    red_bullseye: 5
+  luke:
+    damage: 11200
+    crit: 35
+    blue_bullseye: 10
+  gentleman:
+    damage: 11520
+    crit: 36
+    gray_block: 20
+  archangel:
+    damage: 11840
+    crit: 37
+    blue_bullseye: 20
+    red_bullseye: 10
+  archdevil:
+    damage: 12159
+    crit: 38
+    red_bullseye: 10
+    water_droplet: 10
+  awakened:
+    damage: 12480
+    crit: 39
+    blue_bullseye: 20
+    red_bullseye: 10
+    water_droplet: 10
+  mecha_knight:
+    damage: 12800
+    crit: 40
+    blue_bullseye: 40
+    red_bullseye: 20
+    gray_block: 120
+  dark_warrior:
+    damage: 13119
+    crit: 41
+    blue_bullseye: 40
+    red_bullseye: 20
+    water_droplet: 20
+  blue_knight:
+    damage: 13440
+    crit: 42
+    red_bullseye: 30
+    water_droplet: 20
+  holy_knight:
+    damage: 13760
+    crit: 43
+    blue_bullseye: 40
+    water_droplet: 20
+  heavenly_guardian:
+    damage: 14080
+    crit: 44
+    yellow_elixir: 3500
+    gold: 2000
+    water_droplet: 80
+  ancient_artifact:
+    damage: 14400
+    crit: 45
+    brown_dragon_scale: 3500
+    red_dragon_scale: 2000
+    water_droplet: 160
+  ruined_artifact:
+    damage: 14720
+    crit: 46
+    pink_diamond: 3600
+    gray_block: 2000
+    water_droplet: 320
+  paladin:
+    damage: 15040
+    crit: 47
+    tears: 100
+    crimson_crystal: 80
+  phantom_thief:
+    damage: 15360
+    crit: 48
+    crimson_crystal: 100
+    yellow_crystal: 80
+  hellfire:
+    damage: 15680
+    crit: 49
+    yellow_crystal: 100
+    jade: 80
+  vampire:
+    damage: 16000
+    crit: 50
+    jade: 100
+    shield: 80
+  cyborg:
+    damage: 16320
+    crit: 51
+    shield: 100
+    rainbow_crystal: 80
+    skull: 50
+resources:
+  - wood
+  - stone
+  - metal
+  - cloth
+  - blue_diamond
+  - bone
+  - green_elixir
+  - blue_dragon_scale
+  - dragon_nail
+  - yellow_elixir
+  - brown_dragon_scale
+  - pink_diamond
+  - gold
+  - red_dragon_scale
+  - gray_block
+  - blue_bullseye
+  - red_bullseye
+  - water_droplet
+  - crimson_crystal
+  - yellow_crystal
+  - jade
+  - shield
+  - rainbow_crystal
+  - skull
+tradeskills:
+  -
+    bonus: 120
+  -
+    bonus: 240
+    wood: 300
+  -
+    bonus: 360
+    stone: 310
+  -
+    bonus: 480
+    wood: 330
+  -
+    bonus: 600
+    cloth: 210
+  -
+    bonus: 720
+    metal: 550
+  -
+    bonus: 840
+    wood: 660
+  -
+    bonus: 960
+    blue_diamond: 120
+  -
+    bonus: 1080
+    wood: 950
+  -
+    bonus: 1200
+    cloth: 280
+  -
+    bonus: 1320
+    bone: 150
+  -
+    bonus: 1440
+    metal: 1000
+  -
+    bonus: 1560
+    cloth: 380
+  -
+    bonus: 1680
+    green_elixir: 100
+  -
+    bonus: 1800
+    wood: 1800
+  -
+    bonus: 1920
+    blue_diamond: 180
+  -
+    bonus: 2040
+    blue_dragon_scales: 60
+  -
+    bonus: 2160
+    bone: 180
+  -
+    bonus: 2280
+    metal: 1700
+  -
+    bonus: 2400
+    dragon_nail: 50
+  -
+    bonus: 2520
+    green_elixir: 120
+  -
+    bonus: 2640
+    blue_dragon_scales: 80
+  -
+    bonus: 2760
+    yellow_elixir: 30
+  -
+    bonus: 2880
+    green_elixir: 130
+  -
+    bonus: 3000
+    metal: 2100
+  -
+    bonus: 3120
+    brown_dragon_scales: 17
+  -
+    bonus: 3240
+    cloth: 1100
+  -
+    bonus: 3360
+    dragon_nail: 70
+  -
+    bonus: 3480
+    pink_diamond: 17
+  -
+    bonus: 3600
+    green_elixir: 200
+  -
+    bonus: 3720
+    bone: 420
+  -
+    bonus: 3840
+    gold: 15
+  -
+    bonus: 3960
+    blue_diamond: 520
+  -
+    bonus: 4080
+    dragon_nail: 100
+  -
+    bonus: 4200
+    red_dragon_scales: 13
+  -
+    bonus: 4320
+    yellow_elixir: 50
+  -
+    bonus: 4440
+    brown_dragon_scales: 20
+  -
+    bonus: 4560
+    gray_block: 6
+  -
+    bonus: 4680
+    blue_diamond: 600
+  -
+    bonus: 4800
+    blue_dragon_scales: 140
+  -
+    bonus: 4920
+    blue_diamond: 600
+  -
+    bonus: 5040
+    gold: 18
+  -
+    bonus: 5160
+    dragon_nail: 120
+  -
+    bonus: 5280
+    blue_eye: 6
+  -
+    bonus: 5400
+    bone: 500
+  -
+    bonus: 5520
+    green_elixir: 250
+  -
+    bonus: 5640
+    blue_diamond: 600
+  -
+    bonus: 5760
+    gray_block: 5
+  -
+    bonus: 5880
+    bone: 520
+  -
+    bonus: 6000
+    gold: 30
+  -
+    bonus: 6120
+    blue_dragon_scales: 200
+  -
+    bonus: 6240
+    green_elixir: 320
+  -
+    bonus: 6360
+    dragon_nail: 130
+  -
+    bonus: 6480
+    bone: 600
+  -
+    bonus: 6600
+    gold: 30
+  -
+    bonus: 6720
+    blue_diamond: 800
+  -
+    bonus: 6840
+    green_elixir: 320
+  -
+    bonus: 6960
+    bone: 670
+  -
+    bonus: 7080
+    dragon_nail: 150
+  -
+    bonus: 7200
+    blue_dragon_scales: 200
+  -
+    bonus: 7320
+    green_elixir: 350
+  -
+    bonus: 7440
+    gold: 30
+  -
+    bonus: 7560
+    bone: 650
+  -
+    bonus: 7680
+    blue_diamond: 750
+  -
+    bonus: 7800
+    dragon_nail: 130
+  -
+    bonus: 7920
+    gray_block: 15
+  -
+    bonus: 8040
+    blue_dragon_scales: 200
+  -
+    bonus: 8160
+    yellow_elixir: 60
+  -
+    bonus: 8280
+    gold: 40
+  -
+    bonus: 8400
+    green_elixir: 350
+  -
+    bonus: 8520
+    dragon_nail: 220
+  -
+    bonus: 8640
+    yellow_elixir: 100
+  -
+    bonus: 8760
+    gray_block: 25
+  -
+    bonus: 8880
+    bone: 1000
+  -
+    bonus: 9000
+    gold: 70
+  -
+    bonus: 9120
+    blue_dragon_scales: 300
+  -
+    bonus: 9240
+    yellow_elixir: 130
+  -
+    bonus: 9360
+    dragon_nail: 250
+  -
+    bonus: 9480
+    gold: 100
+  -
+    bonus: 9600
+    blue_diamond: 1000
+  -
+    bonus: 9720
+    gray_block: 35
+  -
+    bonus: 9840
+    blue_dragon_scales: 450
+  -
+    bonus: 9960
+    gold: 130
+  -
+    bonus: 10080
+    bone: 1300
+  -
+    bonus: 10200
+    blue_diamond: 1500
+  -
+    bonus: 10320
+    yellow_elixir: 170
+  -
+    bonus: 10440
+    dragon_nail: 300
+  -
+    bonus: 10560
+    gray_block: 40
+  -
+    bonus: 10680
+    gold: 160
+  -
+    bonus: 10800
+    blue_dragon_scales: 600
+  -
+    bonus: 10920
+    red_bullseye: 600
+  -
+    bonus: 11040
+    water_droplet: 80
+  -
+    bonus: 11160
+    red_bullseye: 800
+  -
+    bonus: 11280
+    gray_block: 1200
+  -
+    bonus: 11400
+    water_droplet: 250
+  -
+    bonus: 11520
+    blue_bullseye: 1200
+  -
+    bonus: 11640
+    red_bullseye: 1200
+  -
+    bonus: 11760
+    gray_block: 2000
+  -
+    bonus: 11880
+    water_droplet: 850
