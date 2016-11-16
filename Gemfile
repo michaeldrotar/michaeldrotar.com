@@ -16,6 +16,8 @@ gem 'omniauth-facebook', '~> 3.0.0'
 gem 'omniauth-google-oauth2', '~> 0.4.0'
 
 group :development do
+  gem 'binding_of_caller' # adds REPL, variable inspection, and pretty stack frames to better_errors
+  gem 'better_errors'
   gem 'guard', '~> 2.2.0', require: false
   gem 'guard-livereload', require: false
   gem 'rack-livereload'
