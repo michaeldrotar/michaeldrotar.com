@@ -1,4 +1,4 @@
-equipment:
+equipment_sets:
   hero:
     damage: 320
     crit: 1
@@ -201,7 +201,7 @@ equipment:
   paladin:
     damage: 15040
     crit: 47
-    tears: 100
+    water_droplet: 100
     crimson_crystal: 80
   phantom_thief:
     damage: 15360
@@ -299,7 +299,7 @@ tradeskills:
     blue_diamond: 180
   -
     bonus: 2040
-    blue_dragon_scales: 60
+    blue_dragon_scale: 60
   -
     bonus: 2160
     bone: 180
@@ -314,7 +314,7 @@ tradeskills:
     green_elixir: 120
   -
     bonus: 2640
-    blue_dragon_scales: 80
+    blue_dragon_scale: 80
   -
     bonus: 2760
     yellow_elixir: 30
@@ -326,7 +326,7 @@ tradeskills:
     metal: 2100
   -
     bonus: 3120
-    brown_dragon_scales: 17
+    brown_dragon_scale: 17
   -
     bonus: 3240
     cloth: 1100
@@ -353,13 +353,13 @@ tradeskills:
     dragon_nail: 100
   -
     bonus: 4200
-    red_dragon_scales: 13
+    red_dragon_scale: 13
   -
     bonus: 4320
     yellow_elixir: 50
   -
     bonus: 4440
-    brown_dragon_scales: 20
+    brown_dragon_scale: 20
   -
     bonus: 4560
     gray_block: 6
@@ -368,7 +368,7 @@ tradeskills:
     blue_diamond: 600
   -
     bonus: 4800
-    blue_dragon_scales: 140
+    blue_dragon_scale: 140
   -
     bonus: 4920
     blue_diamond: 600
@@ -380,7 +380,7 @@ tradeskills:
     dragon_nail: 120
   -
     bonus: 5280
-    blue_eye: 6
+    blue_bullseye: 6
   -
     bonus: 5400
     bone: 500
@@ -401,7 +401,7 @@ tradeskills:
     gold: 30
   -
     bonus: 6120
-    blue_dragon_scales: 200
+    blue_dragon_scale: 200
   -
     bonus: 6240
     green_elixir: 320
@@ -428,7 +428,7 @@ tradeskills:
     dragon_nail: 150
   -
     bonus: 7200
-    blue_dragon_scales: 200
+    blue_dragon_scale: 200
   -
     bonus: 7320
     green_elixir: 350
@@ -449,7 +449,7 @@ tradeskills:
     gray_block: 15
   -
     bonus: 8040
-    blue_dragon_scales: 200
+    blue_dragon_scale: 200
   -
     bonus: 8160
     yellow_elixir: 60
@@ -476,7 +476,7 @@ tradeskills:
     gold: 70
   -
     bonus: 9120
-    blue_dragon_scales: 300
+    blue_dragon_scale: 300
   -
     bonus: 9240
     yellow_elixir: 130
@@ -494,7 +494,7 @@ tradeskills:
     gray_block: 35
   -
     bonus: 9840
-    blue_dragon_scales: 450
+    blue_dragon_scale: 450
   -
     bonus: 9960
     gold: 130
@@ -518,7 +518,7 @@ tradeskills:
     gold: 160
   -
     bonus: 10800
-    blue_dragon_scales: 600
+    blue_dragon_scale: 600
   -
     bonus: 10920
     red_bullseye: 600
