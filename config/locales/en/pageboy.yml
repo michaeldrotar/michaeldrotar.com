@@ -1,9 +1,12 @@
 en:
   pageboy:
     index:
-      title: 'Pageboy Updates'
+      title: 'Pageboy Upgrades'
       description: 'Pageboy is a phone game where instead of playing as the hero, you play as the guy that follows the hero and picks up all the stuff and use those materials to upgrade the hero''s stats and equipment.'
-    equipment:
+      bonus_amount: 'Bonus: +%{amount}%'
+      crit_amount: 'Crit: %{amount}'
+      damage_amount: 'Damage: %{amount}'
+    equipment_set_names:
       hero: 'Hero'
       knight: 'Knight'
       devil_baby: 'Devil Baby'
@@ -55,7 +58,7 @@ en:
       hellfire: 'Hellfire'
       vampire: 'Vampire'
       cyborg: 'Cyborg'
-    resources:
+    resource_names:
       blue_bullseye: 'Blue Bull''s Eye'
       blue_diamond: 'Blue Diamond'
       blue_dragon_scale: 'Blue Dragon Scale'

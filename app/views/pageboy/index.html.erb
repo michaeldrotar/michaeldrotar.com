@@ -1,0 +1,40 @@
+<% content_for(:title) do %><%= t('.title') %><% end %>
+<p><%= t('.description') %></p>
+<table>
+  <thead>
+    <tr>
+      <th>Equipment</th>
+      <th>Tradeskill</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @groupings.each do |grouping| %>
+      <tr>
+        <td>
+          <% if grouping[:equipment_set] %>
+            <div class="pageboy-equipment-set">
+              <div class="pageboy-equipment-set-name">
+                <%= pageboy_equipment_set_name(grouping[:equipment_set]) %>
+              </div>
+              <% if grouping[:equipment_set].damage %>
+                <div><%= t('.damage_amount', amount: grouping[:equipment_set].damage) %></div>
+              <% end %>
+              <% if grouping[:equipment_set].crit %>
+                <div><%= t('.crit_amount', amount: grouping[:equipment_set].crit) %></div>
+              <% end %>
+            </div>
+            <%= pageboy_resource_costs_display(grouping[:equipment_set].resource_costs) %>
+          <% end %>
+        </td>
+        <td>
+          <% if grouping[:tradeskill] %>
+            <div class="pageboy-tradeskill">
+              <div><%= t('.bonus_amount', amount: grouping[:tradeskill].bonus) %></div>
+            </div>
+            <%= pageboy_resource_costs_display(grouping[:tradeskill].resource_costs) %>
+          <% end %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

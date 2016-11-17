@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     namespace :orpheus do
       resources :heroes, only: [:index, :show]
     end
+    get '/pageboy', to: 'pageboy#index'
     get '/', to: 'welcome#index', as: 'locale'
   end
   devise_for :users, path: '', only: :omniauth_callbacks, controllers: { omniauth_callbacks: 'omniauth_callbacks' }
