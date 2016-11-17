@@ -4,7 +4,7 @@ ruby '2.2.4'
 gem 'rails', '~> 4.2.0'
 gem 'rake', '~> 10.5.0'
 gem 'puma', '~> 3.4.0'
-gem 'rack-timeout', '~> 0.4.0'
+gem 'rack-timeout', '~> 0.4.0', group: :production
 gem 'figaro', '~> 1.1.0'
 
 gem 'pg'
@@ -21,6 +21,10 @@ group :development do
   gem 'guard', '~> 2.2.0', require: false
   gem 'guard-livereload', require: false
   gem 'rack-livereload'
+end
+
+group :development, :test do
+  gem 'byebug'
 end
 
 gem 'jbuilder'
