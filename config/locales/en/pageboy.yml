@@ -3,7 +3,7 @@ en:
     index:
       title: 'Pageboy Upgrades'
       description: 'Pageboy is a phone game where instead of playing as the hero, you play as the guy that follows the hero and picks up all the stuff and use those materials to upgrade the hero''s stats and equipment.'
-      bonus_amount: 'Bonus: +%{amount}%'
+      bonus_amount: 'Bonus: %{amount}%'
       crit_amount: 'Crit: %{amount}'
       damage_amount: 'Damage: %{amount}'
     equipment_set_names:

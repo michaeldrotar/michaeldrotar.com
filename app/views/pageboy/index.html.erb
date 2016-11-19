@@ -1,6 +1,6 @@
 <% content_for(:title) do %><%= t('.title') %><% end %>
 <p><%= t('.description') %></p>
-<table>
+<table class="pageboy-upgrades">
   <thead>
     <tr>
       <th>Equipment</th>
@@ -12,26 +12,22 @@
       <tr>
         <td>
           <% if grouping[:equipment_set] %>
-            <div class="pageboy-equipment-set">
-              <div class="pageboy-equipment-set-name">
+            <div class="pageboy-upgrade">
+              <div class="pageboy-upgrade-name">
                 <%= pageboy_equipment_set_name(grouping[:equipment_set]) %>
               </div>
-              <% if grouping[:equipment_set].damage %>
-                <div><%= t('.damage_amount', amount: grouping[:equipment_set].damage) %></div>
-              <% end %>
-              <% if grouping[:equipment_set].crit %>
-                <div><%= t('.crit_amount', amount: grouping[:equipment_set].crit) %></div>
-              <% end %>
+              <div><%= t('.damage_amount', amount: grouping[:equipment_set].damage) %></div>
+              <div><%= t('.crit_amount', amount: grouping[:equipment_set].crit) %></div>
+              <%= pageboy_resource_costs_display(grouping[:equipment_set].resource_costs) %>
             </div>
-            <%= pageboy_resource_costs_display(grouping[:equipment_set].resource_costs) %>
           <% end %>
         </td>
         <td>
           <% if grouping[:tradeskill] %>
-            <div class="pageboy-tradeskill">
+            <div class="pageboy-upgrade">
               <div><%= t('.bonus_amount', amount: grouping[:tradeskill].bonus) %></div>
+              <%= pageboy_resource_costs_display(grouping[:tradeskill].resource_costs) %>
             </div>
-            <%= pageboy_resource_costs_display(grouping[:tradeskill].resource_costs) %>
           <% end %>
         </td>
       </tr>
