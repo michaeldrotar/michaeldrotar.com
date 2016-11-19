@@ -5,10 +5,10 @@ module Pageboy
     def call
       order = 0
       equipment_sets_data = LoadData.call('pageboy')['equipment_sets']
-      equipment_sets_data.keys.map do |key|
-        data = equipment_sets_data[key]
+      equipment_sets_data.map do |data|
         order += 1
-        params = { id: key.to_sym }
+        params = {}
+        params[:id] = data.delete('id').to_sym
         params[:damage] = data.delete('damage')
         params[:crit] = data.delete('crit')
         params[:resource_costs] = resource_costs_from_data(data)
