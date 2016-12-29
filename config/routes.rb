@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  locale_constraint = /#{I18n.available_locales.join('|')}/
   scope '/:locale' do
     devise_for :users, path: '', skip: :omniauth_callbacks
     get '/orpheus', to: 'orpheus#index'
