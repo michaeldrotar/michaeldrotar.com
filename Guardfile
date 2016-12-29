@@ -13,4 +13,5 @@ guard 'livereload' do
   watch(%r{(app|vendor)/assets/\w+/(.+)\.scss}) do |m|
     "/assets/#{m[2]}.css"
   end
+  watch(%r{app/})
 end
