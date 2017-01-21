@@ -11,47 +11,41 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
-    <div class="nav" data-drawer data-drawer--auto-close>
-      <div class="navbar" data-drawer-close>
-        <div class="container">
-          <a href="<%= locale_path %>" class="navbar-brand">
-            <% 'michaeldrotar.com'.split('').each do |letter| %>
-              <div class="navbar-brand__letter"><%= letter %></div>
-            <% end %>
+    <nav class="navbar navbar-toggleable-md navbar-light">
+      <button type="button" class="navbar-toggler navbar-toggler-right"
+          data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a href="<%= locale_path %>" class="navbar-brand">michaeldrotar.com</a>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav mr-auto">
+          <a class="nav-item nav-link active" href="<%= locale_path %>">
+            Home
+            <span class="sr-only">(current)</span>
           </a>
-          <% if content_for?(:title) %>
-            <h1 class="navbar-page-header">
-              <%= yield(:title) %>
-            </h1>
-          <% end %>
-          <button class="navbar-toggle" type="button" data-drawer-toggle>&#9776;</button>
+          <a href="" class="nav-item nav-link ">
+            Link
+          </a>
+          <a href="" class="nav-item nav-link ">
+            Link
+          </a>
         </div>
-      </div>
-      <div class="nav-flyout" data-drawer-close>
-        <div class="nav-flyout-item-container">
-          <% if user_signed_in? %>
-            <%= user.email %>
-          <% else %>
-            <a href="<%= new_user_session_path %>" class="nav-flyout-item nav-flyout-item--prominent">
-              Login
-            </a>
+        <% if user_signed_in? %>
+          <%= user.email %>
+          <%= form_tag(destroy_user_session_path, method: :delete) do %>
+            <button type="submit" class="nav-flyout-item">
+              Logout
+            </button>
           <% end %>
-          <a href="<%= pageboy_path %>" class="nav-flyout-item">
-            Pageboy
+        <% else %>
+          <a href="<%= new_user_session_path %>" class="nav-item nav-link">
+            Login
           </a>
-          <a href="<%= root_path %>" class="nav-flyout-item">
-            Projects
-          </a>
-          <% if user_signed_in? %>
-            <%= form_tag(destroy_user_session_path, method: :delete) do %>
-              <button type="submit" class="nav-flyout-item">
-                Logout
-              </button>
-            <% end %>
-          <% end %>
-        </div>
+        <% end %>
       </div>
-    </div>
+    </nav>
     <div class="container">
       <%= yield %>
     </div>

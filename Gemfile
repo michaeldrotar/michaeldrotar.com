@@ -39,13 +39,15 @@ end
 
 # Frontend
 gem 'autoprefixer-rails'
+gem 'bootstrap', '~> 4.0.0.alpha6'
 gem 'sass-rails'
 gem 'turbolinks'
 gem 'uglifier'
 
+# Bower Assets
 source 'http://insecure.rails-assets.org' do
   gem 'rails-assets-jquery', '~> 3.0.0'
-  gem 'rails-assets-normalize-css', '~> 4.1.0'
+  gem 'rails-assets-tether', '>= 1.3.3'
 end
 
 # Linting
