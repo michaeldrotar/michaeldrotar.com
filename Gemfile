@@ -1,35 +1,43 @@
 source 'https://rubygems.org'
 ruby '2.2.4'
 
-gem 'rails', '~> 4.2.0'
-gem 'rake', '~> 10.5.0'
+# Server
 gem 'puma', '~> 3.4.0'
-gem 'rack-timeout', '~> 0.4.0', group: :production
+gem 'rack-timeout', '~> 0.4.0', group: [:production]
+gem 'rails', '~> 4.2.0'
+gem 'rails_12factor', group: [:production]
+gem 'rake', '~> 10.5.0'
+
+# Env
 gem 'figaro', '~> 1.1.0'
 
-gem 'pg'
+# Database
 gem 'globalize', '~> 5.0.0'
+gem 'pg' # Postgres
 
+# Authentication
 gem 'devise', '~> 4.1.0'
 gem 'omniauth', '~> 1.3.0'
 gem 'omniauth-facebook', '~> 3.0.0'
 gem 'omniauth-google-oauth2', '~> 0.4.0'
 
 group :development do
-  gem 'binding_of_caller' # adds features to better_errors
+  # Error handling
   gem 'better_errors'
+  gem 'binding_of_caller' # adds features to better_errors
+
+  # Auto processing
   gem 'guard', '~> 2.2.0', require: false
   gem 'guard-livereload', require: false
   gem 'rack-livereload', require: false
 end
 
 group :development, :test do
+  # Debugging
   gem 'byebug'
 end
 
-gem 'jbuilder'
-gem 'spring', group: [:development]
-
+# Frontend
 gem 'autoprefixer-rails'
 gem 'sass-rails'
 gem 'turbolinks'
@@ -40,11 +48,11 @@ source 'http://insecure.rails-assets.org' do
   gem 'rails-assets-normalize-css', '~> 4.1.0'
 end
 
+# Linting
 gem 'rubocop', require: false, group: [:development]
 gem 'scss_lint', require: false, group: [:development]
 
+# Windows deps
 gem 'tzinfo', platforms: [:mswin, :mingw]
 gem 'tzinfo-data', platforms: [:mswin, :mingw]
 gem 'wdm', platforms: [:mswin, :mingw]
-
-gem 'rails_12factor', group: [:production]
