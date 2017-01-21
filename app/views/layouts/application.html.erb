@@ -12,38 +12,40 @@
   </head>
   <body>
     <nav class="navbar navbar-toggleable-md navbar-light">
-      <button type="button" class="navbar-toggler navbar-toggler-right"
-          data-toggle="collapse" data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <a href="<%= locale_path %>" class="navbar-brand">michaeldrotar.com</a>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <div class="navbar-nav mr-auto">
-          <a class="nav-item nav-link active" href="<%= locale_path %>">
-            Home
-            <span class="sr-only">(current)</span>
-          </a>
-          <a href="" class="nav-item nav-link ">
-            Link
-          </a>
-          <a href="" class="nav-item nav-link ">
-            Link
-          </a>
-        </div>
-        <% if user_signed_in? %>
-          <%= user.email %>
-          <%= form_tag(destroy_user_session_path, method: :delete) do %>
-            <button type="submit" class="nav-flyout-item">
-              Logout
-            </button>
+      <div class="container">
+        <button type="button" class="navbar-toggler navbar-toggler-right"
+            data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a href="<%= locale_path %>" class="navbar-brand">michaeldrotar.com</a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div class="navbar-nav mr-auto">
+            <a class="nav-item nav-link active" href="<%= locale_path %>">
+              Home
+              <span class="sr-only">(current)</span>
+            </a>
+            <a href="" class="nav-item nav-link ">
+              Link
+            </a>
+            <a href="" class="nav-item nav-link ">
+              Link
+            </a>
+          </div>
+          <% if user_signed_in? %>
+            <%= user.email %>
+            <%= form_tag(destroy_user_session_path, method: :delete) do %>
+              <button type="submit" class="nav-flyout-item">
+                Logout
+              </button>
+            <% end %>
+          <% else %>
+            <a href="<%= new_user_session_path %>" class="nav-item nav-link">
+              Login
+            </a>
           <% end %>
-        <% else %>
-          <a href="<%= new_user_session_path %>" class="nav-item nav-link">
-            Login
-          </a>
-        <% end %>
+        </div>
       </div>
     </nav>
     <div class="container">
