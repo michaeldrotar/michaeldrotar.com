@@ -1,0 +1,117 @@
+.resume-contact {
+  @extend .row;
+}
+
+.resume-contact-item {
+  @extend .col;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  text-align: center;
+}
+
+.resume-job {
+  margin-top: 3rem;
+  position: relative;
+}
+
+.resume-job-duration {
+  color: $brand-primary;
+  float: left;
+  margin-bottom: -.5rem;
+  margin-right: 1rem;
+  margin-top: -.5rem;
+  text-align: center;
+  width: 5rem;
+}
+
+.resume-job-duration-number {
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.resume-job-duration-timeline {
+  color: $gray-light;
+  font-size: .8rem;
+  line-height: 3;
+}
+
+.resume-job-duration-units {
+  font-weight: bold;
+  line-height: .5;
+}
+
+.resume-job-name {
+}
+
+.resume-job-name h2 {
+  font-size: 1.6rem;
+  font-weight: lighter;
+  line-height: 1;
+}
+
+.resume-job-name-formerly {
+  font-size: .8rem;
+  font-style: italic;
+}
+
+.resume-job-name-formerly-name {
+  font-size: 1.1rem;
+  font-style: normal;
+  font-weight: lighter;
+}
+
+.resume-job-role {
+  clear: both;
+  position: relative;
+}
+
+.resume-job-role-accomplishments {
+  display: none;
+}
+
+.resume-job-role-name {
+  font-size: 2rem;
+  font-weight: lighter;
+  margin-bottom: 1rem;
+}
+
+.resume-job-role-timeline {
+  color: $gray-light;
+  font-size: .9rem;
+  position: absolute;
+  top: 2rem;
+}
+
+@include media-breakpoint-up(sm) {
+  .resume-job {
+    padding-left: 6rem;
+  }
+
+  .resume-job-duration {
+    left: 0;
+    position: absolute;
+    top: 0;
+  }
+
+  .resume-job-name h2 {
+    display: inline;
+  }
+
+  .resume-job-name-formerly {
+    display: inline;
+  }
+
+  .resume-job-role-name {
+    display: inline;
+  }
+
+  .resume-job-role-name h3 {
+    display: inline;
+  }
+
+  .resume-job-role-timeline {
+    display: inline;
+    position: static;
+  }
+}
