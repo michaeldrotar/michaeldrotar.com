@@ -53,8 +53,3 @@ end
 # Linting
 gem 'rubocop', require: false, group: [:development]
 gem 'scss_lint', require: false, group: [:development]
-
-# Windows deps
-gem 'tzinfo', platforms: [:mswin, :mingw]
-gem 'tzinfo-data', platforms: [:mswin, :mingw]
-gem 'wdm', platforms: [:mswin, :mingw]

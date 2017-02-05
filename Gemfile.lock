@@ -39,9 +39,9 @@ GEM
       tzinfo (~> 1.1)
     arel (6.0.4)
     ast (2.3.0)
-    autoprefixer-rails (6.6.1)
+    autoprefixer-rails (6.7.2)
       execjs
-    bcrypt (3.1.11-x86-mingw32)
+    bcrypt (3.1.11)
     better_errors (2.1.1)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
@@ -68,11 +68,11 @@ GEM
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0.6.0)
     erubis (2.7.0)
-    eventmachine (1.2.1-x86-mingw32)
+    eventmachine (1.2.2)
     execjs (2.7.0)
     faraday (0.10.1)
       multipart-post (>= 1.2, < 3)
-    ffi (1.9.17-x86-mingw32)
+    ffi (1.9.17)
     figaro (1.1.1)
       thor (~> 0.14)
     formatador (0.2.5)
@@ -91,10 +91,10 @@ GEM
       em-websocket (~> 0.5)
       guard (~> 2.0)
       multi_json (~> 1.8)
-    hashie (3.4.6)
-    hitimes (1.2.4-x86-mingw32)
+    hashie (3.5.1)
+    hitimes (1.2.4)
     http_parser.rb (0.6.0)
-    i18n (0.7.0)
+    i18n (0.8.0)
     json (1.8.6)
     jwt (1.5.6)
     listen (2.10.1)
@@ -115,7 +115,7 @@ GEM
     multi_json (1.12.1)
     multi_xml (0.6.0)
     multipart-post (2.0.0)
-    nokogiri (1.7.0.1-x86-mingw32)
+    nokogiri (1.7.0.1)
       mini_portile2 (~> 2.1.0)
     oauth2 (1.3.0)
       faraday (>= 0.8, < 0.11)
@@ -139,7 +139,7 @@ GEM
     orm_adapter (0.5.0)
     parser (2.3.3.1)
       ast (~> 2.2)
-    pg (0.19.0-x86-mingw32)
+    pg (0.19.0)
     powerpack (0.1.1)
     pry (0.10.4)
       coderay (~> 1.1.0)
@@ -186,7 +186,7 @@ GEM
     rainbow (2.2.1)
     rake (10.5.0)
     rb-fsevent (0.9.8)
-    rb-inotify (0.9.7)
+    rb-inotify (0.9.8)
       ffi (>= 0.5.0)
     responders (2.3.0)
       railties (>= 4.2.0, < 5.1)
@@ -217,7 +217,7 @@ GEM
       sprockets (>= 3.0.0)
     thor (0.19.4)
     thread_safe (0.3.5)
-    tilt (2.0.5)
+    tilt (2.0.6)
     timers (4.0.4)
       hitimes
     turbolinks (5.0.1)
@@ -225,17 +225,14 @@ GEM
     turbolinks-source (5.0.0)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
-    tzinfo-data (1.2016.10)
-      tzinfo (>= 1.0.0)
     uglifier (3.0.4)
       execjs (>= 0.3.0, < 3)
     unicode-display_width (1.1.3)
-    warden (1.2.6)
+    warden (1.2.7)
       rack (>= 1.0)
-    wdm (0.1.1)
 
 PLATFORMS
-  x86-mingw32
+  ruby
 
 DEPENDENCIES
   autoprefixer-rails
@@ -264,13 +261,10 @@ DEPENDENCIES
   sass-rails
   scss_lint
   turbolinks
-  tzinfo
-  tzinfo-data
   uglifier
-  wdm
 
 RUBY VERSION
    ruby 2.2.4p230
 
 BUNDLED WITH
-   1.12.5
+   1.14.3
