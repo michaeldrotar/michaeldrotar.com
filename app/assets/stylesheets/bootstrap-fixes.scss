@@ -1,29 +1,5 @@
-@media(max-width: (map-get($grid-breakpoints, sm)-1)) {
-  .navbar-toggleable-md > .container {
-    margin-left: 0;
-    margin-right: 0;
-
-    .navbar-toggler {
-      right: 0;
-    }
-  }
-}
-
-@media(min-width: (map-get($grid-breakpoints, sm))) {
-  .navbar-toggleable-md > .container {
-    padding-left: 15px;
-    padding-right: 15px;
-
-    .navbar-toggler {
-      right: 2rem;
-    }
-  }
-}
-
-@media(min-width: (map-get($grid-breakpoints, md))) {
-  .navbar-toggleable-md > .container {
-    .navbar-toggler {
-      right: 1rem;
-    }
+@include media-breakpoint-down(xs) {
+  .container {
+    width: 100%;
   }
 }
