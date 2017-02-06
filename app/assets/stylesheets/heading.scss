@@ -1,10 +1,10 @@
 .heading {
-  @extend .jumbotron;
-  @extend .jumbotron-fluid;
-}
-
-.heading h1 {
-  @extend .display-3;
+  font-size: 4.5rem;
+  font-weight: lighter;
+  line-height: 1.1;
+  margin-bottom: 2rem;
+  padding: 2rem 0;
+  position: relative;
 }
 
 .heading-extension {
