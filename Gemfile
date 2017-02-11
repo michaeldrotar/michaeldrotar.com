@@ -30,6 +30,10 @@ group :development do
   gem 'guard', '~> 2.2.0', require: false
   gem 'guard-livereload', require: false
   gem 'rack-livereload', require: false
+
+  # Linting
+  gem 'rubocop', require: false
+  gem 'scss_lint', require: false
 end
 
 group :development, :test do
@@ -49,7 +53,3 @@ source 'http://insecure.rails-assets.org' do
   gem 'rails-assets-jquery', '~> 3.0.0'
   gem 'rails-assets-tether', '>= 1.3.3'
 end
-
-# Linting
-gem 'rubocop', require: false, group: [:development]
-gem 'scss_lint', require: false, group: [:development]
