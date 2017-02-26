@@ -8,94 +8,91 @@
     <div class="resume-contact-item">michaeldrotar@gmail.com</div>
   </div>
 <% end %>
-<div class="resume-job">
-  <div class="resume-job-duration">
-    <div class="resume-job-duration-number">
-      <script>document.write((new Date()).getFullYear() - 2011)</script>
+<div class="row">
+  <div class="col-lg-8">
+    <div class="resume-job">
+      <div class="resume-job-duration">
+        <div class="resume-job-duration-number">
+          <script>
+            (function() {
+              var today = new Date(),
+                  startDate = new Date("11/07/2011"),
+                  elapsed = today - startDate,
+                  millisecondsInYear = 1000*60*60*24*365.25,
+                  years = Math.round(elapsed/millisecondsInYear);
+              document.write(years);
+            })();
+          </script>
+        </div>
+        <div class="resume-job-duration-units">years</div>
+        <div class="resume-job-duration-timeline">2011-Today</div>
+      </div>
+      <div class="resume-job-company">Radial</div>
+      <div class="resume-job-role">Senior Web Architect</div>
+      <ul class="resume-job-accomplishments">
+        <li>Worked across design, ui, and api teams to architect order modification solution</li>
+        <li>Mentored team of frontend developers to deliver robust, enterprise-quality code</li>
+      </ul>
+      <div class="resume-job-role">Senior Web Developer</div>
+      <ul class="resume-job-accomplishments">
+        <li>Designed and developed a frontend for a provisioning service configuration app that used Ember and integrated with LimeSurvey</li>
+        <li>Designed modern a modern store locator feature, designed and developed a modern in-store pickup feature</li>
+      </ul>
+      <div class="resume-job-role">Web Developer</div>
+      <ul class="resume-job-accomplishments">
+        <li>Took initiative to also learn java backend and make necessary peer-reviewed code changes to facilitate frontend work</li>
+        <li>Worked on a variety of different teams including filling in for a frontend lead during an extended vacation, architecting a solution to create a mobile-friendly version of the product, and integrating services across teams into a shared developer portal</li>
+      </ul>
     </div>
-    <div class="resume-job-duration-units">years</div>
-    <div class="resume-job-duration-timeline">2011-Today</div>
+    <div class="resume-job">
+      <div class="resume-job-duration">
+        <div class="resume-job-duration-number">2</div>
+        <div class="resume-job-duration-units">years</div>
+        <div class="resume-job-duration-timeline">2009-2011</div>
+      </div>
+      <div class="resume-job-company">Tata Consultancy Services</div>
+      <div class="resume-job-role">MII Developer</div>
+      <ul class="resume-job-accomplishments">
+        <li>Engineered web interface from the ground up for interfacing with factory machines using MII's adapters</li>
+        <li>Worked on-site with client to understand daily needs and drive product vision</li>
+      </ul>
+    </div>
+    <div class="resume-job">
+      <div class="resume-job-duration">
+        <div class="resume-job-duration-number">1</div>
+        <div class="resume-job-duration-units">year</div>
+        <div class="resume-job-duration-timeline">2008-2009</div>
+      </div>
+      <div class="resume-job-company">Merion Publications, Inc.</div>
+      <div class="resume-job-role">Web Developer</div>
+      <ul class="resume-job-accomplishments">
+        <li>Built weighted product search engine using .Net and SQL transactions</li>
+        <li>Worked one-on-one with clients to understand needs and create helpful tools to improve their daily processes</li>
+      </ul>
+    </div>
   </div>
-  <div class="resume-job-company">Radial</div>
-  <div class="resume-job-role">Web Architect</div>
-  <div class="resume-job-accomplishments">
-    <p>
-      I began working for GSI Commerce as a Frontend Developer for their
-      Multichannel team, leveraging my user experience background to develop
-      friendly and accessible store location and store pickup features for
-      their website platform.
-    </p>
-    <p>
-      Shortly after my start, eBay acquired the company and I began delving
-      into the backend, fixing bugs in the code and making enhancements that
-      would better support the frontend work that I was trying to accomplish.
-    </p>
-    <p>
-      In 2012 I received an internal promotion in recognition of
-      By early 2013, I was promoted to a senior-level position, but our team
-      of 8 had dwindled to 3 due to numerous layoffs and re-positionings within
-      the company. I remained primarily responsible for the multichannel
-      frontend but also assisted with backend and server code, helping to
-      enhance the java applications that ran on Tomcat, and also branching
-      out to assist other teams when our work was light.
-    </p>
-    <p>
-      Our team of 3 received many accolades during our years together.
-      We started up many new projects, including a provisioning tool that would
-      allow us to on-board new clients in days instead of months.
-      I took the opportunity to learn Ember and Bootstrap as I felt they would
-      be a good fit for the configuration front-end which was built on a
-      Java server with a REST api.
-    </p>
-    <p>
-      In late 2014, we started up a new project to get away from building
-      webstore frontends and to focus on our powerful backend architecture.
-      Our team more than doubled in size, including the acquisition of a
-      talented architect that proposed using Ruby on Rails for this project.
-      It proved to be an awesome fit and the new team got up-to-speed on it
-      rather quickly as we started building out our user and client systems
-      that would eventually give us the flexability to have all of our clients
-      log into a single system but have access to their own secure data and
-      users.
-    </p>
-    <p>
-      By mid-2015, I was the last remaining member of our trio as my
-      two co-workers and friends had moved on to other companys with
-      less turnover. Many of the newer team members were in junior positions,
-      so I took the opportunity to start teaching them best practices as
-      I was learning the new systems most quickly and working one-on-one the
-      most with our knowledgable architect.
-    </p>
-    <p>
-      Around this time I started taking the iniative on many projects
-      within our new application.
-      I designed and oversaw development of the in-store return feature
-      that would allow store representatives to process returns, bringing
-      the team together on a regular basis to discuss our progress and
-      hand out new tasks.
-    </p>
-    <p>
-      I also began refactoring much of our earlier work and hosting
-      learning sessions to educate the team on the problems I found,
-      solutions that I implemented, and best practices going forward.
-    </p>
+  <div class="col-lg-4">
+    <ul class="resume-proficiencies">
+      <li class="good">accessability</li>
+      <li>agile</li>
+      <li class="better">alphabetization</li>
+      <li>angular</li>
+      <li>architecture design</li>
+      <li class="better">bootstrap</li>
+      <li class="best">code reviews</li>
+      <li>critical thinking</li>
+      <li>docker</li>
+      <li>ember</li>
+      <li>hallway testing</li>
+      <li>initiative</li>
+      <li class="good">management</li>
+      <li>node.js</li>
+      <li class="better">organization</li>
+      <li>problem solving</li>
+      <li class="good">responsive design</li>
+      <li class="better">ruby on rails</li>
+      <li class="best">teaching</li>
+      <li class="good">team building</li>
+    </ul>
   </div>
-</div>
-<div class="resume-job">
-  <div class="resume-job-duration">
-    <div class="resume-job-duration-number">2</div>
-    <div class="resume-job-duration-units">years</div>
-    <div class="resume-job-duration-timeline">2009-2011</div>
-  </div>
-  <div class="resume-job-company">Tata Consultancy Services</div>
-  <div class="resume-job-role">MII Developer</div>
-</div>
-<div class="resume-job">
-  <div class="resume-job-duration">
-    <div class="resume-job-duration-number">1</div>
-    <div class="resume-job-duration-units">year</div>
-    <div class="resume-job-duration-timeline">2008-2009</div>
-  </div>
-  <div class="resume-job-company">Merion Publications, Inc.</div>
-  <div class="resume-job-role">Web Developer</div>
 </div>

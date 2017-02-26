@@ -12,10 +12,34 @@
 .resume-job {
   margin-top: 3rem;
   position: relative;
+
+  &:first-child {
+    margin-top: 0;
+  }
 }
 
 .resume-job-accomplishments {
   clear: both;
+  display: block;
+  list-style-type: none;
+  margin: 1rem 0;
+  padding: 0;
+
+  > li {
+    display: block;
+    margin-top: 1rem;
+    position: relative;
+    text-align: justify;
+
+    &::before {
+      background-color: $brand-primary;
+      content: '';
+      display: inline-block;
+      height: .3rem;
+      margin-right: .5rem;
+      width: .3rem;
+    }
+  }
 }
 
 .resume-job-company {
@@ -51,10 +75,54 @@
   line-height: .5;
 }
 
+.resume-proficiencies {
+  color: $color-light;
+  display: block;
+  list-style: none;
+  margin: 1rem 0 0;
+  padding: 0;
+  text-align: justify;
+
+  > li {
+    display: inline-block;
+    font-size: 1.1rem;
+    font-weight: lighter;
+
+    &:nth-child(even) {
+      font-size: 1.2rem;
+    }
+
+    &.good {
+      font-size: 1.2rem;
+      font-weight: normal;
+    }
+
+    &.better {
+      font-size: 1.5rem;
+      font-weight: normal;
+    }
+
+    &.best {
+      font-size: 2rem;
+      font-weight: lighter;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    margin-top: 0;
+
+    > li {
+      display: block;
+    }
+  }
+}
+
 .resume-job-role {
   font-size: 1.6rem;
   font-weight: lighter;
+  line-height: 1;
   margin-bottom: 1rem;
+  padding-left: 6rem;
 }
 
 @include media-breakpoint-up(sm) {
@@ -74,5 +142,6 @@
 
   .resume-job-role {
     font-size: 2rem;
+    padding-left: 0;
   }
 }
