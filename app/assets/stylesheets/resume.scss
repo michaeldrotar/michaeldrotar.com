@@ -1,11 +1,21 @@
 .resume-contact {
-  @extend .row;
+  display: flex;
+  flex-flow: row wrap;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.resume-contact-heading {
+  flex: 1 100%;
+  font-size: 1.6rem;
+  font-weight: lighter;
+  line-height: 1;
+  margin-bottom: 1rem;
 }
 
 .resume-contact-item {
-  @extend .col;
-  padding-bottom: 1rem;
-  padding-top: 1rem;
+  flex: 1 50%;
   text-align: center;
 }
 
@@ -126,6 +136,10 @@
 }
 
 @include media-breakpoint-up(sm) {
+  .resume-contact-heading {
+    font-size: 2rem;
+  }
+
   .resume-job {
     padding-left: 6rem;
   }
@@ -143,5 +157,15 @@
   .resume-job-role {
     font-size: 2rem;
     padding-left: 0;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .resume-contact-heading {
+    text-align: left;
+  }
+
+  .resume-contact-item {
+    text-align: left;
   }
 }

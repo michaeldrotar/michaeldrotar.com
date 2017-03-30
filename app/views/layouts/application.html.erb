@@ -37,13 +37,6 @@
         </div>
       </div>
     <% end %>
-    <% if content_for?(:heading_extension) %>
-      <div class="heading-extension">
-        <div class="container">
-          <%= content_for(:heading_extension) %>
-        </div>
-      </div>
-    <% end %>
     <div class="container">
       <%= yield %>
     </div>
