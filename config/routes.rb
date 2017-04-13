@@ -5,7 +5,11 @@ Rails.application.routes.draw do
     namespace :orpheus do
       resources :heroes, only: [:index, :show]
     end
+    resources :portfolio, only: [:index, :show] do
+      get 'page'
+    end
     get '/pageboy', to: 'pageboy#index'
+    get '/portfolio', to: 'portfolio#index'
     get '/resume', to: 'welcome#resume'
     get '/', to: 'welcome#index', as: 'locale'
   end

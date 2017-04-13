@@ -26,14 +26,19 @@
           <div class="navbar-nav mr-auto">
             <%= nav_link_to('Home', locale_path) %>
             <%= nav_link_to('Resume', resume_path) %>
+            <%= nav_link_to('Portfolio', portfolio_index_path) %>
           </div>
         </div>
       </div>
     </nav>
-    <% if content_for?(:heading) %>
+    <% if content_for?(:heading) || content_for?(:title) %>
       <div class="heading">
         <div class="container">
-          <%= content_for(:heading) %>
+          <% if content_for?(:heading) %>
+            <%= content_for(:heading) %>
+          <% else %>
+            <h1><%= content_for(:title) %></h1>
+          <% end %>
         </div>
       </div>
     <% end %>
