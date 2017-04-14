@@ -6,6 +6,8 @@ services:
       - "5432:5432"
   app:
     build: .
+    stdin_open: true
+    tty: true
     links:
       - db
     ports:
