@@ -7,6 +7,7 @@ Rails.application.routes.draw do
     end
     get '/pageboy', to: 'pageboy#index'
     get '/resume', to: 'welcome#resume'
+    get '/:section(/:page)', to: 'static#dispatcher', as: :static
     get '/', to: 'welcome#index', as: 'locale'
   end
   devise_for :users, path: '', only: :omniauth_callbacks, controllers: { omniauth_callbacks: 'omniauth_callbacks' }

@@ -21,4 +21,10 @@ class ApplicationController < ActionController::Base
   def current_locale
     I18n.locale
   end
+
+  def layout_exists?(layout)
+    layouts_path = File.expand_path('../../views/layouts', __FILE__)
+    layout_path = "#{layouts_path}/#{layout}.html.erb"
+    File.file?(layout_path)
+  end
 end
