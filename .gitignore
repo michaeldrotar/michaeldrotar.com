@@ -1,4 +1,5 @@
 /.bundle
+/node_modules
 /config/application.yml
 /config/database.yml
 /log/*.log
