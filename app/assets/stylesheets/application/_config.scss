@@ -78,23 +78,22 @@ $padding-lg-horizontal:     24px;
 //
 // These breakpoints may be used to create pages that respond at the same points that standard Pattern Library components respond
 
-$grid-breakpoints: (
+$container-xs:               580px;
+$container-sm:               580px;
+$container-md:               720px;
+$container-lg:               820px;
+$container-xl:               1020px;
+
+$grid-xs:                    0;
+$grid-sm:                    768px;
+$grid-md:                    992px;
+$grid-lg:                    1200px;
+$grid-xl:                    1366px;
+
+$breakpoints: (
   xs: 0,
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px
+  sm: 768px,
+  md: 992px,
+  lg: 1200px,
+  xl: 1366px
 );
-
-$screen-xs-min:              0px;
-$screen-sm-min:              768px;
-$screen-md-min:              992px;
-$screen-lg-min:              1200px;
-$screen-xl-min:              1366px;
-$screen-xxl-min:             1484px;
-
-$screen-xs-max:              ($screen-sm-min - 1);
-$screen-sm-max:              ($screen-md-min - 1);
-$screen-md-max:              ($screen-lg-min - 1);
-$screen-lg-max:              ($screen-xl-min - 1);
-$screen-xl-max:              ($screen-xxl-min - 1);

@@ -11,7 +11,7 @@
         "first-nested"
       ],
       "ignore": ["after-comment"],
-      "ignoreAtRules": ["else"]
+      "ignoreAtRules": ["if", "else", "return"]
     } ],
     "block-closing-brace-newline-after": [ "always", {
       "ignoreAtRules": ["if", "else"]

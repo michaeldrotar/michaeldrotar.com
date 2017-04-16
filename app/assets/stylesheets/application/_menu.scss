@@ -31,9 +31,6 @@
     text-decoration: none;
     text-transform: lowercase;
     transform: translateY(-100%);
-    transition:
-      color 0.15s ease-out 0.1s,
-      transform 0.55s cubic-bezier(0, 0.35, 0, 1);
     width: 100%;
 
     &::before {
