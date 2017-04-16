@@ -6,9 +6,9 @@ Rails.application.routes.draw do
       resources :heroes, only: [:index, :show]
     end
     get '/pageboy', to: 'pageboy#index'
-    get '/resume', to: 'welcome#resume'
-    get '/:section(/:page)', to: 'static#dispatcher', as: :static
-    get '/', to: 'static#dispatcher', as: 'locale'
+    get '/:section/:page', to: 'static#dispatcher', as: :static_section
+    get '/:page', to: 'static#dispatcher', as: :static
+    get '/', to: 'static#intro', defaults: { page: 'intro' }, as: :intro
   end
   devise_for :users, path: '', only: :omniauth_callbacks, controllers: { omniauth_callbacks: 'omniauth_callbacks' }
   root to: redirect("/#{I18n.default_locale}")
