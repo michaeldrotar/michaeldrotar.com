@@ -1,0 +1,46 @@
+// Confg
+@import 'application/config';
+@import 'application/mixins';
+
+@keyframes typing {
+  from { visibility: hidden; }
+  to   { visibility: visible; }
+}
+
+.intro {
+  @include fullscreen;
+
+  box-shadow: inset 0 0 20px 5px $color-black;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  line-height: 1.8;
+  padding: $grid-gutter-width;
+  text-align: center;
+}
+
+.intro__heading {
+  color: $color-lighter;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.intro__line {
+  @include media-breakpoint-up("sm") {
+    display: block;
+  }
+}
+
+.intro__char {
+  animation: typing 1s;
+  animation-fill-mode: forwards;
+  display: inline;
+  position: relative;
+  visibility: hidden;
+}
+
+@for $i from 1 through 300 {
+  .intro__char--#{$i} {
+    animation-delay: (($i * 0.025s) + 1s);
+  }
+}

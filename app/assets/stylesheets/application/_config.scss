@@ -7,7 +7,7 @@
 // Font settings are listed here so they can be used to reset the font family whenever needed. For instance, a code block using monospace might have a tooltip that needs the base font
 
 $font-path:               "../fonts/";
-$font-family:             "Avenir Next LT Pro", Arial, "Helvetica Neue", Helvetica, sans-serif;
+$font-family:             "Roboto", "Avenir Next LT Pro", Arial, "Helvetica Neue", Helvetica, sans-serif;
 $font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
 
 // Colors
@@ -37,8 +37,8 @@ $color-facebook: #3b5998;
 $color-google:   #d34836;
 
 // Elements (for reference)
-$body-bg:   $color-dark;
-$body-text: $color-lighter;
+$body-bg:   #2f2f2f;
+$body-text: #7a7a7a;
 
 // Dimensions
 //

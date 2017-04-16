@@ -1,11 +1,9 @@
 // Confg
 @import 'application/config';
+@import 'application/mixins';
 
 // Libraries
 @import 'normalize-rails';
-
-// Utilities
-@import 'application/utilities';
 
 // Base
 @import 'application/base';

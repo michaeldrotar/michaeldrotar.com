@@ -1,12 +1,16 @@
-<% content_for(:title) do 'Welcome'end %>
-<div class="card-deck-wrapper">
-  <div class="card-deck">
-    <div class="card card-block">
-      <h2 class="card-title">Orpheus</h2>
-      <p class="card-text">
-        A design document on a Starcraft 2 co-op map that focuses on hero customization and adapting your strategy to a progressively evolving swarm of enemies.
-      </p>
-      <a href="<%= orpheus_path %>" class="btn btn-primary">View Design Document</a>
-    </div>
+<% content_for(:title) do 'Welcome' end %>
+<% content_for(:head) do stylesheet_link_tag('intro', media: 'all') end %>
+<%= intro do %>
+  <div class="intro">
+    <h1 class="intro__heading intro__line"><%= intro_text 'Hello, my name is Michael Drotar.' %></h1>
+    <p>
+      <span class="intro__line"><%= intro_text 'I\'m a lead web architect by day and chronic tinkerer by night.' %></span>
+      <span class="intro__line"><%= intro_text 'Visit my ' %><a href="<%= static_path(page: 'projects') %>"><%= intro_text 'projects' %></a><%= intro_text ' to see things that I love' %></span>
+      <span class="intro__line"><%= intro_text 'or stop by my ' %><a href="<%= static_path(page: 'work') %>"><%= intro_text 'work' %></a><%= intro_text ' page to see things other people love.' %></span>
+      <span class="intro__line"><%= intro_text 'Want to get in touch? Visit my ' %><a href="<%= static_path(page: 'contact') %>"><%= intro_text 'contact' %></a><%= intro_text ' page to say hi!' %></span>
+    </p>
+    <p>
+      <span class="intro__line"><%= intro_text 'Thanks for stopping by!' %></span>
+    </p>
   </div>
-</div>
+<% end %>

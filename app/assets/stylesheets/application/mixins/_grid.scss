@@ -1,0 +1,60 @@
+@function breakpoint-names() {
+  @return map-keys($breakpoints);
+}
+
+@function breakpoint-suffix($name) {
+  @return if(breakpoint-min($name), "-"+$name, "");
+}
+
+@function breakpoint-next($name) {
+  $names: breakpoint-names();
+  $index: index($names, $name);
+  $next: if($index < length($names), nth($names, $n + 1), null);
+  @return breakpoint-min($next);
+}
+
+@function breakpoint-min($name) {
+  $min: map-get($breakpoints, $name);
+  @return if($min != 0, $min, null);
+}
+
+@function breakpoint-max($name) {
+  $next: breakpoint-next($name);
+  @return if($next, $next - 1px, null);
+}
+
+@mixin media-breakpoint-up($name) {
+  $min: breakpoint-min($name);
+  @if $min {
+    @media (min-width: $min) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+@mixin media-breakpoint-down($name) {
+  $max: breakpoint-max($name);
+  @if $max {
+    @media (max-width: $max) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+@mixin media-breakpoint-between($lower, $higher) {
+  @include media-breakpoint-up($lower) {
+    @include media-breakpoint-down($higher) {
+      @content;
+    }
+  }
+}
+
+@mixin media-breakpoint-only($name) {
+  @include media-breakpoint-only($name, $name) {
+    @content;
+  }
+}

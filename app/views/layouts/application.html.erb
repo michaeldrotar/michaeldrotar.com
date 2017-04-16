@@ -1,20 +1,5 @@
 <%= extends 'bare' do %>
-  <nav class="menu" data-drawer>
-    <button type="button" class="menu-toggle" data-drawer-toggle>
-      <div class="icon-hamburger">
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-      <span class="sr-only">Toggle navigation</span>
-    </button>
-    <div class="menu-items">
-      <a href="<%= intro_path %>">Home</a>
-      <a href="">Work</a>
-      <a href="">Projects</a>
-      <a href="">Contact</a>
-    </div>
-  </nav>
+  <%= render partial: 'shared/menu' %>
   <div class="container">
     <img src="<%= image_path('orpheus/heroes/alarak.png') %>" />
     <%= yield %>
