@@ -1,7 +1,3 @@
 <%= extends 'application' do %>
-  <a href="<%= static_path(page: 'styleguide') %>">Styleguide</a>
-  <a href="<%= static_section_path(section: 'styleguide', page: 'colors') %>">Colors</a>
-  <a href="<%= static_section_path(section: 'styleguide', page: 'fonts') %>">Fonts</a>
-  <a href="<%= static_section_path(section: 'styleguide', page: 'layout') %>">Layout</a>
   <%= yield %>
 <% end %>

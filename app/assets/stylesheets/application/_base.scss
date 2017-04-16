@@ -4,13 +4,19 @@
   box-sizing: inherit;
 }
 
+html,
+body {
+  height: 100%;
+  min-height: 100%;
+}
+
 html {
   box-sizing: border-box;
 }
 
 body {
   background-color: $body-bg;
-  box-shadow: inset 0 0 20px 5px $color-black;
+  // box-shadow: inset 0 0 20px 5px $color-black;
   color: $body-text;
   font-family: $font-family;
   font-size: $font-size-sm;
@@ -23,7 +29,8 @@ body {
   }
 }
 
-a:link {
+a:link,
+a:visited {
   color: inherit;
   font-size: 1.01rem;
   font-weight: bold;
@@ -33,7 +40,8 @@ a:link {
     color: $color-lighter;
   }
 
-  &:focus {
+  &:focus,
+  &:active {
     outline: 0;
     text-decoration: underline;
   }
