@@ -2,8 +2,12 @@
   @return map-keys($breakpoints);
 }
 
+@function breakpoint-suffix($name) {
+  @return if(breakpoint-min($name), "-"+$name, "");
+}
+
 @function breakpoint-next($name) {
-  $names: breakpoint-names;
+  $names: breakpoint-names();
   $index: index($names, $name);
   $next: if($index < length($names), nth($names, $n + 1), null);
   @return breakpoint-min($next);
@@ -58,6 +62,8 @@
 .container {
   margin: 0 auto;
   max-width: $container-xs;
+  padding-left: $grid-gutter-width;
+  padding-right: $grid-gutter-width;
 
   @include media-breakpoint-up("sm") {
     max-width: $container-sm;
@@ -73,5 +79,49 @@
 
   @include media-breakpoint-up("xl") {
     max-width: $container-xl;
+  }
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -$grid-gutter-width;
+  margin-right: -$grid-gutter-width;
+
+  > div {
+    flex: 0 0 100%;
+    max-width: 100%;
+    min-height: 1px;
+    padding-bottom: $grid-gutter-width;
+    padding-left: $grid-gutter-width;
+    padding-right: $grid-gutter-width;
+    position: relative;
+  }
+}
+
+@each $breakpoint in breakpoint-names() {
+  $suffix: breakpoint-suffix($breakpoint);
+
+  .grid-#{$breakpoint} {
+    @extend .grid;
+  }
+
+  @include media-breakpoint-up($breakpoint) {
+    .grid-#{$breakpoint} > div {
+      flex: 1 0 0;
+    }
+  }
+
+  @for $size from 1 through 6 {
+    .grid-#{$size}#{$suffix} {
+      @extend .grid;
+    }
+
+    @include media-breakpoint-up($breakpoint) {
+      .grid-#{$size}#{$suffix} > div {
+        flex: 0 0 (100% / $size);
+        max-width: (100% / $size);
+      }
+    }
   }
 }
