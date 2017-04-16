@@ -1,5 +1,57 @@
 <% content_for(:title) do 'Styleguide' end %>
 
-<h1 class="h1">styleguide</h1>
+<h1>Styleguide</h1>
 
 <p>The foundation of this styleguide is built using smart single-purpose classes. I call them smart because they can adapt to the context within which they're used to provide styles complementary to their core purpose. For instance, the <code>.text-red</code> class will make any text red, but the <code>.bg-red</code> class not only makes the background red but also adjusts the text color to provide proper contrast. If used on an element that has state, such as a link or button, <code>.bg-*</code> and <code>.text-*</code> classes go a step further to provide <code>:hover</code>, <code>:focus</code>, and <code>:active</code> indications that align with the style of this guide.</p>
+
+<h2 id="grid">Grid</h2>
+
+<%= example do %>
+  <div class="grid">
+    <div>1</div>
+    <div>2</div>
+  </div>
+<% end %>
+
+<%= example do %>
+  <div class="grid-xs">
+    <div>1</div>
+    <div>2</div>
+  </div>
+<% end %>
+
+<%= example do %>
+  <div class="grid-md">
+    <div>1</div>
+    <div>2</div>
+  </div>
+<% end %>
+
+<%= example do %>
+  <div class="grid-sm grid-3-md">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+  </div>
+<% end %>
+
+<%= example do %>
+  <div class="grid-2-sm grid-4-lg">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+  </div>
+<% end %>
+
+<%= example do %>
+  <div class="grid grid-2-sm grid-md grid-1-lg">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+  </div>
+<% end %>
