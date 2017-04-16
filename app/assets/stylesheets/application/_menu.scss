@@ -1,0 +1,77 @@
+.menu {
+}
+
+.menu-items {
+  @include fullscreen;
+
+  background-color: transparentize($body-bg, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: $space-xl $grid-gutter-width;
+  transform: translateY(-100%);
+  transition:
+    transform 0.45s cubic-bezier(0.45, 0, 0, 1),
+    visibility 0.45s;
+  visibility: hidden;
+  z-index: 1;
+
+  .is-open & {
+    transform: translateY(0);
+    visibility: visible;
+  }
+
+  > a {
+    display: block;
+    font-size: $font-size-lg;
+    margin: 0 auto;
+    max-width: 600px;
+    padding: $space-xl 0;
+    text-align: center;
+    text-decoration: none;
+    text-transform: lowercase;
+    transform: translateY(-100%);
+    transition:
+      color 0.15s ease-out 0.1s,
+      transform 0.55s cubic-bezier(0, 0.35, 0, 1);
+    width: 100%;
+
+    &::before {
+      content: ".";
+    }
+
+    &,
+    &:link,
+    &:visited {
+      color: $color-light;
+    }
+
+    &:hover,
+    &:focus {
+      color: $color-lighter;
+    }
+
+    &:active {
+      color: $color-dark;
+    }
+
+    .is-open & {
+      transform: translateY(0);
+    }
+  }
+}
+
+.menu-toggle {
+  background-color: $color-darker;
+  border: 0;
+  border-radius: 100%;
+  bottom: $space-lg;
+  cursor: pointer;
+  margin: 0;
+  outline: 0;
+  overflow: hidden;
+  padding: 0;
+  position: fixed;
+  right: $space-md;
+  z-index: 2;
+}

@@ -49,4 +49,5 @@ gem 'uglifier'
 
 # Bower Assets
 source 'http://insecure.rails-assets.org' do
+  gem 'rails-assets-jquery'
 end

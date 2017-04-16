@@ -1,0 +1,100 @@
+//
+// Configuration
+// --------------------------------------------------
+
+// Fonts
+//
+// Font settings are listed here so they can be used to reset the font family whenever needed. For instance, a code block using monospace might have a tooltip that needs the base font
+
+$font-path:               "../fonts/";
+$font-family:             "Avenir Next LT Pro", Arial, "Helvetica Neue", Helvetica, sans-serif;
+$font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
+
+// Colors
+//
+// These color variables are provided for use throughout the application
+
+// Grays
+$color-black:   #161719;
+$color-darker:  #1d1f21;
+$color-dark:    #333;
+$color-light:   #969896;
+$color-lighter: #c5c8c6;
+$color-white:   #fff;
+
+// Rainbow
+$color-red:       #cc6666;
+$color-orange:    #de935f;
+$color-yellow:    #f0c674;
+$color-limegreen: #b5bd68;
+$color-green:     #a5cd68;
+$color-teal:      #8abeb7;
+$color-blue:      #81a2be;
+$color-purple:    #b294bb;
+
+// External services
+$color-facebook: #3b5998;
+$color-google:   #d34836;
+
+// Elements (for reference)
+$body-bg:   $color-dark;
+$body-text: $color-lighter;
+
+// Dimensions
+//
+// Certain elements interact in ways that make it handy to have their dimensions provided as variables
+
+$font-size-xs:              12px;
+$font-size-sm:              14px;
+$font-size-md:              16px;
+$font-size-lg:              24px;
+$font-size-xl:              36px;
+
+$grid-gutter-width:         32px; // must be a multiple of two
+
+$line-height-xs:            1.5;
+$line-height-sm:            1.5;
+$line-height-md:            1.5;
+$line-height-lg:            1.3333333;
+$line-height-xl:            1.3333333;
+
+$space-xs:                  4px;
+$space-sm:                  8px;
+$space-md:                  16px;
+$space-lg:                  24px;
+$space-xl:                  48px;
+
+$padding-xs-vertical:       4px;
+$padding-sm-vertical:       6px;
+$padding-md-vertical:       8px;
+$padding-lg-vertical:       16px;
+
+$padding-xs-horizontal:     8px;
+$padding-sm-horizontal:     12px;
+$padding-md-horizontal:     16px;
+$padding-lg-horizontal:     24px;
+
+// Media query breakpoints
+//
+// These breakpoints may be used to create pages that respond at the same points that standard Pattern Library components respond
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+
+$screen-xs-min:              0px;
+$screen-sm-min:              768px;
+$screen-md-min:              992px;
+$screen-lg-min:              1200px;
+$screen-xl-min:              1366px;
+$screen-xxl-min:             1484px;
+
+$screen-xs-max:              ($screen-sm-min - 1);
+$screen-sm-max:              ($screen-md-min - 1);
+$screen-md-max:              ($screen-lg-min - 1);
+$screen-lg-max:              ($screen-xl-min - 1);
+$screen-xl-max:              ($screen-xxl-min - 1);

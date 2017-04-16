@@ -1,14 +1,19 @@
-// Configuration
-@import 'config';
+@import 'application/config';
 
-// Libraries
 @import 'normalize-rails';
 
-// Custom
-@import 'base';
+@import 'application/utilities';
+
+@import 'application/base';
+@import 'application/grid';
+@import 'application/icons';
+@import 'application/screenreaders';
 //@import 'heading';
 //@import 'nav';
 //@import 'omniauth';
 //@import 'orpheus';
 //@import 'pageboy';
 //@import 'resume';
+
+// Components
+@import 'application/menu';

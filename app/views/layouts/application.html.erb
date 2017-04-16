@@ -1,5 +1,22 @@
 <%= extends 'bare' do %>
-  <a href="<%= locale_path %>">Home</a>
-  <a href="<%= static_path(section: 'styleguide') %>">Styleguide</a>
-  <%= yield %>
+  <nav class="menu" data-drawer>
+    <button type="button" class="menu-toggle" data-drawer-toggle>
+      <div class="icon-hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <span class="sr-only">Toggle navigation</span>
+    </button>
+    <div class="menu-items">
+      <a href="<%= locale_path %>">Home</a>
+      <a href="">Work</a>
+      <a href="">Projects</a>
+      <a href="">Contact</a>
+    </div>
+  </nav>
+  <div class="container">
+    <img src="<%= image_path('orpheus/heroes/alarak.png') %>" />
+    <%= yield %>
+  </div>
 <% end %>
