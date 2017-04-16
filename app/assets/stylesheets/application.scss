@@ -1,9 +1,13 @@
+// Confg
 @import 'application/config';
 
+// Libraries
 @import 'normalize-rails';
 
+// Utilities
 @import 'application/utilities';
 
+// Base
 @import 'application/base';
 @import 'application/grid';
 @import 'application/icons';

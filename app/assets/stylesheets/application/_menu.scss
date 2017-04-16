@@ -59,7 +59,7 @@
       transition:
         color 0.15s ease-out 0.1s,
         transform 0.4s cubic-bezier(0.33, 0.98, 0.46, 1.68);
-      }
+    }
 
     &,
     &:link,
@@ -86,8 +86,8 @@
   background-color: transparentize($color-darker, 0.05);
   border: 0;
   border-radius: 100%;
-  box-shadow: 0 0 10px 1px $color-darker;
   bottom: $space-lg;
+  box-shadow: 0 0 10px 1px $color-darker;
   cursor: pointer;
   margin: 0;
   outline: 0;
