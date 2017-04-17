@@ -1,0 +1,29 @@
+.preview {
+  box-shadow: $space-xs $space-xs 0 0 $color-darker;
+}
+
+.preview-image {
+  box-shadow: inset 0 0 10px 2px $color-black;
+  padding-bottom: percentage(9/16);
+}
+
+.preview-title {
+  background-color: $color-lighter;
+  display: block;
+  font-size: $font-size-xs;
+  font-weight: normal;
+  letter-spacing: 1px;
+  text-align: center;
+  text-transform: uppercase;
+
+  &,
+  a:link &,
+  a:visited &,
+  a:hover &,
+  a:focus &,
+  a:active & {
+    color: $body-text;
+    font-weight: normal;
+    text-decoration: none;
+  }
+}
