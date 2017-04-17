@@ -1,6 +1,5 @@
 <% anchor = strip_tags(text).parameterize %>
 <a name="<%= anchor %>"></a>
 <%= content_tag(tag, options) do %>
-  <a href="#<%= anchor %>"></a>
-  <%= text %>
+  <a href="#<%= anchor %>"><%= text %></a>
 <% end %>

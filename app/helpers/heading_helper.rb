@@ -5,6 +5,8 @@ module HeadingHelper
       options = text if text.is_a?(Hash)
       text = capture(&block)
     end
+    options ||= {}
+    options[:class] = (options[:class] ? options[:class] + ' ' : '') + "h#{level}"
     render partial: 'helpers/heading', locals: {
       tag: "h#{level}",
       options: options,

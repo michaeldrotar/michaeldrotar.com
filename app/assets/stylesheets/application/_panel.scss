@@ -1,0 +1,9 @@
+.panel {
+  background-color: $color-dark;
+  margin-bottom: $space-md;
+  padding: $space-md;
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+}

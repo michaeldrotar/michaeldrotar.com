@@ -1,8 +1,8 @@
 .container {
   margin: 0 auto;
   max-width: $container-xs;
-  padding-left: $grid-gutter-width;
-  padding-right: $grid-gutter-width;
+  padding-left: ($grid-gutter-width / 2);
+  padding-right: ($grid-gutter-width / 2);
 
   @include media-breakpoint-up("sm") {
     max-width: $container-sm;
@@ -24,17 +24,22 @@
 .grid {
   display: flex;
   flex-wrap: wrap;
-  margin-left: -$grid-gutter-width;
-  margin-right: -$grid-gutter-width;
+  margin-bottom: $space-md;
+  margin-left: -($grid-gutter-width / 2);
+  margin-right: -($grid-gutter-width / 2);
 
   > div {
     flex: 0 0 100%;
     max-width: 100%;
     min-height: 1px;
     padding-bottom: $grid-gutter-width;
-    padding-left: $grid-gutter-width;
-    padding-right: $grid-gutter-width;
+    padding-left: ($grid-gutter-width / 2);
+    padding-right: ($grid-gutter-width / 2);
     position: relative;
+
+    > :last-child {
+      margin-bottom: 0;
+    }
   }
 }
 

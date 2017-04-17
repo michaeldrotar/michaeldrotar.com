@@ -31,7 +31,21 @@ body {
 }
 
 a {
+  &,
   &:link,
+  &:visited,
+  &:hover,
+  &:focus,
+  &:active {
+    color: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    text-decoration: inherit;
+  }
+}
+
+a.link {
+  &,
   &:visited {
     color: inherit;
     font-size: 1.01rem;
@@ -68,6 +82,7 @@ h6 {
   display: block;
   font-size: $font-size-xl;
   font-weight: bold;
+  margin-bottom: $space-xl;
   text-transform: lowercase;
 
   &::before {
@@ -75,6 +90,25 @@ h6 {
   }
 }
 
+.h2 {
+  display: block;
+  font-size: $font-size-lg;
+  font-weight: bold;
+  margin-bottom: $space-lg;
+}
+
+.h3 {
+  display: block;
+  font-size: $font-size-lg;
+  font-weight: normal;
+  margin-bottom: $space-md;
+}
+
 img {
   max-width: 100%;
+}
+
+p {
+  margin-bottom: $space-md;
+  margin-top: 0;
 }

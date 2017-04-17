@@ -1,73 +1,80 @@
 <% content_for(:title) do 'Styleguide' end %>
 
-<h1 class="h1">Styleguide</h1>
+<%= h1_tag('Styleguide') %>
 
-<h2 id="grid">Grid</h2>
+<%= h2_tag('Grid') %>
 
-<%= example do %>
-  <div class="grid">
-    <div>1</div>
-    <div>2</div>
+<%= h3_tag('.grid') %>
+<div class="grid">
+  <div><div class="panel">1</div></div>
+  <div><div class="panel">2</div></div>
+</div>
+
+<%= h3_tag('.grid-xs') %>
+<div class="grid-xs">
+  <div><div class="panel">1</div></div>
+  <div><div class="panel">2</div></div>
+</div>
+
+<%= h3_tag('.grid-md') %>
+<div class="grid-md">
+  <div><div class="panel">1</div></div>
+  <div><div class="panel">2</div></div>
+</div>
+
+<%= h3_tag('.grid-sm.grid-3-md') %>
+<div class="grid-sm grid-3-md">
+  <div><div class="panel">1</div></div>
+  <div><div class="panel">2</div></div>
+  <div><div class="panel">3</div></div>
+  <div><div class="panel">4</div></div>
+  <div><div class="panel">5</div></div>
+  <div><div class="panel">6</div></div>
+</div>
+
+<%= h3_tag('.grid-2-sm.grid-4-lg') %>
+<div class="grid-2-sm grid-4-lg">
+  <div><div class="panel">1</div></div>
+  <div><div class="panel">2</div></div>
+  <div><div class="panel">3</div></div>
+  <div><div class="panel">4</div></div>
+</div>
+
+<%= h3_tag('.grid.grid-2-sm.grid-md.grid-1-lg') %>
+<div class="grid grid-2-sm grid-md grid-1-lg">
+  <div><div class="panel">1</div></div>
+  <div><div class="panel">2</div></div>
+  <div><div class="panel">3</div></div>
+  <div><div class="panel">4</div></div>
+</div>
+
+<%= h2_tag('Typography') %>
+
+<%= h3_tag('Headings') %>
+<p>Heading tags are de-styled by default so they can be used to provide context without affecting the look of something. Use the corresponding <code>.h1</code>, <code>.h2</code>, etc classes when the standard look is required. Refer to the headings used throughout this page for examples.</p>
+
+<%= h3_tag('Links') %>
+<p><a href="#links">Links</a> blend in by default so they can easily be used in other components. Make sure to style their states as part of the component!</p>
+<p>When part of a paragraph, add the <a href="#links" class="link">.link</a> class to make them stand out from the rest of the text.</p>
+
+<%= h2_tag('Panel') %>
+
+<div class="panel">
+  <p>The panel wraps content in a visually separated area.</p>
+</div>
+
+<%= h2_tag('Preview') %>
+<div class="grid-2-sm">
+  <div>
+    <a href="" class="preview">
+      <div class="preview-title">Some Project</div>
+      <div class="preview-image" style="background-image: url('')"></div>
+    </a>
   </div>
-<% end %>
-
-<%= example do %>
-  <div class="grid-xs">
-    <div>1</div>
-    <div>2</div>
+  <div>
+    <a href="" class="preview">
+      <div class="preview-title">Other Project</div>
+      <div class="preview-image" style="background-image: url('')"></div>
+    </a>
   </div>
-<% end %>
-
-<%= example do %>
-  <div class="grid-md">
-    <div>1</div>
-    <div>2</div>
-  </div>
-<% end %>
-
-<%= example do %>
-  <div class="grid-sm grid-3-md">
-    <div>1</div>
-    <div>2</div>
-    <div>3</div>
-    <div>4</div>
-    <div>5</div>
-    <div>6</div>
-  </div>
-<% end %>
-
-<%= example do %>
-  <div class="grid-2-sm grid-4-lg">
-    <div>1</div>
-    <div>2</div>
-    <div>3</div>
-    <div>4</div>
-  </div>
-<% end %>
-
-<%= example do %>
-  <div class="grid grid-2-sm grid-md grid-1-lg">
-    <div>1</div>
-    <div>2</div>
-    <div>3</div>
-    <div>4</div>
-  </div>
-<% end %>
-
-<h2 id="preview">Preview</h2>
-<%= example do %>
-  <div class="grid-2-sm">
-    <div>
-      <a href="" class="preview">
-        <div class="preview-title">Some Project</div>
-        <div class="preview-image" style="background-image: url('')"></div>
-      </a>
-    </div>
-    <div>
-      <a href="" class="preview">
-        <div class="preview-title">Some Project</div>
-        <div class="preview-image" style="background-image: url('')"></div>
-      </a>
-    </div>
-  </div>
-<% end %>
+</div>
