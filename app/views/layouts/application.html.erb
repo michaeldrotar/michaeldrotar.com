@@ -1,6 +1,8 @@
 <%= extends 'bare' do %>
   <%= render partial: 'shared/menu' %>
-  <div class="container">
-    <%= yield %>
+  <div class="page" ss-container>
+    <div class="container">
+      <%= yield %>
+    </div>
   </div>
 <% end %>
