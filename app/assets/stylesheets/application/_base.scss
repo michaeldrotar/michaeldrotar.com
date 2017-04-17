@@ -29,12 +29,14 @@ body {
   }
 }
 
-a:link,
-a:visited {
-  color: inherit;
-  font-size: 1.01rem;
-  font-weight: bold;
-  text-decoration: none;
+a {
+  &:link,
+  &:visited {
+    color: inherit;
+    font-size: 1.01rem;
+    font-weight: bold;
+    text-decoration: none;
+  }
 
   &:hover {
     color: $color-lighter;
