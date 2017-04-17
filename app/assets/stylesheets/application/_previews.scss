@@ -13,12 +13,17 @@
   }
 }
 
+.preview--pip {
+  margin-right: 10%;
+}
+
 .preview-image {
   background-color: $color-dark;
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
   padding-bottom: percentage(308/560);
+  position: relative;
   transition: 0.2s background-size;
 
   a:hover &,
@@ -27,13 +32,25 @@
   }
 }
 
+.preview--pip .preview-image {
+  padding-bottom: 0;
+
+  img + img {
+    box-shadow: 0 0 1px 1px $color-black;
+    max-height: 90%;
+    position: absolute;
+    right: -10%;
+    top: 5%;
+  }
+}
+
 .preview-title {
   background-color: $color-lighter;
   display: block;
   font-size: $font-size-xs;
   font-weight: normal;
-  padding: $space-xs;
   letter-spacing: 1px;
+  padding: $space-xs;
   text-align: center;
   text-transform: uppercase;
 }
