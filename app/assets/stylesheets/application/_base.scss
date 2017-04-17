@@ -61,3 +61,15 @@ h6 {
   line-height: inherit;
   margin: 0;
 }
+
+.h1 {
+  color: $color-lighter;
+  display: block;
+  font-size: $font-size-xl;
+  font-weight: bold;
+  text-transform: lowercase;
+
+  &::before {
+    content: ".";
+  }
+}
