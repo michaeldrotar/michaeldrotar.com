@@ -107,4 +107,14 @@ img {
 p {
   margin-bottom: $space-md;
   margin-top: 0;
+
+  &.lead {
+    font-size: $font-size-lg;
+    margin-bottom: $space-xl;
+    margin-top: $space-xs;
+  }
+
+  h1 + &.lead {
+    margin-top: -$space-xl;
+  }
 }

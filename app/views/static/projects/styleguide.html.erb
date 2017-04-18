@@ -1,6 +1,7 @@
 <% content_for(:title) do 'Styleguide' end %>
 
 <%= h1_tag('Styleguide') %>
+<p class="lead">All of the styles for this very site, collated in one fancy box.</p>
 
 <%= h2_tag('Grid') %>
 
@@ -56,6 +57,9 @@
 <%= h3_tag('Links') %>
 <p><a href="#links">Links</a> blend in by default so they can easily be used in other components. Make sure to style their states as part of the component!</p>
 <p>When part of a paragraph, add the <a href="#links" class="link">.link</a> class to make them stand out from the rest of the text.</p>
+
+<%= h3_tag('Paragraphs') %>
+<p>Paragraphs can be seen throughout the site. Use the <code>.lead</code> class for a paragraph that sits directly under an <code>.h1</code> for some extra visual flair.</p>
 
 <%= h2_tag('Panel') %>
 
