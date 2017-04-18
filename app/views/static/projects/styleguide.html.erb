@@ -4,45 +4,31 @@
 <p class="lead">All of the styles for this very site, collated in one fancy box.</p>
 
 <%= h2_tag('Grid') %>
+<p>The <code>.grid</code> class turns its child <code>&lt;div&gt;</code> tags into a single-column grid layout. Specifying a breakpoint changes the grid to use auto-sized columns at that given point, and specifying a number hard-codes how many columns will fit to fill the width before wrapping. Rows may be created by either using multiple grid parents or by specifying a number of columns to wrap after. Different grid classes may be combined to have the grid change at different breakpoints.</p>
 
-<%= h3_tag('.grid') %>
-<div class="grid">
+<%= h3_tag('.grid-2-sm') %>
+<div class="grid-2-sm">
   <div><div class="panel">1</div></div>
   <div><div class="panel">2</div></div>
+  <div><div class="panel">3</div></div>
+  <div><div class="panel">4</div></div>
 </div>
 
-<%= h3_tag('.grid-xs') %>
+<%= h3_tag('.grid-xs + .grid-xs') %>
 <div class="grid-xs">
   <div><div class="panel">1</div></div>
   <div><div class="panel">2</div></div>
-</div>
-
-<%= h3_tag('.grid-md') %>
-<div class="grid-md">
-  <div><div class="panel">1</div></div>
-  <div><div class="panel">2</div></div>
-</div>
-
-<%= h3_tag('.grid-sm.grid-3-md') %>
-<div class="grid-sm grid-3-md">
-  <div><div class="panel">1</div></div>
-  <div><div class="panel">2</div></div>
-  <div><div class="panel">3</div></div>
-  <div><div class="panel">4</div></div>
-  <div><div class="panel">5</div></div>
-  <div><div class="panel">6</div></div>
-</div>
-
-<%= h3_tag('.grid-2-sm.grid-4-lg') %>
-<div class="grid-2-sm grid-4-lg">
-  <div><div class="panel">1</div></div>
-  <div><div class="panel">2</div></div>
   <div><div class="panel">3</div></div>
   <div><div class="panel">4</div></div>
 </div>
+<div class="grid-xs">
+  <div><div class="panel">1</div></div>
+  <div><div class="panel">2</div></div>
+  <div><div class="panel">3</div></div>
+</div>
 
-<%= h3_tag('.grid.grid-2-sm.grid-md.grid-1-lg') %>
-<div class="grid grid-2-sm grid-md grid-1-lg">
+<%= h3_tag('.grid-2-sm.grid-md.grid-1-lg') %>
+<div class="grid-2-sm grid-md grid-1-lg">
   <div><div class="panel">1</div></div>
   <div><div class="panel">2</div></div>
   <div><div class="panel">3</div></div>
@@ -60,6 +46,9 @@
 
 <%= h3_tag('Paragraphs') %>
 <p>Paragraphs can be seen throughout the site. Use the <code>.lead</code> class for a paragraph that sits directly under an <code>.h1</code> for some extra visual flair.</p>
+
+<%= h3_tag('Code') %>
+<p>The <code>&lt;code&gt;</code> tag is used to denote code samples, primarily only used in this document. It's docception!</p>
 
 <%= h2_tag('Panel') %>
 
