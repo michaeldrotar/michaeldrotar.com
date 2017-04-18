@@ -1,15 +1,9 @@
 <% content_for(:head) do stylesheet_link_tag('intro', media: 'all') end %>
 <%= intro do %>
   <div class="intro">
-    <h1 class="intro__heading intro__line"><%= intro_text 'Hello, my name is Michael Drotar.' %></h1>
-    <p>
-      <span class="intro__line"><%= intro_text 'I\'m a lead web architect by day and chronic tinkerer by night.' %></span>
-      <span class="intro__line"><%= intro_text 'Visit my ' %><a href="<%= static_path(page: 'projects') %>" class="link"><%= intro_text 'projects' %></a><%= intro_text ' to see things that I love' %></span>
-      <span class="intro__line"><%= intro_text 'or stop by my ' %><a href="<%= static_path(page: 'work') %>" class="link"><%= intro_text 'work' %></a><%= intro_text ' page to see things other people love.' %></span>
-      <span class="intro__line"><%= intro_text 'Want to get in touch? Visit my ' %><a href="<%= static_path(page: 'contact') %>" class="link"><%= intro_text 'contact' %></a><%= intro_text ' page to say hi!' %></span>
-    </p>
-    <p>
-      <span class="intro__line"><%= intro_text 'Thanks for stopping by!' %></span>
-    </p>
+    <h1 class="intro-heading intro-line"><%= intro_text 'Hello, my name is Michael Drotar.' %></h1>
+    <p class="intro-text"><%= intro_text 'I\'m a lead web architect by day and chronic tinkerer by night. Visit my ' %><a href="<%= static_path(page: 'projects') %>" class="link"><%= intro_text 'projects' %></a><%= intro_text ' to see things that I love or stop by my ' %><a href="<%= static_path(page: 'work') %>" class="link"><%= intro_text 'work' %></a><%= intro_text ' page to see things other people love.' %></p>
+    <p class="intro-text"><%= intro_text 'Want to get in touch? Visit my ' %><a href="<%= static_path(page: 'contact') %>" class="link"><%= intro_text 'contact' %></a><%= intro_text ' page to say hi!' %></p>
+    <p class="intro-text"><%= intro_text 'Thanks for stopping by!' %></p>
   </div>
 <% end %>

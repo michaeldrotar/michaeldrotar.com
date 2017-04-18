@@ -1,11 +1,12 @@
 .container {
   margin: 0 auto;
   max-width: $container-xs;
-  padding-left: ($grid-gutter-width / 2);
-  padding-right: ($grid-gutter-width / 2);
+  padding: $space-md ($grid-gutter-width / 2);
 
   @include media-breakpoint-up("sm") {
     max-width: $container-sm;
+    padding-bottom: $space-xl;
+    padding-top: $space-xl;
   }
 
   @include media-breakpoint-up("md") {
