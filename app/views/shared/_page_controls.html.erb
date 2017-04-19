@@ -1,0 +1,12 @@
+<div class="page-controls">
+  <% if params.key?(:section) %>
+    <a href="<%= static_path(page: params[:section]) %>" class="grid-button">
+      <div class="grid-button-icon">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <div class="sr-only">Back</div>
+    </a>
+  <% end %>
+</div>

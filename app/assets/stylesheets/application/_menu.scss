@@ -1,6 +1,6 @@
 .menu {
   position: relative;
-  z-index: 2;
+  z-index: 3;
 }
 
 .menu-items {
@@ -98,4 +98,12 @@
   position: fixed;
   right: $space-md;
   z-index: 2;
+
+  @include media-breakpoint-up('sm') {
+    background-color: transparent;
+    bottom: auto;
+    box-shadow: none;
+    right: $space-lg;
+    top: $space-lg;
+  }
 }

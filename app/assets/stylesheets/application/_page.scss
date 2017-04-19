@@ -8,3 +8,18 @@
   width: 100%;
   z-index: 1;
 }
+
+.page-controls {
+  display: none;
+
+  .grid-button {
+    left: $space-lg;
+    position: fixed;
+    top: $space-lg;
+    z-index: 2;
+  }
+
+  @include media-breakpoint-up('sm') {
+    display: block;
+  }
+}
