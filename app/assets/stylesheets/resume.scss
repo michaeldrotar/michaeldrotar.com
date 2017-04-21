@@ -42,7 +42,7 @@
     text-align: justify;
 
     &::before {
-      background-color: $brand-primary;
+      background-color: $color-lighter;
       content: '';
       display: inline-block;
       height: .3rem;
@@ -59,7 +59,7 @@
 }
 
 .resume-job-duration {
-  color: $brand-primary;
+  color: $color-lighter;
   float: left;
   margin-bottom: -.5rem;
   margin-right: 1rem;
@@ -75,7 +75,7 @@
 }
 
 .resume-job-duration-timeline {
-  color: $gray-light;
+  color: $color-light;
   font-size: .8rem;
   line-height: 3;
 }
