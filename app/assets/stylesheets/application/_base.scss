@@ -49,10 +49,7 @@ a.link {
     text-decoration: none;
   }
 
-  &:hover {
-    color: $color-lighter;
-  }
-
+  &:hover,
   &:focus,
   &:active {
     outline: 0;
@@ -129,4 +126,9 @@ p {
   h1 + &.lead {
     margin-top: -$space-xl;
   }
+}
+
+strong {
+  color: $color-light;
+  font-weight: bold;
 }
