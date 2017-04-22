@@ -2,7 +2,7 @@ module Orpheus
   class Hero
     attr_reader :id
 
-    def initialize(id, params = {})
+    def initialize(id, _params = {})
       @id = id
     end
 
