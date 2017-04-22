@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     namespace :orpheus do
       resources :heroes, only: [:index, :show]
     end
+    resources :projects
     get '/pageboy', to: 'pageboy#index'
     get '/:section/:page', to: 'static#dispatcher', as: :static_section
     get '/:page', to: 'static#dispatcher', as: :static
