@@ -12,13 +12,16 @@
 
 .intro-heading {
   color: $color-lighter;
-  font-size: 1.1rem;
+  font-size: $font-size-lg;
   font-weight: bold;
-  margin-bottom: $space-lg;
+  line-height: $line-height-lg;
+  margin-bottom: $space-md;
 }
 
 .intro-text {
+  font-size: $font-size-md;
+  line-height: $line-height-md;
   margin-left: auto;
   margin-right: auto;
-  max-width: 25em;
+  max-width: 27em;
 }
