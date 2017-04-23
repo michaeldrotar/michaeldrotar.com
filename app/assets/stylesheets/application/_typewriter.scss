@@ -1,0 +1,38 @@
+@keyframes cursor {
+  0%   { opacity: 0; }
+  39%  { opacity: 0; }
+  40%  { opacity: 1; }
+  100% { opacity: 1; }
+}
+
+[data-typewriter] {
+  opacity: 0.00001;
+}
+
+[data-typewriter].is-typing {
+  opacity: 1;
+}
+
+.typewriter-char {
+  opacity: 0.00001;
+  position: relative;
+  transition: opacity 0.1s;
+}
+
+.typewriter-char.is-typed {
+  opacity: 1;
+}
+
+.typewriter-cursor {
+  background-color: currentColor;
+  bottom: 0;
+  display: block;
+  height: 2px;
+  left: 100%;
+  position: absolute;
+  width: 8px;
+}
+
+.typewriter-cursor.is-idle {
+  animation: cursor 1s infinite;
+}

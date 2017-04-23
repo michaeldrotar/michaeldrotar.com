@@ -1,9 +1,6 @@
-<% content_for(:head) do stylesheet_link_tag('intro', media: 'all') end %>
-<%= intro do %>
-  <div class="intro">
-    <h1 class="intro-heading intro-line"><%= intro_text 'Hello, my name is Michael Drotar.' %></h1>
-    <p class="intro-text"><%= intro_text 'I\'m a lead web architect by day and chronic tinkerer by night. Visit my ' %><a href="<%= static_path(page: 'projects') %>" class="link"><%= intro_text 'projects' %></a><%= intro_text ' to see things that I love or stop by my ' %><a href="<%= static_path(page: 'work') %>" class="link"><%= intro_text 'work' %></a><%= intro_text ' page to see things other people love.' %></p>
-    <p class="intro-text"><%= intro_text 'Want to get in touch? Contact me at ' %><a href="mailto:michaeldrotar@gmail.com" class="link"><%= intro_text 'michaeldrotar@gmail.com' %></a><%= intro_text '' %></p>
-    <p class="intro-text"><%= intro_text 'Thanks for stopping by!' %></p>
-  </div>
-<% end %>
+<div class="intro" data-typewriter>
+  <h1 class="intro-heading intro-line">Hello, my name is Michael Drotar.</h1>
+  <p class="intro-text">I'm a lead web architect by day and chronic tinkerer by night. Visit my <a href="<%= static_path(page: 'projects') %>" class="link">projects</a> to see things that I love or stop by my <a href="<%= static_path(page: 'work') %>" class="link">work</a> page to see things other people love.</p>
+  <p class="intro-text">Want to get in touch? Contact me at <a href="mailto:michaeldrotar@gmail.com" class="link">michaeldrotar@gmail.com</a></p>
+  <p class="intro-text">Thanks for stopping by!</p>
+</div>
