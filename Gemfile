@@ -12,6 +12,7 @@ gem 'rake', '~> 10.5.0'
 gem 'figaro', '~> 1.1.0'
 
 # Database
+gem 'friendly_id', '~> 5.2.0'
 gem 'globalize', '~> 5.0.0'
 gem 'pg' # Postgres
 

@@ -4,9 +4,9 @@
 <div class="grid-2-sm">
   <% @projects.each do |project| %>
     <div>
-      <a href="<%= static_section_path(section: 'projects', page: project.id) %>" class="preview">
+      <a href="<%= static_section_path(section: 'projects', page: project.friendly_id) %>" class="preview">
         <h2 class="preview-title"><%= project.name %></h2>
-        <div class="preview-image" style="background-image: url('<%= image_path("screenshots/#{project.id}/preview") %>')"></div>
+        <div class="preview-image" style="background-image: url('<%= image_path("screenshots/#{project.friendly_id}/preview") %>')"></div>
       </a>
     </div>
   <% end %>
