@@ -1,0 +1,51 @@
+- name: Forever Green
+  tags:
+    - animations
+    - asp.net
+    - cshtml
+    - gulp
+    - html5
+    - icon font
+    - normalize.css
+    - promotional site
+    - scss
+- name: India Hicks
+  site: https://indiahicks.com/
+  tags:
+    - angular
+    - asp.net
+    - bootstrap
+    - cshtml
+    - ecommerce site
+    - exigo
+    - html5
+    - javascript
+    - jquery
+    - scss
+- name: Origami Owl
+  site: https://www.origamiowl.com/
+  tags:
+    - asp.net
+    - bootstrap
+    - css
+    - ecommerce site
+    - exigo
+    - gulp
+    - html5
+    - icon font
+    - javascript
+    - jquery
+    - momentjs
+    - underscore.js
+- name: Vertical Research Advisory
+  site: https://www.vraletter.com/
+  tags:
+    - css
+    - gulp
+    - html5
+    - icon font
+    - promotional site
+- name: Styleguide
+  tags:
+    - html5
+    - scss
