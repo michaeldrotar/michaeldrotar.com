@@ -1,5 +1,5 @@
 class ProjectsController < ApplicationController
   def index
-    @projects = Project.all.order(:updated_at)
+    @projects = Project.all.order(:order)
   end
 end

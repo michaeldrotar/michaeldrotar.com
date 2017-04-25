@@ -60,7 +60,8 @@ unless projects_to_delete.empty?
   projects_to_delete.each(&:delete)
 end
 
-projects_data.each do |project_data|
+projects_data.each_with_index do |project_data, order|
+  project_data['order'] = order
   printable_project_data = project_data.dup
   project_data['tags'] = Tag.where(name: project_data['tags'])
 
