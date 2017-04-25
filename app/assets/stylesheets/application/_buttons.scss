@@ -1,0 +1,25 @@
+.button,
+a.button {
+  background-color: $color-red;
+  border: 0;
+  color: $color-white;
+  display: inline-block;
+  font-size: $font-size-sm;
+  padding: $space-xs $space-md;
+  position: relative;
+  text-transform: uppercase;
+
+  &:hover,
+  &:focus {
+    background-color: lighten($color-red, 5%);
+  }
+
+  &:active {
+    background-color: darken($color-red, 10%);
+    top: 2px;
+  }
+}
+
+.button-bar {
+  margin-bottom: $space-md;
+}
