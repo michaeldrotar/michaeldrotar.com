@@ -1,6 +1,7 @@
 .preview {
   box-shadow: $space-sm $space-sm 0 0 $color-darker;
   display: block;
+  margin-bottom: $space-xl;
 
   &:link,
   &:visited,
@@ -36,6 +37,7 @@
   padding-bottom: 0;
 
   img {
+    display: block;
     width: 100%;
   }
 
