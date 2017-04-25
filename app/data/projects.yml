@@ -1,3 +1,14 @@
+- name: Radial Pattern Library
+  tags:
+    - accessibility
+    - bootstrap
+    - grunt
+    - html5
+    - icon font
+    - javascript
+    - jquery
+    - responsive
+    - scss
 - name: Forever Green
   tags:
     - animations
@@ -8,10 +19,12 @@
     - icon font
     - normalize.css
     - promotional site
+    - responsive
     - scss
 - name: India Hicks
   site: https://indiahicks.com/
   tags:
+    - accessibility
     - angular
     - asp.net
     - bootstrap
@@ -21,6 +34,7 @@
     - html5
     - javascript
     - jquery
+    - responsive
     - scss
 - name: Origami Owl
   site: https://www.origamiowl.com/
@@ -45,6 +59,7 @@
     - html5
     - icon font
     - promotional site
+    - responsive
 - name: Styleguide
   tags:
     - html5
