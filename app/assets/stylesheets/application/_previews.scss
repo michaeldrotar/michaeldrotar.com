@@ -44,9 +44,10 @@
   img + img {
     box-shadow: 0 0 1px 1px $color-black;
     max-height: 90%;
+    max-width: 20%;
     position: absolute;
     right: -10%;
-    top: 5%;
+    top: 50px;
     width: auto;
   }
 }
