@@ -87,10 +87,6 @@ h6 {
   font-weight: bold;
   margin-bottom: $space-xl;
   text-transform: lowercase;
-
-  &::before {
-    content: ".";
-  }
 }
 
 .h2 {
