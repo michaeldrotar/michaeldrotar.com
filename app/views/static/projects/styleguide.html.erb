@@ -76,28 +76,18 @@
   </div>
 </div>
 
-<%= h2_tag('Preview') %>
-<div class="grid-2-sm">
-  <div>
-    <a href="" class="preview" data-prevent-default="click">
-      <div class="preview-title">Some Project</div>
-      <div class="preview-image" style="background-image: url('')"></div>
-    </a>
-  </div>
-  <div>
-    <a href="" class="preview" data-prevent-default="click">
-      <div class="preview-title">Other Project</div>
-      <div class="preview-image" style="background-image: url('')"></div>
-    </a>
-  </div>
-</div>
-
-<%= h2_tag('Screens') %>
+<%= h2_tag('Screens and Previews') %>
 <p>Screens provide a visual aesthetic similar to a browser window for showcasing screenshots of projects.</p>
+<p>Nesting a preview inside a screen provides a space to see a snippet of content and expand it when needed.</p>
 
 <div class="screen">
   <div class="screen-title">Screen Component</div>
-  <div class="panel">
-    <p>Screens provide a visual aesthetic similar to a browser window.</p>
+  <div class="preview" data-toggle="is-fullscreen">
+    <div class="preview-content">
+      <div class="panel">
+        <p>Screens provide a visual aesthetic similar to a browser window.</p>
+        <p>Nested content is clipped at the bounds of the preview area, but can be expanded upon click for a full screen overlay.</p>
+      </div>
+    </div>
   </div>
 </div>

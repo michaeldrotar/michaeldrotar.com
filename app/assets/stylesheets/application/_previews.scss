@@ -1,17 +1,26 @@
 .preview {
-  box-shadow: $space-sm $space-sm 0 0 $color-darker;
+  cursor: pointer;
   display: block;
-  margin-bottom: $space-xl;
+  padding-bottom: percentage(308/560);
+  position: relative;
+}
 
-  &:link,
-  &:visited,
-  &:hover,
-  &:focus,
-  &:active {
-    color: $color-dark;
-    font-weight: normal;
-    text-decoration: none;
-  }
+.preview.is-fullscreen {
+  position: static;
+}
+
+.preview-content {
+  background-color: $color-dark;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.preview.is-fullscreen .preview-content {
+  position: fixed;
 }
 
 .preview--pip {
