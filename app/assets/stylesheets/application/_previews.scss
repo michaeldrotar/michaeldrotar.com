@@ -10,8 +10,12 @@
 }
 
 .preview-content {
+  align-items: center;
   background-color: $color-dark;
   bottom: 0;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
   left: 0;
   overflow: hidden;
   position: absolute;
