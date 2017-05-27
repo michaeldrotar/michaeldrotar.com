@@ -8,11 +8,9 @@ RUN apt-get update && apt-get install -y \
 RUN mkdir /app
 WORKDIR /app
 
-COPY Gemfile* ./
-RUN gem install bundler && bundle install
-
 COPY . ./
 
+ENV BUNDLE_PATH /bundle
 EXPOSE 3000
 
-CMD ["bundle", "exec", "rails", "server", "-b", "0.0.0.0"]
+CMD scripts/start

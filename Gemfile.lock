@@ -258,8 +258,5 @@ DEPENDENCIES
   scss_lint
   uglifier
 
-RUBY VERSION
-   ruby 2.2.4p230
-
 BUNDLED WITH
    1.14.6

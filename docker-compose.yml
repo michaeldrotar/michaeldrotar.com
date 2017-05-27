@@ -1,5 +1,9 @@
 version: '2'
 services:
+  bundle:
+    image: busybox
+    volumes:
+      - /bundle
   db:
     image: postgres:latest
     ports:
@@ -14,3 +18,5 @@ services:
       - "3000:3000"
     volumes:
       - .:/app
+    volumes_from:
+      - bundle
