@@ -1,4 +1,4 @@
-FROM ruby:2.2.4
+FROM ruby:2.4.1
 
 RUN apt-get update && apt-get install -y \
   # necessary for debian environments
@@ -9,6 +9,7 @@ RUN mkdir /app
 WORKDIR /app
 
 COPY . ./
+RUN gem install bundler
 
 ENV BUNDLE_PATH /bundle
 EXPOSE 3000
