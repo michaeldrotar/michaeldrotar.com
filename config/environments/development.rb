@@ -1,5 +1,3 @@
-require 'rack-livereload'
-
 Rails.application.configure do
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development
@@ -35,7 +33,4 @@ Rails.application.configure do
 
   # Raises error for missing translations
   config.action_view.raise_on_missing_translations = true
-
-  # Inform livereload when an asset changes
-  config.middleware.insert_after(ActionDispatch::Static, Rack::LiveReload)
 end

@@ -27,11 +27,6 @@ group :development do
   gem 'better_errors'
   gem 'binding_of_caller' # adds features to better_errors
 
-  # Auto processing
-  gem 'guard', '~> 2.2.0', require: false
-  gem 'guard-livereload', require: false
-  gem 'rack-livereload', require: false
-
   # Linting
   gem 'rubocop', require: false
   gem 'scss_lint', require: false
