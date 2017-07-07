@@ -88,8 +88,10 @@
 .resume-proficiencies {
   color: $color-light;
   display: block;
+  font-size: 2rem;
+  letter-spacing: 0.5rem;
   list-style: none;
-  margin: 1rem 0 0;
+  margin: 0;
   padding: 0;
   text-align: justify;
 
@@ -97,13 +99,14 @@
     display: inline-block;
     font-size: 1.1rem;
     font-weight: lighter;
+    letter-spacing: 0;
 
     &:nth-child(even) {
       font-size: 1.2rem;
     }
 
     &.good {
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       font-weight: normal;
     }
 
@@ -113,16 +116,17 @@
     }
 
     &.best {
-      font-size: 2rem;
+      font-size: 1.8rem;
       font-weight: lighter;
     }
   }
 
-  @include media-breakpoint-up(lg) {
-    margin-top: 0;
+  @include media-breakpoint-up(xl) {
+    font-size: 1rem;
 
     > li {
       display: block;
+      margin: 0;
     }
   }
 }
