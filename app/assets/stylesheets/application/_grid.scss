@@ -68,4 +68,22 @@
       }
     }
   }
+
+  .grid-2-3#{$suffix} {
+    @extend .grid;
+  }
+
+  @include media-breakpoint-up($breakpoint) {
+    .grid-2-3#{$suffix} > div {
+      &:nth-child(odd) {
+        flex: 0 0 (200% / 3);
+        max-width: (200% / 3);
+      }
+
+      &:nth-child(even) {
+        flex: 0 0 (100% / 3);
+        max-width: (100% / 3);
+      }
+    }
+  }
 }
