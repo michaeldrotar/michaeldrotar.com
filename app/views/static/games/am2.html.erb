@@ -1,0 +1,9 @@
+<% content_for(:head) { stylesheet_link_tag('am2', media: 'all') } %>
+<% content_for(:body) do %>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.5.5/pixi.min.js"></script>
+  <%= javascript_include_tag('am2') %>
+<% end %>
+
+<div class="am2">
+  <div class="loader"></div>
+</div>
