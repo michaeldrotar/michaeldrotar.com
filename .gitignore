@@ -5,3 +5,11 @@
 /log/*.log
 /tmp
 /.byebug_history
+
+
+# Logs
+*.log
+npm-debug.log*
+
+# Dependency directories
+node_modules
