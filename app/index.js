@@ -52,7 +52,7 @@ app.use(async ctx => {
 
 app.start = function (port = config.PORT) {
   app.listen(port, () => {
-    console.log(`Listening on port ${port}`)
+    console.log(`Listening on port ${port} (${config.NODE_ENV})`)
   })
 }
 
