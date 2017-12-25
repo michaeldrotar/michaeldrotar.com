@@ -16,10 +16,14 @@ const controllers = require('./controllers')
 
 const app = new Koa()
 
+const nunjucks = require('nunjucks')
+const nunjucksEnvironment = new nunjucks.Environment(
+  new nunjucks.FileSystemLoader(path.join(__dirname, 'views'))
+)
+
 app.use(views(path.join(__dirname, 'views'), {
-  map: {
-    html: 'nunjucks'
-  }
+  map: { njk: 'nunjucks' },
+  options: { nunjucksEnv: nunjucksEnvironment }
 }))
 
 app.use(helmet())
