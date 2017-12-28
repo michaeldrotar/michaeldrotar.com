@@ -1,7 +1,7 @@
 {
-  "name": "vuesite",
+  "name": "michaeldrotar.com",
   "version": "1.0.0",
-  "description": "A Vue.js project",
+  "description": "My personal website",
   "author": "Michael <michaeldrotar@gmail.com>",
   "private": true,
   "scripts": {

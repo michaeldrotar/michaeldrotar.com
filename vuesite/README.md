@@ -1,6 +1,6 @@
-# vuesite
+# michaeldrotar.com
 
-> A Vue.js project
+> My personal website
 
 ## Build Setup
 
