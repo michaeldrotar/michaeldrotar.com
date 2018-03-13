@@ -173,3 +173,20 @@
     text-align: left;
   }
 }
+
+@media print {
+  .resume-job.duration {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .resume-job-duration-number,
+  .resume-job-duration-units {
+    display: none;
+  }
+
+  .resume-proficiences {
+    display: none;
+  }
+}

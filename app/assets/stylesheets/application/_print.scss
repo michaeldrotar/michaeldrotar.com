@@ -1,15 +1,7 @@
 @media print {
-  html,
-  body,
-  .menu-items {
-    background-color: white;
-  }
-
-  .h1,
-  .intro-heading,
-  .resume-job-duration,
-  .resume-job-duration-timeline {
-    color: $body-text;
+  * {
+    background-color: $color-true-white !important;
+    color: $color-true-black !important;
   }
 
   .intro,
