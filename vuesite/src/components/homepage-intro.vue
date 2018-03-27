@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="homepage-spotlight"></div>
+    <!-- <div class="homepage-spotlight"></div> -->
     <awful-typewriter>
       <div class="homepage-intro">
         <h1 class="homepage-intro-heading homepage-intro-line">Hi, I'm Michael.</h1>
@@ -78,7 +78,7 @@
   .homepage-intro {
     @apply --fullscreen;
 
-    background-image: linear-gradient(90deg, rgba(28, 28, 28, 0) 10%, rgba(28, 28, 28, 1) 10%);
+    /* background-image: linear-gradient(90deg, rgba(28, 28, 28, 0) 10%, rgba(28, 28, 28, 1) 10%); */
     background-size: 10px 10px;
     box-shadow: inset 0 0 20px 5px darken(var(--body-bg), 10%);
     display: flex;
