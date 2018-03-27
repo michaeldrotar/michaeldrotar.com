@@ -1,10 +1,10 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-import AppHomepage from '@/pages/homepage'
-import AppLayout from '@/layouts/application'
-import AppNotFound from '@/components/app-not-found'
+import AppLayout from '@/components/app-layout'
+import AppHomepage from '@/components/app-homepage'
 import AppProjects from '@/components/app-projects'
+import PageNotFound from '@/components/page-not-found'
 
 Vue.use(Router)
 
@@ -13,12 +13,12 @@ export default new Router({
   routes: [
     {
       path: '/',
-      component: AppHomepage
-    },
-    {
-      path: '/',
       component: AppLayout,
       children: [
+        {
+          path: '',
+          component: AppHomepage
+        },
         {
           path: 'projects',
           component: AppProjects
@@ -27,7 +27,7 @@ export default new Router({
     },
     {
       path: '*',
-      component: AppNotFound
+      component: PageNotFound
     }
   ]
 })
