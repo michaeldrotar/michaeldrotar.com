@@ -17,7 +17,7 @@
 
   export default {
     name: 'homepage-intro',
-    components: { AwfulTypewriter } //,
+    components: { AwfulTypewriter } // ,
     // mounted: function () {
     //   var query = document.querySelectorAll('[data-typewriter]')
     //   var elements = Array.prototype.slice.call(query)

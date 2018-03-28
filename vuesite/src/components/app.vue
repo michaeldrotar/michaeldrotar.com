@@ -1,19 +1,8 @@
 <template>
   <div>
-    <main-nav/>
     <router-view/>
   </div>
 </template>
-
-<script>
-  import mainNav from './main-nav'
-  export default {
-    name: 'app',
-    components: {
-      'main-nav': mainNav
-    }
-  }
-</script>
 
 <style>
   palette {

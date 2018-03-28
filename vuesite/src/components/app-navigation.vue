@@ -1,42 +1,54 @@
 <template>
-  <nav class="menu" data-drawer>
-    <button type="button" class="menu-toggle" data-drawer-toggle>
-      <div class="icon-hamburger">
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-      <span class="sr-only">Toggle navigation</span>
+  <nav class="menu" :class="{'is-open': isOpen}">
+    <button type="button" class="menu-toggle" @click="toggle">
+      <app-icon type="hamburger" text="Toggle navigation"></app-icon>
     </button>
     <div class="menu-items">
-      <a href="<%= root_path %>">Home</a>
-      <a href="<%= static_path(page: 'projects') %>">Projects</a>
-      <a href="<%= static_path(page: 'resume') %>">Resume</a>
+      <a href="/">Home</a>
+      <a href="/projects">Projects</a>
+      <a href="/resume">Resume</a>
       <a href="https://github.com/michaeldrotar" target="_blank" data-drawer-close>Github</a>
     </div>
   </nav>
 </template>
 
 <script>
+  import AppIcon from '@/components/app-icon'
+
   export default {
-    name: 'main-nav'
+    name: 'app-navigation',
+    components: {
+      AppIcon
+    },
+    data: function () {
+      return {
+        isOpen: false
+      }
+    },
+    methods: {
+      toggle: function (_event) {
+        this.isOpen = !this.isOpen
+      }
+    }
   }
 </script>
 
 <style>
+  @import '../stylesheets/application/config';
+
   .menu {
     position: relative;
     z-index: 3;
   }
 
   .menu-items {
-    @include fullscreen;
+    @apply --fullscreen;
 
-    background-color: transparentize($body-bg, 0.05);
+    background-color: color(var(--body-bg) alpha(95%));
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: $space-xl $grid-gutter-width;
+    padding: var(--space-xl) var(--grid-gutter-width);
     transform: translateY(-100%);
     transition:
       transform 0.45s cubic-bezier(0.45, 0, 0, 1),
@@ -44,17 +56,17 @@
     visibility: hidden;
     z-index: 1;
 
-    .is-open & {
+    @nest .is-open & {
       transform: translateY(0);
       visibility: visible;
     }
 
-    > a {
+    & > a {
       display: block;
-      font-size: $font-size-lg;
+      font-size: var(--font-size-lg);
       margin: 0 auto;
       max-width: 600px;
-      padding: $space-lg 0;
+      padding: var(--space-lg) 0;
       text-align: center;
       text-decoration: none;
       text-transform: lowercase;
@@ -88,45 +100,45 @@
       &,
       &:link,
       &:visited {
-        color: $color-light;
+        color: var(--color-light);
       }
 
       &:hover,
       &:focus {
-        color: $color-lighter;
+        color: var(--color-lighter);
       }
 
       &:active {
-        color: $color-dark;
+        color: var(--color-dark);
       }
 
-      .is-open & {
+      @nest .is-open & {
         transform: translateY(0);
       }
     }
   }
 
   .menu-toggle {
-    background-color: transparentize($color-darker, 0.05);
+    background-color: transparentize(var(--color-darker), 0.05);
     border: 0;
     border-radius: 100%;
-    bottom: $space-lg;
-    box-shadow: 0 0 10px 1px $color-darker;
+    bottom: var(--space-lg);
+    box-shadow: 0 0 10px 1px var(--color-darker);
     cursor: pointer;
     margin: 0;
     outline: 0;
     overflow: hidden;
     padding: 0;
     position: fixed;
-    right: $space-md;
+    right: var(--space-md);
     z-index: 2;
 
-    @include media-breakpoint-up('sm') {
+    @media (--sm-up) {
       background-color: transparent;
       bottom: auto;
       box-shadow: none;
-      right: $space-lg;
-      top: $space-lg;
+      right: var(--space-lg);
+      top: var(--space-lg);
     }
   }
 </style>
