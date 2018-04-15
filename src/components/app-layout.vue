@@ -6,16 +6,16 @@
 </template>
 
 <script>
-  import AppNavigation from '@/components/app-navigation'
+import AppNavigation from "@/components/app-navigation";
 
-  export default {
-    name: 'app-layout',
-    components: {
-      AppNavigation
-    }
+export default {
+  name: "app-layout",
+  components: {
+    AppNavigation
   }
+};
 </script>
 
 <style lang="scss">
-  @import '../stylesheets/application';
+@import "../stylesheets/application";
 </style>

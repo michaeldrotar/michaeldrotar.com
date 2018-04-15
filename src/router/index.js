@@ -1,38 +1,38 @@
-import Vue from 'vue'
-import Router from 'vue-router'
+import Vue from "vue";
+import Router from "vue-router";
 
-import AppLayout from '@/components/app-layout'
-import AppHomepage from '@/components/app-homepage'
-import AppProjects from '@/components/app-projects'
-import AppResume from '@/components/app-resume'
-import PageNotFound from '@/components/page-not-found'
+import AppLayout from "@/components/app-layout";
+import AppHomepage from "@/components/app-homepage";
+import AppProjects from "@/components/app-projects";
+import AppResume from "@/components/app-resume";
+import PageNotFound from "@/components/page-not-found";
 
-Vue.use(Router)
+Vue.use(Router);
 
 export default new Router({
-  mode: 'history',
+  mode: "history",
   routes: [
     {
-      path: '/',
+      path: "/",
       component: AppLayout,
       children: [
         {
-          path: '',
+          path: "",
           component: AppHomepage
         },
         {
-          path: 'projects',
+          path: "projects",
           component: AppProjects
         },
         {
-          path: 'resume',
+          path: "resume",
           component: AppResume
         }
       ]
     },
     {
-      path: '*',
+      path: "*",
       component: PageNotFound
     }
   ]
-})
+});

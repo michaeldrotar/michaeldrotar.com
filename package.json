@@ -45,6 +45,7 @@
       "@vue/prettier"
     ]
   },
+  "prettier": {},
   "postcss": {
     "plugins": {
       "autoprefixer": {}
