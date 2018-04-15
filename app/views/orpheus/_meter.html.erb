@@ -1,6 +1,0 @@
-	<div class="bar">
-    <% (1..max).each do |i| %>
-      <div class="node <% if i <= value %>on<% end %>"></div>
-    <% end %>
-    <progress class="progress" value="<%= value %>" max="<%= max %>"><%= "#{(value*100.0/max).to_i}%" %></progress>
-	</div>

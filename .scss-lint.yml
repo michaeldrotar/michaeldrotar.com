@@ -1,5 +1,0 @@
-linters:
-  MergeableSelector:
-    enabled: false
-  SelectorFormat:
-    convention: 'hyphenated_BEM'
