@@ -5,7 +5,7 @@
     </button>
     <div class="menu-items">
       <router-link @click.native="close" to="/">Home</router-link>
-      <router-link @click.native="close" to="/projects">Projects</router-link>
+      <!-- router-link @click.native="close" to="/projects">Projects</router-link -->
       <router-link @click.native="close" to="/resume">Resume</router-link>
       <a href="https://github.com/michaeldrotar" target="_blank" @click="close">Github</a>
     </div>
