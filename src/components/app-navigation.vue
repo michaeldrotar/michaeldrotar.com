@@ -4,10 +4,10 @@
       <app-icon type="hamburger" text="Toggle navigation"></app-icon>
     </button>
     <div class="menu-items">
-      <router-link to="/">Home</router-link>
-      <router-link to="/projects">Projects</router-link>
-      <router-link to="/resume">Resume</router-link>
-      <a href="https://github.com/michaeldrotar" target="_blank" data-drawer-close>Github</a>
+      <router-link @click.native="close" to="/">Home</router-link>
+      <router-link @click.native="close" to="/projects">Projects</router-link>
+      <router-link @click.native="close" to="/resume">Resume</router-link>
+      <a href="https://github.com/michaeldrotar" target="_blank" @click="close">Github</a>
     </div>
   </nav>
 </template>
@@ -26,7 +26,10 @@ export default {
     };
   },
   methods: {
-    toggle: function(_event) {
+    close: function() {
+      this.isOpen = false;
+    },
+    toggle: function() {
       this.isOpen = !this.isOpen;
     }
   }
@@ -42,9 +45,9 @@ export default {
 }
 
 .menu-items {
-  @apply --fullscreen;
+  @include fullscreen;
 
-  background-color: color($body-bg alpha(95%));
+  background-color: transparentize($body-bg, 0.05);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -54,12 +57,12 @@ export default {
   visibility: hidden;
   z-index: 1;
 
-  @nest .is-open & {
+  .is-open & {
     transform: translateY(0);
     visibility: visible;
   }
 
-  & > a {
+  > a {
     display: block;
     font-size: $font-size-lg;
     margin: 0 auto;
@@ -106,7 +109,7 @@ export default {
       color: $color-dark;
     }
 
-    @nest .is-open & {
+    .is-open & {
       transform: translateY(0);
     }
   }
@@ -127,7 +130,7 @@ export default {
   right: $space-md;
   z-index: 2;
 
-  @media (--sm-up) {
+  @include media-breakpoint-up("sm") {
     background-color: transparent;
     bottom: auto;
     box-shadow: none;

@@ -21,7 +21,7 @@ html {
   line-height: $line-height-md;
   margin: 0;
 
-  @media (--sm-up) {
+  @include media-breakpoint-up("sm") {
     font-size: 16px;
   }
 }

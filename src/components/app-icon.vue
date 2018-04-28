@@ -1,6 +1,6 @@
 <template>
   <div :class="['icon', 'icon-' + type]">
-    <div v-for="part in parts"></div>
+    <div v-for="part in parts" :key="part"></div>
     <span v-if="text" class="sr-only">{{text}}</span>
   </div>
 </template>
@@ -42,7 +42,7 @@ export default {
   padding: 11px;
   width: 60px;
 
-  & > div {
+  > div {
     background-color: $body-text;
     display: block;
     height: 2px;
@@ -70,23 +70,25 @@ export default {
     }
   }
 
-  @nest button:hover & {
-    & > div:nth-child(1) {
+  button:hover & {
+    > div:nth-child(1) {
       transform: translateY(-4px);
     }
 
-    & > div:nth-child(3) {
+    > div:nth-child(3) {
       transform: translateY(4px);
     }
   }
 
-  @nest .is-open button & {
-    & > div {
-      &:nth-child(1), &:nth-child(3) {
+  .is-open button & {
+    > div {
+      &:nth-child(1),
+      &:nth-child(3) {
         width: 8px;
       }
 
-      &:nth-child(1)::before, &:nth-child(3)::before {
+      &:nth-child(1)::before,
+      &:nth-child(3)::before {
         transition: width 1s ease-out;
         transition-delay: 0.25s;
         width: 30px;
