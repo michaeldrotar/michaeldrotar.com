@@ -4,7 +4,6 @@
 
 /* Libraries */
 @import "~normalize.css/normalize";
-//@import "normalize.css";
 /*
 @import 'simple-scrollbar';
 */
@@ -14,7 +13,9 @@
 /*
 @import 'application/buttons';
 @import 'application/footer';
-@import 'application/grid';
+*/
+@import "application/grid";
+/*
 @import 'application/grid-button';
 @import 'application/icons';
 @import 'application/intro';

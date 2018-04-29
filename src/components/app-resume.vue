@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <h1 class="h1">Michael Drotar</h1>
     <div class="grid-2-3-xl">
       <div>
@@ -57,29 +57,30 @@
         </div>
       </div>
       <div>
+        <!-- need forced spaces so justify alignment works -->
         <ul class="resume-proficiencies">
-          <li class="good">accessability</li>
-          <li>agile</li>
-          <li class="better">alphabetization</li>
-          <li>angular</li>
-          <li class="best">architecture design</li>
-          <li class="better">bootstrap</li>
-          <li class="best">critical thinking</li>
-          <li class="good">docker</li>
-          <li>ember</li>
-          <li>initiative</li>
-          <li>knockout.js</li>
-          <li class="best">mentoring</li>
-          <li>node.js</li>
-          <li class="best">project management</li>
-          <li class="good">organization</li>
-          <li class="best">problem solving</li>
-          <li>requirements analysis</li>
-          <li class="better">responsive design</li>
-          <li class="good">ruby on rails</li>
-          <li class="best">team building</li>
-          <li>vue.js</li>
-          <li class="good">web services</li>
+          <li class="good">accessability</li>&#32;
+          <li>agile</li>&#32;
+          <li class="better">alphabetization</li>&#32;
+          <li>angular</li>&#32;
+          <li class="best">architecture design</li>&#32;
+          <li class="better">bootstrap</li>&#32;
+          <li class="best">critical thinking</li>&#32;
+          <li class="good">docker</li>&#32;
+          <li>ember</li>&#32;
+          <li>initiative</li>&#32;
+          <li>knockout.js</li>&#32;
+          <li class="best">mentoring</li>&#32;
+          <li>node.js</li>&#32;
+          <li class="best">project management</li>&#32;
+          <li class="good">organization</li>&#32;
+          <li class="best">problem solving</li>&#32;
+          <li>requirements analysis</li>&#32;
+          <li class="better">responsive design</li>&#32;
+          <li class="good">ruby on rails</li>&#32;
+          <li class="best">team building</li>&#32;
+          <li>vue.js</li>&#32;
+          <li class="good">web services</li>&#32;
         </ul>
       </div>
     </div>
@@ -105,28 +106,6 @@ export default {
 
 <style lang="scss">
 @import "../stylesheets/application/config";
-
-.resume-proficiencies {
-  color: $color-light;
-  display: block;
-  font-size: 2rem;
-  letter-spacing: 0.5rem;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  text-align: justify;
-
-  > li {
-    display: inline-block;
-    font-size: 1.1rem;
-    font-weight: lighter;
-    letter-spacing: 0;
-
-    &:nth-child(even) {
-      font-size: 1.2rem;
-    }
-  }
-}
 
 .resume-contact {
   display: flex;
