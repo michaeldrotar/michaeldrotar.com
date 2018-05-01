@@ -11,7 +11,9 @@
     "e2e": "vue-cli-service e2e",
     "lint": "vue-cli-service lint",
     "e2e:open": "vue-cli-service e2e:open",
-    "start": "npm run build && node server.js"
+    "start": "node server.js",
+    "heroku-postbuild":
+      "npm install --only=dev --no-shrinkwrap && npm run build"
   },
   "engines": {
     "node": "8.11.x",
