@@ -8,71 +8,72 @@
 //
 // Font settings are listed here so they can be used to reset the font family whenever needed. For instance, a code block using monospace might have a tooltip that needs the base font
 
-$font-path:               "../fonts/";
-$font-family:             "Roboto", "Avenir Next LT Pro", Arial, "Helvetica Neue", Helvetica, sans-serif;
-$font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
+$font-path: "../fonts/";
+$font-family: "Roboto", "Avenir Next LT Pro", Arial, "Helvetica Neue", Helvetica,
+  sans-serif;
+$font-family-monospace: Menlo, Monaco, Consolas, "Courier New", monospace;
 
 // Colors
 //
 // These color variables are provided for use throughout the application
 
 // Grays
-$color-black:   #111;
-$color-darker:  #222;
-$color-dark:    #444;
-$color-light:   #bbb;
+$color-black: #111;
+$color-darker: #222;
+$color-dark: #444;
+$color-light: #bbb;
 $color-lighter: #ddd;
-$color-white:   #fff;
+$color-white: #fff;
 
 // Rainbow
-$color-red:       #cc6666;
-$color-orange:    #de935f;
-$color-yellow:    #f0c674;
+$color-red: #cc6666;
+$color-orange: #de935f;
+$color-yellow: #f0c674;
 $color-limegreen: #b5bd68;
-$color-green:     #a5cd68;
-$color-teal:      #8abeb7;
-$color-blue:      #81a2be;
-$color-purple:    #b294bb;
+$color-green: #a5cd68;
+$color-teal: #8abeb7;
+$color-blue: #81a2be;
+$color-purple: #b294bb;
 
 // External services
 $color-facebook: #3b5998;
-$color-google:   #d34836;
+$color-google: #d34836;
 
 // Elements (for reference)
-$body-bg:   #333;
+$body-bg: #333;
 $body-text: #999;
 
 // Dimensions
 //
 // Certain elements interact in ways that make it handy to have their dimensions provided as variables
 
-$font-size-xs:              0.75rem;
-$font-size-sm:              0.875rem;
-$font-size-md:              1rem;
-$font-size-lg:              1.5rem;
-$font-size-xl:              2.625rem;
+$font-size-xs: 0.75rem;
+$font-size-sm: 0.875rem;
+$font-size-md: 1rem;
+$font-size-lg: 1.5rem;
+$font-size-xl: 2.625rem;
 
-$line-height-xs:            1.5;
-$line-height-sm:            1.5;
-$line-height-md:            1.5;
-$line-height-lg:            1.3333333;
-$line-height-xl:            1.3333333;
+$line-height-xs: 1.5;
+$line-height-sm: 1.5;
+$line-height-md: 1.5;
+$line-height-lg: 1.3333333;
+$line-height-xl: 1.3333333;
 
-$space-xs:                  4px;
-$space-sm:                  8px;
-$space-md:                  16px;
-$space-lg:                  24px;
-$space-xl:                  48px;
+$space-xs: 4px;
+$space-sm: 8px;
+$space-md: 16px;
+$space-lg: 24px;
+$space-xl: 48px;
 
-$padding-xs-vertical:       4px;
-$padding-sm-vertical:       6px;
-$padding-md-vertical:       8px;
-$padding-lg-vertical:       16px;
+$padding-xs-vertical: 4px;
+$padding-sm-vertical: 6px;
+$padding-md-vertical: 8px;
+$padding-lg-vertical: 16px;
 
-$padding-xs-horizontal:     8px;
-$padding-sm-horizontal:     12px;
-$padding-md-horizontal:     16px;
-$padding-lg-horizontal:     24px;
+$padding-xs-horizontal: 8px;
+$padding-sm-horizontal: 12px;
+$padding-md-horizontal: 16px;
+$padding-lg-horizontal: 24px;
 
 // Media query breakpoints
 //
@@ -86,10 +87,10 @@ $breakpoints: (
   xl: 1366px
 );
 
-$container-xs:               580px;
-$container-sm:               580px;
-$container-md:               720px;
-$container-lg:               820px;
-$container-xl:               1020px;
+$container-xs: 580px;
+$container-sm: 580px;
+$container-md: 720px;
+$container-lg: 820px;
+$container-xl: 1020px;
 
-$grid-gutter-width:          $space-md; // must be a multiple of two
+$grid-gutter-width: $space-md; // must be a multiple of two

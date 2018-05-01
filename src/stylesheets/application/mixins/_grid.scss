@@ -3,7 +3,7 @@
 }
 
 @function breakpoint-suffix($name) {
-  @return if(breakpoint-min($name), "-"+$name, "");
+  @return if(breakpoint-min($name), "-" + $name, "");
 }
 
 @function breakpoint-next($name) {
