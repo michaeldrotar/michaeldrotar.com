@@ -1,7 +1,0 @@
-<%= content_for(:title, t('.title')) %>
-
-<% @heroes.each do |hero| %>
-  <a href="<%= orpheus_hero_path(hero.id) %>" style="background-image: url('<%= asset_path("orpheus/heroes/#{hero.image}.png") %>'); background-size: contain; background-repeat: no-repeat; background-position: center top; display: block; padding-top: 5rem">
-    <%= hero.name %>
-  </a>
-<% end %>

@@ -1,0 +1,146 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  height: 100%;
+  min-height: 100%;
+}
+
+html {
+  background-color: $body-bg;
+  box-sizing: border-box;
+  /* box-shadow: inset 0 0 20px 5px $color-black; */
+  color: $body-text;
+  font-family: $font-family;
+  font-size: 14px;
+  font-weight: lighter;
+  line-height: $line-height-md;
+  margin: 0;
+
+  @include media-breakpoint-up("sm") {
+    font-size: 16px;
+  }
+}
+
+a {
+  &,
+  &:link,
+  &:visited,
+  &:hover,
+  &:focus,
+  &:active {
+    color: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    text-decoration: inherit;
+  }
+}
+
+a.link {
+  &,
+  &:visited {
+    color: inherit;
+    font-size: 1.01em;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    outline: 0;
+    text-decoration: underline;
+  }
+}
+
+code {
+  background-color: $color-dark;
+  border-radius: 4px;
+  color: $color-red;
+  display: inline-block;
+  font-family: $font-family-monospace;
+  font-size: $font-size-sm;
+  padding: 0 $space-xs;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  display: inline;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: 1em;
+  margin: 0;
+}
+
+.h1 {
+  color: $color-lighter;
+  display: block;
+  font-size: $font-size-xl;
+  font-weight: bold;
+  margin-bottom: $space-xl;
+  text-transform: lowercase;
+}
+
+.h2 {
+  display: block;
+  font-size: $font-size-lg;
+  font-weight: bold;
+  margin-bottom: $space-lg;
+  margin-top: $space-xl;
+}
+
+.h3 {
+  display: block;
+  font-size: $font-size-lg;
+  font-weight: normal;
+  margin-bottom: $space-md;
+  margin-top: $space-lg;
+}
+
+img {
+  max-width: 100%;
+}
+
+p {
+  margin-bottom: $space-md;
+  margin-top: 0;
+
+  &.lead {
+    font-size: $font-size-lg;
+    margin-bottom: $space-xl;
+    margin-top: $space-xs;
+  }
+
+  h1 + &.lead {
+    margin-top: -$space-xl;
+  }
+}
+
+.ss-scroll {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+strong {
+  color: $color-light;
+  font-weight: bold;
+}
+
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
