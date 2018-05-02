@@ -1,0 +1,27 @@
+@media print {
+  * {
+    background-color: $color-true-white !important;
+    color: $color-true-black !important;
+  }
+
+  .intro,
+  .page,
+  .screen {
+    box-shadow: none;
+  }
+
+  .page,
+  .ss-container,
+  .ss-content,
+  .ss-wrapper {
+    float: none;
+    height: auto;
+    overflow: visible;
+    position: static;
+  }
+
+  .menu,
+  .ss-scroll {
+    display: none;
+  }
+}

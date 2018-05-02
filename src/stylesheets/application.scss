@@ -1,20 +1,20 @@
 /* Confg */
-@import "application/config";
-@import "application/mixins";
+@import 'application/config';
+@import 'application/mixins';
 
 /* Libraries */
-@import "~normalize.css/normalize";
+@import '~normalize.css/normalize';
 /*
 @import 'simple-scrollbar';
 */
 /* Base */
-@import "application/base";
-@import "application/homepage";
+@import 'application/base';
+@import 'application/homepage';
 /*
 @import 'application/buttons';
 @import 'application/footer';
 */
-@import "application/grid";
+@import 'application/grid';
 /*
 @import 'application/grid-button';
 @import 'application/icons';
@@ -40,6 +40,4 @@
 */
 
 /* Overrides */
-/*
 @import 'application/print';
-*/

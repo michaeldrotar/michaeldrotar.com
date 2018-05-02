@@ -89,10 +89,10 @@
 
 <script>
 export default {
-  name: "app-resume",
+  name: 'app-resume',
   data: function() {
     var today = new Date();
-    var startDate = new Date("11/07/2011");
+    var startDate = new Date('11/07/2011');
     var elapsed = today - startDate;
     var millisecondsInYear = 1000 * 60 * 60 * 24 * 365.25;
     var currentJobYears = Math.round(elapsed / millisecondsInYear);
@@ -105,7 +105,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import "../stylesheets/application/config";
+@import '../stylesheets/application/config';
 
 .resume-contact {
   display: flex;
@@ -152,7 +152,7 @@ export default {
 
     &::before {
       background-color: $color-lighter;
-      content: "";
+      content: '';
       display: inline-block;
       height: 0.3rem;
       margin-right: 0.5rem;

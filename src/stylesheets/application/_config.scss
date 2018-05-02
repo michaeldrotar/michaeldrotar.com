@@ -1,4 +1,4 @@
-@import "mixins";
+@import 'mixins';
 
 //
 // Configuration
@@ -8,14 +8,18 @@
 //
 // Font settings are listed here so they can be used to reset the font family whenever needed. For instance, a code block using monospace might have a tooltip that needs the base font
 
-$font-path: "../fonts/";
-$font-family: "Roboto", "Avenir Next LT Pro", Arial, "Helvetica Neue", Helvetica,
+$font-path: '../fonts/';
+$font-family: 'Roboto', 'Avenir Next LT Pro', Arial, 'Helvetica Neue', Helvetica,
   sans-serif;
-$font-family-monospace: Menlo, Monaco, Consolas, "Courier New", monospace;
+$font-family-monospace: Menlo, Monaco, Consolas, 'Courier New', monospace;
 
 // Colors
 //
 // These color variables are provided for use throughout the application
+
+// Print
+$color-true-black: #000;
+$color-true-white: #fff;
 
 // Grays
 $color-black: #111;
