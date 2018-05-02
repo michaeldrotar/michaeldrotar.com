@@ -13,10 +13,10 @@
 </template>
 
 <script>
-import AppIcon from "@/components/app-icon";
+import AppIcon from '@/components/app-icon';
 
 export default {
-  name: "app-navigation",
+  name: 'app-navigation',
   components: {
     AppIcon
   },
@@ -37,7 +37,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import "../stylesheets/application/config";
+@import '../stylesheets/application/config';
 
 .menu {
   position: relative;
@@ -130,7 +130,7 @@ export default {
   right: $space-md;
   z-index: 2;
 
-  @include media-breakpoint-up("sm") {
+  @include media-breakpoint-up('sm') {
     background-color: transparent;
     bottom: auto;
     box-shadow: none;

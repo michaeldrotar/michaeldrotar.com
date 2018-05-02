@@ -11,15 +11,15 @@ const PARTS = {
 };
 
 export default {
-  name: "app-icon",
+  name: 'app-icon',
   props: {
     text: {
       type: String,
-      default: ""
+      default: ''
     },
     type: {
       type: String,
-      default: "",
+      default: '',
       validator: function(value) {
         return Object.keys(PARTS).indexOf(value) !== -1;
       }
@@ -34,7 +34,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import "../stylesheets/application/config";
+@import '../stylesheets/application/config';
 
 .icon-hamburger {
   display: block;
@@ -55,7 +55,7 @@ export default {
     width: 24px;
 
     &::before {
-      content: "";
+      content: '';
       display: block;
       height: 2px;
       position: absolute;

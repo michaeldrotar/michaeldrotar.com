@@ -12,9 +12,9 @@
 </template>
 
 <script>
-import AwfulTypewriter from "@/components/awful-typewriter";
+import AwfulTypewriter from '@/components/awful-typewriter';
 export default {
-  name: "homepage",
+  name: 'homepage',
   components: {
     AwfulTypewriter
   }
