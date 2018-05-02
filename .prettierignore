@@ -1,0 +1,6 @@
+node_modules
+/dist
+private
+*.html
+.*ignore
+package-lock.json
