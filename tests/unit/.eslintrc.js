@@ -1,8 +1,8 @@
 module.exports = {
-  "env": {
-    "mocha": true
+  env: {
+    mocha: true
   },
-  "rules": {
-    "import/no-extraneous-dependencies": "off"
+  rules: {
+    'import/no-extraneous-dependencies': 'off'
   }
-}
+};
