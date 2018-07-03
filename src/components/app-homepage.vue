@@ -25,12 +25,16 @@ export default {
     };
   },
   mounted() {
+    var apiHost =
+      window && window.location && window.location.hostname === 'localhost'
+        ? 'http://localhost:8081'
+        : '';
     var req = new XMLHttpRequest();
     var self = this;
     req.addEventListener('load', function() {
       self.apiMessage = JSON.parse(this.response)['message'];
     });
-    req.open('get', 'http://localhost:8081/api');
+    req.open('get', `${apiHost}/api`);
     req.send();
   }
 };
