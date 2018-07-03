@@ -8,6 +8,7 @@
         <p class="homepage-intro-text">Thanks for stopping by!</p>
       </div>
     </awful-typewriter>
+    {{ apiMessage }}
   </div>
 </template>
 
@@ -17,6 +18,20 @@ export default {
   name: 'homepage',
   components: {
     AwfulTypewriter
+  },
+  data() {
+    return {
+      apiMessage: null
+    };
+  },
+  mounted() {
+    var req = new XMLHttpRequest();
+    var self = this;
+    req.addEventListener('load', function() {
+      self.apiMessage = JSON.parse(this.response)['message'];
+    });
+    req.open('get', 'http://localhost:8081/api');
+    req.send();
   }
 };
 </script>
