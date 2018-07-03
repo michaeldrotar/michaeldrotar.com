@@ -20,10 +20,10 @@ if (process.env.NODE_ENV === 'production') {
   const path = require('path');
   const serveStatic = require('serve-static');
   // create middleware to handle the serving the app
-  app.use('/', serveStatic(path.join(__dirname, '/dist')));
+  app.use('/', serveStatic(path.join(__dirname, '../dist')));
   // Catch all routes and redirect to the index file
   app.get('*', function(req, res) {
-    res.sendFile(path.join(__dirname, '/dist/index.html'));
+    res.sendFile(path.join(__dirname, '../dist/index.html'));
   });
 }
 
