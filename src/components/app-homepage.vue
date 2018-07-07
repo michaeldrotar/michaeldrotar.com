@@ -8,7 +8,6 @@
         <p class="homepage-intro-text">Thanks for stopping by!</p>
       </div>
     </awful-typewriter>
-    {{ apiMessage }}
   </div>
 </template>
 
@@ -20,9 +19,7 @@ export default {
     AwfulTypewriter
   },
   data() {
-    return {
-      apiMessage: null
-    };
+    return {};
   },
   mounted() {
     var apiHost =
@@ -30,9 +27,8 @@ export default {
         ? 'http://localhost:8081'
         : '';
     var req = new XMLHttpRequest();
-    var self = this;
     req.addEventListener('load', function() {
-      self.apiMessage = JSON.parse(this.response)['message'];
+      console.log(JSON.parse(this.response)['message']); // eslint-disable-line no-console
     });
     req.open('get', `${apiHost}/api`);
     req.send();
