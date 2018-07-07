@@ -1,5 +1,7 @@
 /* eslint-env node */
-const express = require('express');
+import express from 'express';
+import path from 'path';
+import serveStatic from 'serve-static';
 // create the express app
 const app = express();
 app.use(function(req, res, next) {
@@ -17,8 +19,6 @@ app.get('/api', function(req, res) {
 });
 
 if (process.env.NODE_ENV === 'production') {
-  const path = require('path');
-  const serveStatic = require('serve-static');
   // create middleware to handle the serving the app
   app.use('/', serveStatic(path.join(__dirname, '../dist')));
   // Catch all routes and redirect to the index file
