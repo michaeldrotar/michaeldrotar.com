@@ -5,12 +5,16 @@
   "author": "Michael <michaeldrotar@gmail.com>",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build-client": "vue-cli-service build",
+    "build-server": "webpack --config server.config.js",
+    "build": "npm run build-client && npm run build-server",
+    "clean": "rm -fR dist && rm -f server.js",
     "lint": "vue-cli-service lint",
+    "serve-client": "vue-cli-service serve",
+    "serve": "npm run build-server && concurrently --kill-others \"npm run build-server -- --watch\" \"nodemon server.js --watch server.js\" \"npm run serve-client\"",
+    "start": "node server.js",
     "test:unit": "vue-cli-service test:unit",
     "test:e2e": "vue-cli-service test:e2e",
-    "start": "node server.js",
     "heroku-postbuild": "npm install --only=dev --no-shrinkwrap && npm run build"
   },
   "engines": {
@@ -34,11 +38,16 @@
     "@vue/eslint-config-prettier": "^3.0.0-rc.3",
     "@vue/test-utils": "^1.0.0-beta.16",
     "chai": "^4.1.2",
+    "concurrently": "^3.6.0",
     "favicons-webpack-plugin": "0.0.9",
     "lint-staged": "^6.1.1",
     "node-sass": "^4.9.0",
+    "nodemon": "^1.17.5",
     "sass-loader": "^7.0.1",
-    "vue-template-compiler": "^2.5.16"
+    "vue-template-compiler": "^2.5.16",
+    "webpack": "^4.15.1",
+    "webpack-cli": "^3.0.8",
+    "webpack-node-externals": "^1.7.2"
   },
   "browserslist": [
     "> 1%",
