@@ -19,6 +19,8 @@ app.get('/api', function(req, res) {
 });
 
 if (process.env.NODE_ENV === 'production') {
+  console.log('__dirname: ' + __dirname); // eslint-disable-line no-console
+  console.log('path: ' + path.join(__dirname, 'dist')); // eslint-disable-line no-console
   // create middleware to handle the serving the app
   app.use('/', serveStatic(path.join(__dirname, 'dist')));
   // Catch all routes and redirect to the index file
