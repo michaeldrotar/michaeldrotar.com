@@ -12,6 +12,7 @@
 </template>
 
 <script>
+import Game from '../../lib/brick-engine/game';
 import AwfulTypewriter from '@/components/awful-typewriter';
 export default {
   name: 'homepage',
@@ -22,6 +23,7 @@ export default {
     return {};
   },
   mounted() {
+    window.game = new Game().start();
     var apiHost =
       window && window.location && window.location.hostname === 'localhost'
         ? 'http://localhost:8081'
