@@ -6,13 +6,16 @@ import Router from 'koa-router';
 import api from './api';
 import ui from './ui';
 
-// import { server as latencyCheckerServer } from '../games/latency-checker';
+// import Game from '../lib/brick-engine/game';
+import { server as latencyCheckerServer } from '../games/latency-checker/server';
+//
+// new Game().start();
 
 const app = new Koa();
 const router = new Router();
 const server = http.createServer(app.callback());
 
-// latencyCheckerServer(server);
+latencyCheckerServer(server);
 
 let routes = [['/api', api], ['', ui]];
 routes.forEach(route => {
