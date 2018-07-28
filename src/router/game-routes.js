@@ -1,5 +1,6 @@
 import GameLayout from '@/layouts/game-layout';
 import LatencyChecker from '@/pages/latency-checker';
+import TanksPage from '@/pages/tanks-page';
 
 export default [
   {
@@ -9,6 +10,10 @@ export default [
       {
         path: 'latency-checker',
         component: LatencyChecker
+      },
+      {
+        path: 'tanks',
+        component: TanksPage
       }
     ]
   }
