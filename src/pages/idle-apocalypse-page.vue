@@ -22,6 +22,13 @@
 </template>
 
 <script>
+// const data = `
+// Gremlin
+// Slime        Gremlin
+// Orc Mage
+// Cracked Orb  Orc Mage
+// `.trim();
+
 const db = {};
 db.resources = [];
 
@@ -63,6 +70,16 @@ db.resources.push(roots);
 
 const vines = new Resource('Vines');
 db.resources.push(vines);
+
+const boneWood = new Resource('Bone Wood');
+db.resources.push(boneWood);
+
+const poisonIvy = new Resource('Poison Ivy');
+db.resources.push(poisonIvy);
+
+// Scavenger
+const bolt = new Resource('Bolt');
+db.resources.push(bolt);
 
 // Magic Workshop
 const magicTome = new Resource('Magic Tome', { costs: [crackedOrb, hide] });
