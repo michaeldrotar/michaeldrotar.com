@@ -12,4 +12,6 @@ palette {
   color: #6bb78b;
   color: #51a4a5;
 }
+
+@import '@/stylesheets/application.scss';
 </style>

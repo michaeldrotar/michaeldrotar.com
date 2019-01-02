@@ -34,8 +34,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../stylesheets/application/config';
-
 .icon-hamburger {
   display: block;
   height: 60px;

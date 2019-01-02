@@ -105,8 +105,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../stylesheets/application/config';
-
 .resume-contact {
   display: flex;
   flex-flow: row wrap;

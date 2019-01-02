@@ -37,8 +37,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../stylesheets/application/config';
-
 .menu {
   position: relative;
   z-index: 3;
