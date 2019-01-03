@@ -1,20 +1,20 @@
 <template>
   <div>
-    <mdc-top-app-bar></mdc-top-app-bar>
+    <app-header></app-header>
     <app-navigation></app-navigation>
     <router-view></router-view>
   </div>
 </template>
 
 <script>
-import MdcTopAppBar from '@/components/mdc-top-app-bar';
+import AppHeader from '@/components/app-header';
 import AppNavigation from '@/components/app-navigation';
 
 export default {
   name: 'app-layout',
   components: {
     AppNavigation,
-    MdcTopAppBar
+    AppHeader
   }
 };
 </script>

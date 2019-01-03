@@ -6,9 +6,7 @@
         <span class="mdc-top-app-bar__title">Title</span>
       </section>
       <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
-        <a href="#" class="material-icons mdc-top-app-bar__action-item" aria-label="Download" alt="Download">file_download</a>
-        <a href="#" class="material-icons mdc-top-app-bar__action-item" aria-label="Print this page" alt="Print this page">print</a>
-        <a href="#" class="material-icons mdc-top-app-bar__action-item" aria-label="Bookmark this page" alt="Bookmark this page">bookmark</a>
+        <app-header-action to="projects" icon-id="group_work" text="Projects" />
       </section>
     </div>
   </header>
@@ -16,9 +14,14 @@
 
 <script>
 import { MDCTopAppBar } from '@material/top-app-bar';
+import AppHeaderAction from '@/components/app-header-action';
 
 export default {
-  name: 'MDCTopAppBar',
+  name: 'mdc-top-app-bar',
+  foo: 'bar',
+  components: {
+    AppHeaderAction
+  },
   mounted: function() {
     this.mdcTopAppBar = new MDCTopAppBar(this.$el);
   }
