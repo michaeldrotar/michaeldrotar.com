@@ -1,7 +1,7 @@
-import AppLayout from '@/components/app-layout';
-import AppHomepage from '@/components/app-homepage';
-import AppProjects from '@/components/app-projects';
-import AppResume from '@/components/app-resume';
+import AppLayout from '@/layouts/app-layout';
+import HomepagePage from '@/pages/homepage-page';
+import ProjectsPage from '@/pages/projects-page';
+import ResumePage from '@/pages/resume-page';
 
 export default [
   {
@@ -10,15 +10,15 @@ export default [
     children: [
       {
         path: '',
-        component: AppHomepage
+        component: HomepagePage
       },
       {
         path: 'projects',
-        component: AppProjects
+        component: ProjectsPage
       },
       {
         path: 'resume',
-        component: AppResume
+        component: ResumePage
       }
     ]
   }
