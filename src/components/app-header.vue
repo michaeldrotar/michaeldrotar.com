@@ -1,5 +1,5 @@
 <template>
-  <header class="app-header mdc-top-app-bar mdc-top-app-bar--fixed">
+  <header class="app-header mdc-top-app-bar">
     <div class="app-header-logo-image"></div>
     <div class="mdc-top-app-bar__row">
       <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
@@ -7,25 +7,21 @@
           michaeldrotar.com
         </span>
       </section>
-      <!--section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
-        <app-header-action to="projects" icon-id="group_work" text="Projects" />
-      </section-->
     </div>
   </header>
 </template>
 
 <script>
 import { MDCTopAppBar } from '@material/top-app-bar';
-// import AppHeaderAction from '@/components/app-header-action';
 
 export default {
-  name: 'mdc-top-app-bar',
-  foo: 'bar',
-  components: {
-    // AppHeaderAction
-  },
   mounted: function() {
-    this.mdcTopAppBar = new MDCTopAppBar(this.$el);
+    const element = this.$el;
+    const parent = element.parentElement;
+    parent.style.marginTop = '72px';
+    element.style.top = '0';
+
+    this.mdcTopAppBar = new MDCTopAppBar(element);
   }
 };
 </script>
@@ -40,8 +36,8 @@ export default {
   background-size: 200px;
   bottom: -10px;
   display: block;
-  position: absolute;
   left: 0;
+  position: absolute;
   top: 0;
   width: 150px;
 }
@@ -49,6 +45,6 @@ export default {
 .mdc-top-app-bar {
   @include mdc-top-app-bar-ink-color($body-text);
   @include mdc-top-app-bar-icon-ink-color($body-text);
-  @include mdc-top-app-bar-fill-color($body-bg);
+  @include mdc-top-app-bar-fill-color(transparentize($body-bg, 0.1));
 }
 </style>
