@@ -25,6 +25,7 @@
     "npm": "6.5.x"
   },
   "dependencies": {
+    "@material/image-list": "^0.42.0",
     "@material/top-app-bar": "^0.42.0",
     "babylonjs": "^3.3.0",
     "koa": "^2.6.2",
