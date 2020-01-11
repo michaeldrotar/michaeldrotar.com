@@ -4,40 +4,33 @@
 
 /* Libraries */
 @import 'normalize.css/normalize';
-/*
-@import 'simple-scrollbar';
-*/
+// @import 'simple-scrollbar';
+
 /* Base */
 @import 'application/base';
 @import 'application/homepage';
-/*
-@import 'application/buttons';
-@import 'application/footer';
-*/
+// @import 'application/buttons';
+// @import 'application/footer';
 @import 'application/grid';
-/*
-@import 'application/grid-button';
-@import 'application/icons';
-@import 'application/intro';
-@import 'application/page';
-@import 'application/panel';
-@import 'application/previews';
-@import 'application/screenreaders';
-@import 'application/screen';
-@import 'application/typewriter';
-*/
-/*@import 'heading'; */
-/*@import 'nav'; */
-/*@import 'omniauth'; */
-/*@import 'orpheus'; */
-/*@import 'pageboy'; */
-/*@import 'resume'; */
+// @import 'application/grid-button';
+// @import 'application/icons';
+// @import 'application/intro';
+// @import 'application/page';
+// @import 'application/panel';
+// @import 'application/previews';
+// @import 'application/screenreaders';
+// @import 'application/screen';
+// @import 'application/typewriter';
+// @import 'heading';
+// @import 'nav';
+// @import 'omniauth';
+// @import 'orpheus';
+// @import 'pageboy';
+// @import 'resume';
 
 /* Components */
-/*
-@import 'application/menu';
-@import 'resume';
-*/
+// @import 'application/menu';
+// @import 'resume';
 
 /* Overrides */
 @import 'application/print';
