@@ -14,19 +14,42 @@
           <div class="resume-job-company">Radial</div>
           <div class="resume-job-role">Senior Web Architect</div>
           <ul class="resume-job-accomplishments">
-            <li>Led team to develop an opinionated pattern library based on bootstrap</li>
-            <li>Worked across design, ui, and api teams to architect order modification solution</li>
-            <li>Mentored team of frontend developers to deliver robust, enterprise-quality code</li>
+            <li>
+              Led team to develop an opinionated pattern library based on
+              bootstrap
+            </li>
+            <li>
+              Worked across design, ui, and api teams to architect order
+              modification solution
+            </li>
+            <li>
+              Mentored team of frontend developers to deliver robust,
+              enterprise-quality code
+            </li>
           </ul>
           <div class="resume-job-role">Senior Web Developer</div>
           <ul class="resume-job-accomplishments">
-            <li>Designed and developed a frontend for a provisioning service configuration app that used Ember and integrated with LimeSurvey</li>
-            <li>Designed modern a modern store locator feature, designed and developed a modern in-store pickup feature</li>
+            <li>
+              Designed and developed a frontend for a provisioning service
+              configuration app that used Ember and integrated with LimeSurvey
+            </li>
+            <li>
+              Designed modern a modern store locator feature, designed and
+              developed a modern in-store pickup feature
+            </li>
           </ul>
           <div class="resume-job-role">Web Developer</div>
           <ul class="resume-job-accomplishments">
-            <li>Took initiative to also learn java backend and make necessary peer-reviewed code changes to facilitate frontend work</li>
-            <li>Worked on a variety of different teams including filling in for a frontend lead during an extended vacation, architecting a solution to create a mobile-friendly version of the product, and integrating services across teams into a shared developer portal</li>
+            <li>
+              Took initiative to also learn java backend and make necessary
+              peer-reviewed code changes to facilitate frontend work
+            </li>
+            <li>
+              Worked on a variety of different teams including filling in for a
+              frontend lead during an extended vacation, architecting a solution
+              to create a mobile-friendly version of the product, and
+              integrating services across teams into a shared developer portal
+            </li>
           </ul>
         </div>
         <div class="resume-job">
@@ -38,8 +61,14 @@
           <div class="resume-job-company">Tata Consultancy Services</div>
           <div class="resume-job-role">MII Developer</div>
           <ul class="resume-job-accomplishments">
-            <li>Engineered web interface from the ground up for interfacing with factory machines using MII's adapters</li>
-            <li>Worked on-site with client to understand daily needs and drive product vision</li>
+            <li>
+              Engineered web interface from the ground up for interfacing with
+              factory machines using MII's adapters
+            </li>
+            <li>
+              Worked on-site with client to understand daily needs and drive
+              product vision
+            </li>
           </ul>
         </div>
         <div class="resume-job">
@@ -51,36 +80,64 @@
           <div class="resume-job-company">Merion Publications, Inc.</div>
           <div class="resume-job-role">Web Developer</div>
           <ul class="resume-job-accomplishments">
-            <li>Built weighted product search engine using .Net and SQL transactions</li>
-            <li>Worked one-on-one with clients to understand needs and create helpful tools to improve their daily processes</li>
+            <li>
+              Built weighted product search engine using .Net and SQL
+              transactions
+            </li>
+            <li>
+              Worked one-on-one with clients to understand needs and create
+              helpful tools to improve their daily processes
+            </li>
           </ul>
         </div>
       </div>
       <div>
         <!-- need forced spaces so justify alignment works -->
         <ul class="resume-proficiencies">
-          <li class="good">accessability</li>&#32;
-          <li>agile</li>&#32;
-          <li class="better">alphabetization</li>&#32;
-          <li>angular</li>&#32;
-          <li class="best">architecture design</li>&#32;
-          <li class="better">bootstrap</li>&#32;
-          <li class="best">critical thinking</li>&#32;
-          <li class="good">docker</li>&#32;
-          <li>ember</li>&#32;
-          <li>initiative</li>&#32;
-          <li>knockout.js</li>&#32;
-          <li class="best">mentoring</li>&#32;
-          <li>node.js</li>&#32;
-          <li class="best">project management</li>&#32;
-          <li class="good">organization</li>&#32;
-          <li class="best">problem solving</li>&#32;
-          <li>requirements analysis</li>&#32;
-          <li class="better">responsive design</li>&#32;
-          <li class="good">ruby on rails</li>&#32;
-          <li class="best">team building</li>&#32;
-          <li>vue.js</li>&#32;
-          <li class="good">web services</li>&#32;
+          <li class="good">accessability</li>
+          &#32;
+          <li>agile</li>
+          &#32;
+          <li class="better">alphabetization</li>
+          &#32;
+          <li>angular</li>
+          &#32;
+          <li class="best">architecture design</li>
+          &#32;
+          <li class="better">bootstrap</li>
+          &#32;
+          <li class="best">critical thinking</li>
+          &#32;
+          <li class="good">docker</li>
+          &#32;
+          <li>ember</li>
+          &#32;
+          <li>initiative</li>
+          &#32;
+          <li>knockout.js</li>
+          &#32;
+          <li class="best">mentoring</li>
+          &#32;
+          <li>node.js</li>
+          &#32;
+          <li class="best">project management</li>
+          &#32;
+          <li class="good">organization</li>
+          &#32;
+          <li class="best">problem solving</li>
+          &#32;
+          <li>requirements analysis</li>
+          &#32;
+          <li class="better">responsive design</li>
+          &#32;
+          <li class="good">ruby on rails</li>
+          &#32;
+          <li class="best">team building</li>
+          &#32;
+          <li>vue.js</li>
+          &#32;
+          <li class="good">web services</li>
+          &#32;
         </ul>
       </div>
     </div>

@@ -1,7 +1,7 @@
 <template>
   <div :class="['icon', 'icon-' + type]">
     <div v-for="part in parts" :key="part"></div>
-    <span v-if="text" class="sr-only">{{text}}</span>
+    <span v-if="text" class="sr-only">{{ text }}</span>
   </div>
 </template>
 

@@ -2,7 +2,9 @@
   <header class="app-header mdc-top-app-bar">
     <div class="app-header-logo-image"></div>
     <div class="mdc-top-app-bar__row">
-      <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+      <section
+        class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start"
+      >
         <span class="mdc-top-app-bar__title">
           michaeldrotar.com
         </span>

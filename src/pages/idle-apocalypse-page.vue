@@ -3,17 +3,36 @@
     Idle Apocalypse
     <div class="resource-viewer">
       <div class="resource-viewer-costs">
-        <button type="button" class="resource-viewer-cost" v-for="cost in costs" v-bind:key="cost.name" v-on:click="assign(cost)">
+        <button
+          type="button"
+          class="resource-viewer-cost"
+          v-for="cost in costs"
+          v-bind:key="cost.name"
+          v-on:click="assign(cost)"
+        >
           {{ cost.name }}
         </button>
       </div>
       <div class="resource-viewer-resources">
-        <button type="button" class="resource-viewer-resource" v-for="resource in resources" v-bind:key="resource.name" v-on:click="assign(resource)">
-          {{ resource.name }} <span v-if="resource == currentResource">(current)</span>
+        <button
+          type="button"
+          class="resource-viewer-resource"
+          v-for="resource in resources"
+          v-bind:key="resource.name"
+          v-on:click="assign(resource)"
+        >
+          {{ resource.name }}
+          <span v-if="resource == currentResource">(current)</span>
         </button>
       </div>
       <div class="resource-viewer-produces">
-        <button type="button" class="resource-viewer-produce" v-for="produce in produces" v-bind:key="produce.name" v-on:click="assign(produce)">
+        <button
+          type="button"
+          class="resource-viewer-produce"
+          v-for="produce in produces"
+          v-bind:key="produce.name"
+          v-on:click="assign(produce)"
+        >
           {{ produce.name }}
         </button>
       </div>

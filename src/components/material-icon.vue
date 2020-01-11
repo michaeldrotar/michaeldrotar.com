@@ -1,5 +1,7 @@
 <template>
-  <span class="material-icons" :aria-label="label" :aria-hidden="hidden">{{ id }}</span>
+  <span class="material-icons" :aria-label="label" :aria-hidden="hidden">{{
+    id
+  }}</span>
 </template>
 
 <script>

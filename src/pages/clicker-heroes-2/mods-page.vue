@@ -1,9 +1,14 @@
 <template>
   <div>
     Clicker Heroes 2 / mods /
-    <router-link to="/clicker-heroes-2/mods/frequent-ruby-shop">Frequent Ruby Shop</router-link>
+    <router-link to="/clicker-heroes-2/mods/frequent-ruby-shop"
+      >Frequent Ruby Shop</router-link
+    >
     <image-list>
-      <image-list-item image="clicker-heroes-2/ruby-shop.png" label="Frequent Ruby Shop" />
+      <image-list-item
+        image="clicker-heroes-2/ruby-shop.png"
+        label="Frequent Ruby Shop"
+      />
     </image-list>
     <router-view></router-view>
   </div>
@@ -21,5 +26,4 @@ export default {
 };
 </script>
 
-<style lang="scss">
-</style>
+<style lang="scss"></style>

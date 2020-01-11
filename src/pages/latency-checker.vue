@@ -1,14 +1,24 @@
 <template>
   <div>
-    <canvas id='latency-checker'></canvas>
-    <div>{{num}}</div>
+    <canvas id="latency-checker"></canvas>
+    <div>{{ num }}</div>
     <div v-for="diff in oldStates" :key="diff.num.newValue">
       <div class="diff">
         <div v-for="key in Object.keys(diff)" :key="key">
-          <span class="diff-key">{{key}}</span>
-          <span class="diff-old" :class="{ green: diff[key].oldValue > diff[key].newValue }">{{diff[key].oldValue}}</span>
-          <span class="diff-new" :class="{ green: diff[key].oldValue < diff[key].newValue }">{{diff[key].newValue}}</span>
-          <span class="diff-diff">{{diff[key].oldValue - diff[key].newValue}}</span>
+          <span class="diff-key">{{ key }}</span>
+          <span
+            class="diff-old"
+            :class="{ green: diff[key].oldValue > diff[key].newValue }"
+            >{{ diff[key].oldValue }}</span
+          >
+          <span
+            class="diff-new"
+            :class="{ green: diff[key].oldValue < diff[key].newValue }"
+            >{{ diff[key].newValue }}</span
+          >
+          <span class="diff-diff">{{
+            diff[key].oldValue - diff[key].newValue
+          }}</span>
         </div>
       </div>
       <!-- <span :class="{ green: state[0].num > state[1].num }">{{state[0].num}}</span>

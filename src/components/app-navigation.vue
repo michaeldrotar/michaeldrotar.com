@@ -1,5 +1,5 @@
 <template>
-  <nav class="menu" :class="{'is-open': isOpen}">
+  <nav class="menu" :class="{ 'is-open': isOpen }">
     <button type="button" class="menu-toggle" @click="toggle">
       <app-icon type="hamburger" text="Toggle navigation"></app-icon>
     </button>
@@ -7,7 +7,9 @@
       <router-link @click.native="close" to="/">Home</router-link>
       <!-- router-link @click.native="close" to="/projects">Projects</router-link -->
       <router-link @click.native="close" to="/resume">Resume</router-link>
-      <a href="https://github.com/michaeldrotar" target="_blank" @click="close">Github</a>
+      <a href="https://github.com/michaeldrotar" target="_blank" @click="close"
+        >Github</a
+      >
     </div>
   </nav>
 </template>
