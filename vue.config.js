@@ -7,10 +7,12 @@ module.exports = {
   css: {
     loaderOptions: {
       sass: {
-        data: `
+        prependData: `
           @import "@/stylesheets/application/_config.scss";
         `,
-        includePaths: ['./node_modules']
+        sassOptions: {
+          includePaths: ['./node_modules']
+        }
       }
     }
   }
