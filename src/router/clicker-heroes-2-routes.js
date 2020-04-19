@@ -10,16 +10,16 @@ export default [
     children: [
       {
         path: '',
-        component: ClickerHeroes2Page
+        component: ClickerHeroes2Page,
       },
       {
         path: 'mods',
-        component: ClickerHeroes2ModsPage
+        component: ClickerHeroes2ModsPage,
       },
       {
         path: 'mods/frequent-ruby-shop',
-        component: ClickerHeroes2FrequentRubyShopModPage
-      }
-    ]
-  }
+        component: ClickerHeroes2FrequentRubyShopModPage,
+      },
+    ],
+  },
 ];

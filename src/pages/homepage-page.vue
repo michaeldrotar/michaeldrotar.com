@@ -28,7 +28,7 @@ import AwfulTypewriter from '@/components/awful-typewriter';
 export default {
   name: 'homepage',
   components: {
-    AwfulTypewriter
+    AwfulTypewriter,
   },
   data() {
     return {};
@@ -40,11 +40,11 @@ export default {
         ? 'http://localhost:8081'
         : '';
     var req = new XMLHttpRequest();
-    req.addEventListener('load', function() {
+    req.addEventListener('load', function () {
       console.log(JSON.parse(this.response)['message']); // eslint-disable-line no-console
     });
     req.open('get', `${apiHost}/api`);
     req.send();
-  }
+  },
 };
 </script>

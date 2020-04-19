@@ -11,10 +11,10 @@ export default {
     mode: {
       type: String,
       default: 'standard',
-      validator: function(value) {
+      validator: function (value) {
         return ['standard'].indexOf(value) !== -1;
-      }
-    }
+      },
+    },
   },
   mounted() {
     var existingHtml = this.$el.innerHTML.trim().replace(/\s+/g, ' ');
@@ -49,7 +49,7 @@ export default {
     this.type();
   },
   methods: {
-    type: function() {
+    type: function () {
       var cursor = this.cursor;
       var characters = this.characters;
       var index = this.index;
@@ -70,8 +70,8 @@ export default {
 
       this.index += 1;
       setTimeout(this.type, 10);
-    }
-  }
+    },
+  },
 };
 </script>
 

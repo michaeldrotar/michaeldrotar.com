@@ -1,6 +1,6 @@
 <template>
   <div id="tanks">
-    <canvas style="height: 500px; width: 800px"></canvas>
+    <canvas style="height: 500px; width: 800px;"></canvas>
   </div>
 </template>
 
@@ -14,7 +14,7 @@ export default {
     return {
       tanksGame: null,
       scene: null,
-      engine: null
+      engine: null,
     };
   },
   mounted() {
@@ -63,10 +63,10 @@ export default {
     }
     const scene = createScene();
     this.scene = scene;
-    engine.runRenderLoop(function() {
+    engine.runRenderLoop(function () {
       scene.render();
     });
-    window.addEventListener('resize', function() {
+    window.addEventListener('resize', function () {
       engine.resize();
     });
   },
@@ -74,6 +74,6 @@ export default {
     // this.tanksGame.stop();
     this.scene.dispose();
     this.engine.dispose();
-  }
+  },
 };
 </script>

@@ -9,12 +9,12 @@ export default [
     children: [
       {
         path: 'latency-checker',
-        component: LatencyChecker
+        component: LatencyChecker,
       },
       {
         path: 'tanks',
-        component: TanksPage
-      }
-    ]
-  }
+        component: TanksPage,
+      },
+    ],
+  },
 ];

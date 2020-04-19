@@ -11,7 +11,7 @@ import AppNavigation from '@/components/app-navigation';
 export default {
   name: 'game-layout',
   components: {
-    AppNavigation
-  }
+    AppNavigation,
+  },
 };
 </script>

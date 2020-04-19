@@ -9,16 +9,16 @@ export default {
   props: {
     id: {
       type: String,
-      required: true
+      required: true,
     },
     label: {
-      type: String
-    }
+      type: String,
+    },
   },
   computed: {
-    hidden: function() {
+    hidden: function () {
       return !this.label;
-    }
-  }
+    },
+  },
 };
 </script>

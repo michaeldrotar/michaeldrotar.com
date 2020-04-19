@@ -147,7 +147,7 @@
 <script>
 export default {
   name: 'app-resume',
-  data: function() {
+  data: function () {
     var today = new Date();
     var startDate = new Date('11/07/2011');
     var elapsed = today - startDate;
@@ -155,9 +155,9 @@ export default {
     var currentJobYears = Math.round(elapsed / millisecondsInYear);
 
     return {
-      currentJobYears
+      currentJobYears,
     };
-  }
+  },
 };
 </script>
 

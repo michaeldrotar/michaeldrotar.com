@@ -13,16 +13,16 @@
 export default {
   props: {
     image: {
-      type: String
+      type: String,
     },
     label: {
-      type: String
-    }
+      type: String,
+    },
   },
   computed: {
     imageUrl() {
       return this.image && require(`@/assets/${this.image}`);
-    }
-  }
+    },
+  },
 };
 </script>

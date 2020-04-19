@@ -27,9 +27,9 @@
       &nbsp;
       <span>{{ state[0].num - state[1].num }}</span> -->
     </div>
-    <div class="block" style="top: 10px" id="block-1"></div>
-    <div class="block" style="top: 20px" id="block-2"></div>
-    <div class="block" style="top: 30px" id="block-3"></div>
+    <div class="block" style="top: 10px;" id="block-1"></div>
+    <div class="block" style="top: 20px;" id="block-2"></div>
+    <div class="block" style="top: 30px;" id="block-3"></div>
   </div>
 </template>
 
@@ -50,7 +50,7 @@ export default {
       medium: { top: '20%', left: 0 },
       fast: { top: '30%', left: 0 },
       num: 0,
-      oldStates: []
+      oldStates: [],
     };
   },
   mounted() {
@@ -68,7 +68,7 @@ export default {
       // el.style.left = state.x + '%';
     }
     var self = this;
-    this.client.game.scene.render = function() {
+    this.client.game.scene.render = function () {
       render(slow, this.state.slow);
       render(medium, this.state.medium);
       render(fast, this.state.fast);
@@ -105,7 +105,7 @@ export default {
     */
     // this.game.stop();
     // this.client.close();
-  }
+  },
 };
 </script>
 

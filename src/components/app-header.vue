@@ -17,14 +17,14 @@
 import { MDCTopAppBar } from '@material/top-app-bar';
 
 export default {
-  mounted: function() {
+  mounted: function () {
     const element = this.$el;
     const parent = element.parentElement;
     parent.style.marginTop = '72px';
     element.style.top = '0';
 
     this.mdcTopAppBar = new MDCTopAppBar(element);
-  }
+  },
 };
 </script>
 

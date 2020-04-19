@@ -8,8 +8,8 @@ export default [
     children: [
       {
         path: 'idle-apocalypse',
-        component: IdleApocalypsePage
-      }
-    ]
-  }
+        component: IdleApocalypsePage,
+      },
+    ],
+  },
 ];

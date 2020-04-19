@@ -7,13 +7,13 @@ module.exports = {
   entry: './server/index.js',
   target: 'node',
   node: {
-    __dirname: false
+    __dirname: false,
   },
   devtool: env == 'development' ? 'inline-source-map' : false,
   output: {
     libraryTarget: 'commonjs',
     path: path.join(__dirname),
-    filename: 'server.js'
+    filename: 'server.js',
   },
-  externals: [nodeExternals()]
+  externals: [nodeExternals()],
 };

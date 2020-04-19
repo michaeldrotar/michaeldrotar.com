@@ -16,18 +16,18 @@ import MaterialIcon from '@/components/material-icon';
 export default {
   props: {
     iconId: {
-      type: String
+      type: String,
     },
     text: {
-      type: String
+      type: String,
     },
     to: {
-      type: String
-    }
+      type: String,
+    },
   },
   components: {
-    MaterialIcon
-  }
+    MaterialIcon,
+  },
 };
 </script>
 

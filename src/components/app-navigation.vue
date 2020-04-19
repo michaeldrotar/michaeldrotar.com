@@ -20,21 +20,21 @@ import AppIcon from '@/components/app-icon';
 export default {
   name: 'app-navigation',
   components: {
-    AppIcon
+    AppIcon,
   },
-  data: function() {
+  data: function () {
     return {
-      isOpen: false
+      isOpen: false,
     };
   },
   methods: {
-    close: function() {
+    close: function () {
       this.isOpen = false;
     },
-    toggle: function() {
+    toggle: function () {
       this.isOpen = !this.isOpen;
-    }
-  }
+    },
+  },
 };
 </script>
 

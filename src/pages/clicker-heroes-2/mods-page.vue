@@ -21,8 +21,8 @@ import ImageListItem from '@/components/image-list-item';
 export default {
   components: {
     ImageList,
-    ImageListItem
-  }
+    ImageListItem,
+  },
 };
 </script>
 

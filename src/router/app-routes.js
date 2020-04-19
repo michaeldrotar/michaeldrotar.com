@@ -12,18 +12,18 @@ export default [
       [
         {
           path: '',
-          component: HomepagePage
+          component: HomepagePage,
         },
         {
           path: 'projects',
-          component: ProjectsPage
+          component: ProjectsPage,
         },
         {
           path: 'resume',
-          component: ResumePage
-        }
+          component: ResumePage,
+        },
       ],
       ClickerHeroes2Routes
-    )
-  }
+    ),
+  },
 ];

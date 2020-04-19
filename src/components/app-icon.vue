@@ -7,7 +7,7 @@
 
 <script>
 const PARTS = {
-  hamburger: 3
+  hamburger: 3,
 };
 
 export default {
@@ -15,21 +15,21 @@ export default {
   props: {
     text: {
       type: String,
-      default: ''
+      default: '',
     },
     type: {
       type: String,
       default: '',
-      validator: function(value) {
+      validator: function (value) {
         return Object.keys(PARTS).indexOf(value) !== -1;
-      }
-    }
+      },
+    },
   },
   computed: {
-    parts: function() {
+    parts: function () {
       return PARTS[this.type];
-    }
-  }
+    },
+  },
 };
 </script>
 

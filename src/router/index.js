@@ -10,5 +10,5 @@ Vue.use(Router);
 
 export default new Router({
   mode: 'history',
-  routes: [].concat(AppRoutes, FunRoutes, GameRoutes, ErrorRoutes)
+  routes: [].concat(AppRoutes, FunRoutes, GameRoutes, ErrorRoutes),
 });

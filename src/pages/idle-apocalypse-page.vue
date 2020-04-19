@@ -60,7 +60,7 @@ class Resource {
   }
 
   get produces() {
-    return db.resources.filter(resource => {
+    return db.resources.filter((resource) => {
       return resource.costs.indexOf(this) !== -1;
     });
   }
@@ -189,30 +189,30 @@ db.monsters = [
 
 export default {
   name: 'idle-apocalypse',
-  data: function() {
+  data: function () {
     return {
       currentResource: db.resources[0],
-      db: db
+      db: db,
     };
   },
   computed: {
-    costs: function() {
+    costs: function () {
       return this.currentResource.costs;
     },
-    produces: function() {
+    produces: function () {
       return this.currentResource.produces;
     },
-    resources: function() {
+    resources: function () {
       return db.resources.sort((a, b) => {
         return a.name.localeCompare(b.name);
       });
-    }
+    },
   },
   methods: {
     assign(resource) {
       this.currentResource = resource;
-    }
-  }
+    },
+  },
 };
 </script>
 
