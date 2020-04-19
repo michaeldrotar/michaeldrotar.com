@@ -17,8 +17,11 @@ const server = http.createServer(app.callback());
 
 latencyCheckerServer(server);
 
-let routes = [['/api', api], ['', ui]];
-routes.forEach(route => {
+let routes = [
+  ['/api', api],
+  ['', ui],
+];
+routes.forEach((route) => {
   router.use(route[0], route[1].routes(), route[1].allowedMethods());
 });
 

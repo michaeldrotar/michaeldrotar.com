@@ -3,21 +3,21 @@
   max-width: $container-xs;
   padding: $space-md $grid-gutter-width;
 
-  @include media-breakpoint-up("sm") {
+  @include media-breakpoint-up('sm') {
     max-width: $container-sm;
     padding-bottom: $space-xl;
     padding-top: $space-xl;
   }
 
-  @include media-breakpoint-up("md") {
+  @include media-breakpoint-up('md') {
     max-width: $container-md;
   }
 
-  @include media-breakpoint-up("lg") {
+  @include media-breakpoint-up('lg') {
     max-width: $container-lg;
   }
 
-  @include media-breakpoint-up("xl") {
+  @include media-breakpoint-up('xl') {
     max-width: $container-xl;
   }
 }

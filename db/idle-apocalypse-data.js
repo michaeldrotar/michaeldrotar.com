@@ -4,9 +4,9 @@ export const details = [
     type: 'Creature Farm',
     upgrades: [
       {
-        costs: [{ ref: 'Roots', amount: 10 }]
-      }
-    ]
+        costs: [{ ref: 'Roots', amount: 10 }],
+      },
+    ],
   },
   {
     name: 'Gremlin',
@@ -18,20 +18,20 @@ export const details = [
       {
         costs: [{ ref: 'Slime', amount: 5 }],
         upgrades: {
-          drops: [{ ref: 'Slime', amount: 1 }]
-        }
+          drops: [{ ref: 'Slime', amount: 1 }],
+        },
       },
       {
         costs: [{ ref: 'Hide', amount: 5 }],
         upgrades: {
-          drops: [{ ref: 'Slime', amount: 1 }]
-        }
-      }
-    ]
+          drops: [{ ref: 'Slime', amount: 1 }],
+        },
+      },
+    ],
   },
   {
     name: 'Slime',
-    type: 'Resource'
+    type: 'Resource',
   },
   {
     name: 'Orc Mage',
@@ -44,29 +44,29 @@ export const details = [
         costs: [{ ref: 'Hide', amount: 125 }],
         upgrades: {
           costs: [{ ref: 'Roots', amount: 1 }],
-          drops: [{ ref: 'Cracked Orb', amount: 1 }]
-        }
+          drops: [{ ref: 'Cracked Orb', amount: 1 }],
+        },
       },
       {
         costs: [
           { ref: 'Magic Tome', amount: 25 },
-          { ref: 'Slime', amount: 250 }
+          { ref: 'Slime', amount: 250 },
         ],
         upgrades: {
           costs: [{ ref: 'Roots', amount: 1 }],
           drops: [
             {
               ref: 'Cracked Orb',
-              amount: 1
-            }
-          ]
-        }
-      }
-    ]
+              amount: 1,
+            },
+          ],
+        },
+      },
+    ],
   },
   {
     name: 'Cracked Orb',
-    type: 'Resource'
+    type: 'Resource',
   },
   {
     name: 'Generator I',
@@ -74,8 +74,8 @@ export const details = [
     costs: [{ ref: 'Hide', amount: 5 }],
     generates: {
       type: 'spawnTime',
-      amounts: [-0.04, -0.08, -0.12, -0.16, -0.2]
-    }
+      amounts: [-0.04, -0.08, -0.12, -0.16, -0.2],
+    },
   },
   {
     name: 'Hatchery',
@@ -84,12 +84,12 @@ export const details = [
     costs: [{ ref: 'Slime', amount: 15 }],
     upgrades: [
       {
-        costs: [{ ref: 'Rotten Flesh', amount: 250 }]
+        costs: [{ ref: 'Rotten Flesh', amount: 250 }],
       },
       {
-        costs: [{ ref: 'Ooze', amount: 1000 }]
-      }
-    ]
+        costs: [{ ref: 'Ooze', amount: 1000 }],
+      },
+    ],
   },
   {
     name: 'Spider',
@@ -102,33 +102,33 @@ export const details = [
         costs: [{ ref: 'Slime', amount: 100 }],
         upgrades: {
           costs: [{ ref: 'Slime', amount: 1 }],
-          drops: [{ ref: 'Hide', amount: 1 }]
-        }
+          drops: [{ ref: 'Hide', amount: 1 }],
+        },
       },
       {
         costs: [
           { ref: 'Cracked Orb', amount: 15 },
-          { ref: 'Roots', amount: 100 }
+          { ref: 'Roots', amount: 100 },
         ],
         upgrades: {
           costs: [{ ref: 'Slime', amount: 1 }],
-          drops: [{ ref: 'Hide', amount: 1 }]
-        }
+          drops: [{ ref: 'Hide', amount: 1 }],
+        },
       },
       {
         costs: [
           { ref: 'Wings', amount: 50 },
-          { ref: 'Magic Tome', amount: 125 }
+          { ref: 'Magic Tome', amount: 125 },
         ],
         upgrades: {
-          drops: [{ ref: 'Hide', amount: 1 }]
-        }
-      }
-    ]
+          drops: [{ ref: 'Hide', amount: 1 }],
+        },
+      },
+    ],
   },
   {
     name: 'Hide',
-    type: 'Resource'
+    type: 'Resource',
   },
   {
     name: 'Blood Bat',
@@ -140,163 +140,163 @@ export const details = [
       {
         costs: [
           { ref: 'Magic Tome', amount: 100 },
-          { ref: 'Hide', amount: 500 }
+          { ref: 'Hide', amount: 500 },
         ],
         upgrades: {
           costs: [{ ref: 'Rotten Flesh', amount: 1 }],
-          drops: [{ ref: 'Wings', amount: 1 }]
-        }
-      }
-    ]
+          drops: [{ ref: 'Wings', amount: 1 }],
+        },
+      },
+    ],
   },
   {
     name: 'Idol Portal',
-    requirements: [{ ref: 'Library' }]
-  }
+    requirements: [{ ref: 'Library' }],
+  },
 ];
 
 export default [
   // Creature Farms + Creatures + Drops + Juice
   {
     name: 'Mud Farm',
-    costs: []
+    costs: [],
   },
   {
     name: 'Gremlin',
-    costs: []
+    costs: [],
   },
   {
     name: 'Slime',
-    costs: []
+    costs: [],
   },
   {
     name: 'Orc Mage',
-    costs: [{ ref: 'Roots' }]
+    costs: [{ ref: 'Roots' }],
   },
   {
     name: 'Cracked Orb',
-    costs: []
+    costs: [],
   },
   {
     name: 'Hatchery',
-    costs: [{ ref: 'Slime' }]
+    costs: [{ ref: 'Slime' }],
   },
   {
     name: 'Spider',
-    costs: [{ ref: 'Slime' }]
+    costs: [{ ref: 'Slime' }],
   },
   {
     name: 'Hide',
-    costs: []
+    costs: [],
   },
   {
     name: 'Blood Bat',
-    costs: [{ ref: 'Rotten Flesh' }]
+    costs: [{ ref: 'Rotten Flesh' }],
   },
   {
     name: 'Wings',
-    costs: []
+    costs: [],
   },
   {
     name: 'Crypts',
-    costs: [{ ref: 'Cracked Orb' }, { ref: 'Roots' }]
+    costs: [{ ref: 'Cracked Orb' }, { ref: 'Roots' }],
   },
   {
     name: 'Zombie',
-    costs: []
+    costs: [],
   },
   {
     name: 'Rotten Flesh',
-    costs: []
+    costs: [],
   },
   {
     name: 'Skeleton Mage',
-    costs: [{ ref: 'Bones' }]
+    costs: [{ ref: 'Bones' }],
   },
   {
     name: 'Greenhouse',
-    costs: [{ ref: 'Stone Stew' }, { ref: 'Vines' }]
+    costs: [{ ref: 'Stone Stew' }, { ref: 'Vines' }],
   },
   {
     name: 'Ent',
-    costs: [{ ref: 'Fairy Dust' }, { ref: 'Roots' }]
+    costs: [{ ref: 'Fairy Dust' }, { ref: 'Roots' }],
   },
   {
     name: 'Wood',
-    costs: []
+    costs: [],
   },
   // Producers
   {
     name: 'Arbitrarium',
-    costs: [{ ref: 'Coin' }, { ref: 'Hide' }]
+    costs: [{ ref: 'Coin' }, { ref: 'Hide' }],
   },
   {
     name: 'Roots',
-    costs: []
+    costs: [],
   },
   {
     name: 'Vines',
-    costs: []
+    costs: [],
   },
   {
     name: 'Mine',
-    costs: [{ ref: 'Fairy Dust' }, { ref: 'Vines' }]
+    costs: [{ ref: 'Fairy Dust' }, { ref: 'Vines' }],
   },
   {
     name: 'Stone',
-    costs: []
+    costs: [],
   },
   {
     name: 'Scavenger',
-    costs: [{ ref: 'Ogre Hair' }, { ref: 'Wood' }]
+    costs: [{ ref: 'Ogre Hair' }, { ref: 'Wood' }],
   },
   // Converters
   {
     name: 'Magic Workshop',
-    costs: [{ ref: 'Cracked Orb' }, { ref: 'Hide' }]
+    costs: [{ ref: 'Cracked Orb' }, { ref: 'Hide' }],
   },
   {
     name: 'Magic Tome',
-    costs: [{ ref: 'Cracked Orb' }, { ref: 'Hide' }]
+    costs: [{ ref: 'Cracked Orb' }, { ref: 'Hide' }],
   },
   {
     name: 'Fairy Dust',
-    costs: [{ ref: 'Wings' }]
+    costs: [{ ref: 'Wings' }],
   },
   {
     name: 'Kitchen',
-    costs: [{ ref: 'Mighty Hammer' }, { ref: 'Stone' }]
+    costs: [{ ref: 'Mighty Hammer' }, { ref: 'Stone' }],
   },
   {
     name: 'Stone Stew',
-    costs: [{ ref: 'Stone' }, { ref: 'Rotten Flesh' }]
+    costs: [{ ref: 'Stone' }, { ref: 'Rotten Flesh' }],
   },
   // Generators
   {
     name: 'Generator I',
-    costs: [{ ref: 'Hide' }]
+    costs: [{ ref: 'Hide' }],
   },
   // Researchers
   {
     name: 'Library',
-    costs: [{ ref: 'Magic Tome' }, { ref: 'Roots' }]
+    costs: [{ ref: 'Magic Tome' }, { ref: 'Roots' }],
   },
   {
     name: 'Archives',
-    costs: [{ ref: 'Necklace' }, { ref: 'Magic Tome' }]
+    costs: [{ ref: 'Necklace' }, { ref: 'Magic Tome' }],
   },
   // Idols
   {
     name: 'Idol Portal',
-    costs: [{ ref: 'Dark Energy' }, { ref: 'MagicTome' }]
+    costs: [{ ref: 'Dark Energy' }, { ref: 'MagicTome' }],
   },
   // Misc
   {
     name: 'Spell Factory',
-    costs: [{ ref: 'Ring' }, { ref: 'Roots' }]
+    costs: [{ ref: 'Ring' }, { ref: 'Roots' }],
   },
   {
     name: 'Skull Mortar',
-    costs: [{ ref: 'Stage Number' }, { ref: 'Stone' }]
-  }
+    costs: [{ ref: 'Stage Number' }, { ref: 'Stone' }],
+  },
 ];

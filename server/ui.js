@@ -5,7 +5,7 @@ import send from 'koa-send';
 var router = new Router();
 
 router.use(serve('dist'));
-router.get('*', async ctx => {
+router.get('*', async (ctx) => {
   await send(ctx, 'dist/index.html');
 });
 

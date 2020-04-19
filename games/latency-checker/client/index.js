@@ -6,11 +6,11 @@ export function client(url, canvas) {
   var io = socket(url);
   var game = new Game({ canvas: canvas });
   var oldStates = [];
-  io.on('onconnected', function(data) {
+  io.on('onconnected', function (data) {
     console.log(`handshake received: ${data.id}`);
     game.start();
   });
-  io.on('state', function(state) {
+  io.on('state', function (state) {
     var oldState = game.scene.state;
     var newState = state;
     var diff = {};
@@ -32,7 +32,7 @@ export function client(url, canvas) {
         } else if (oldValue !== newValue) {
           diff[baseKey + (baseKey.length > 0 ? '_' : '') + key] = {
             oldValue,
-            newValue
+            newValue,
           };
           hasDiff = true;
         }

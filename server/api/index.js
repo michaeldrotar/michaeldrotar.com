@@ -11,9 +11,9 @@ router.use(async (ctx, next) => {
   await next();
 });
 
-router.get('/', async ctx => {
+router.get('/', async (ctx) => {
   ctx.body = {
-    message: `success! ${process.env.NODE_ENV}/${process.env.BLAH}`
+    message: `success! ${process.env.NODE_ENV}/${process.env.BLAH}`,
   };
 });
 

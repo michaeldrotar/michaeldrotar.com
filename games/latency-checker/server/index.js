@@ -31,7 +31,7 @@ class Server {
     client.emit('state', this.game.scene.state);
     client.on(
       'disconnect',
-      function() {
+      function () {
         console.log('a user disconnected');
         _.pull(this.clients, client);
         if (this.clients.length === 0) {

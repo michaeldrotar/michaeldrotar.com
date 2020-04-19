@@ -7,7 +7,7 @@ export default class Tanks extends Game {
     super(
       Object.assign(
         {
-          scenes: [MainScene]
+          scenes: [MainScene],
         },
         options
       )
