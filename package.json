@@ -12,6 +12,7 @@
     "clean": "rm -fR dist && rm -f server.js",
     "generate-webpack": "vue inspect > webpack.config.js",
     "lint": "vue-cli-service lint",
+    "reformat": "prettier . --write",
     "serve-client": "vue-cli-service serve --port 8080",
     "serve": "npm run build-server && concurrently --kill-others \"npm run build-server -- --watch\" \"nodemon server.js --watch server.js\" \"npm run serve-client\"",
     "start": "node server.js",
