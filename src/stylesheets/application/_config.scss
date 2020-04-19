@@ -44,8 +44,8 @@ $color-facebook: #3b5998;
 $color-google: #d34836;
 
 // Elements (for reference)
-$body-bg: #393339;
-$body-text: #f0f0f0;
+$body-bg: #333;
+$body-text: #999;
 
 // Dimensions
 //
@@ -88,7 +88,7 @@ $breakpoints: (
   sm: 768px,
   md: 992px,
   lg: 1200px,
-  xl: 1366px,
+  xl: 1366px
 );
 
 $container-xs: 580px;

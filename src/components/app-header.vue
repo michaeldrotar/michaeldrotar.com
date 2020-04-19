@@ -9,14 +9,23 @@
           michaeldrotar.com
         </span>
       </section>
+      <section
+        class="mdc-top-app-bar__section mdc-top-appbar__section--align-end"
+      >
+        <app-navigation></app-navigation>
+      </section>
     </div>
   </header>
 </template>
 
 <script>
 import { MDCTopAppBar } from '@material/top-app-bar';
+import AppNavigation from '@/components/app-navigation';
 
 export default {
+  components: {
+    AppNavigation,
+  },
   mounted: function () {
     const element = this.$el;
     const parent = element.parentElement;

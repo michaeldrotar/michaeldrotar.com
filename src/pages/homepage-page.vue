@@ -2,9 +2,8 @@
   <div>
     <awful-typewriter>
       <div class="homepage-intro">
-        <router-link to="/clicker-heroes-2">link</router-link>
         <h1 class="homepage-intro-heading homepage-intro-line">
-          Hi, I'm Michael!
+          Hi, I'm Michael.
         </h1>
         <p class="homepage-intro-text">
           I'm a lead web architect by day and chronic tinkerer by night.
