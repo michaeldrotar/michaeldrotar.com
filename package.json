@@ -22,8 +22,8 @@
     "heroku-postbuild": "npm install --only=dev --no-shrinkwrap && npm run build"
   },
   "engines": {
-    "node": "8.11.x",
-    "npm": "6.5.x"
+    "node": "12.14.x",
+    "npm": "6.13.x"
   },
   "dependencies": {
     "@material/image-list": "4.0.0",
