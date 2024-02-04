@@ -1,7 +1,0 @@
-node_modules
-/dist
-server.js
-private
-*.html
-.*ignore
-package-lock.json
