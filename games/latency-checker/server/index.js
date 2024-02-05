@@ -39,7 +39,7 @@ class Server {
           clearInterval(this.syncTimer);
           this.syncTimer = null;
         }
-      }.bind(this)
+      }.bind(this),
     );
     if (this.clients.length === 1) {
       this.game.start();

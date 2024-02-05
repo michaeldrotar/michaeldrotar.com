@@ -48,8 +48,10 @@ export default {
     opacity: 1;
     position: relative;
     transform: translateY(0);
-    transition: opacity 0.15s ease-out,
-      transform 0.45s cubic-bezier(0.33, 0.98, 0.46, 1.68), width 0.1s ease-in;
+    transition:
+      opacity 0.15s ease-out,
+      transform 0.45s cubic-bezier(0.33, 0.98, 0.46, 1.68),
+      width 0.1s ease-in;
     width: 24px;
 
     &::before {

@@ -1,6 +1,6 @@
 <template>
   <div id="tanks">
-    <canvas style="height: 500px; width: 800px;"></canvas>
+    <canvas style="height: 500px; width: 800px"></canvas>
   </div>
 </template>
 
@@ -32,14 +32,14 @@ export default {
         Math.PI / 2,
         3,
         new BABYLON.Vector3(0, 0, 0),
-        scene
+        scene,
       );
       camera.attachControl(canvas, true);
 
       new BABYLON.HemisphericLight(
         'light1',
         new BABYLON.Vector3(1, 1, 0),
-        scene
+        scene,
       );
       new BABYLON.PointLight('light2', new BABYLON.Vector3(0, 1, -1), scene);
 
@@ -48,14 +48,14 @@ export default {
       let side1 = BABYLON.MeshBuilder.CreateBox(
         'sphere',
         { height: 2, width: 1, depth: 0.1 },
-        scene
+        scene,
       );
       side1.position = new BABYLON.Vector3(0, 0, 0.5);
 
       let side2 = BABYLON.MeshBuilder.CreateBox(
         'foo',
         { height: 2, width: 1, depth: 0.1 },
-        scene
+        scene,
       );
       side2.position = new BABYLON.Vector3(0, 0, -0.5);
 

@@ -27,7 +27,7 @@ export function client(url, canvas) {
             calcDiff(
               baseKey + (baseKey.length > 0 ? '_' : '') + key,
               oldValue,
-              newValue
+              newValue,
             ) || hasDiff;
         } else if (oldValue !== newValue) {
           diff[baseKey + (baseKey.length > 0 ? '_' : '') + key] = {

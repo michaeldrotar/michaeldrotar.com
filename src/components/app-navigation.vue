@@ -53,7 +53,9 @@ export default {
   justify-content: center;
   padding: $space-xl $grid-gutter-width;
   transform: translateY(-100%);
-  transition: transform 0.45s cubic-bezier(0.45, 0, 0, 1), visibility 0.45s;
+  transition:
+    transform 0.45s cubic-bezier(0.45, 0, 0, 1),
+    visibility 0.45s;
   visibility: hidden;
   z-index: 1;
 
@@ -75,22 +77,26 @@ export default {
     width: 100%;
 
     &:nth-child(1) {
-      transition: color 0.15s ease-out 0.1s,
+      transition:
+        color 0.15s ease-out 0.1s,
         transform 0.7s cubic-bezier(0.33, 0.98, 0.46, 1.68);
     }
 
     &:nth-child(2) {
-      transition: color 0.15s ease-out 0.1s,
+      transition:
+        color 0.15s ease-out 0.1s,
         transform 0.6s cubic-bezier(0.33, 0.98, 0.46, 1.68);
     }
 
     &:nth-child(3) {
-      transition: color 0.15s ease-out 0.1s,
+      transition:
+        color 0.15s ease-out 0.1s,
         transform 0.5s cubic-bezier(0.33, 0.98, 0.46, 1.68);
     }
 
     &:nth-child(4) {
-      transition: color 0.15s ease-out 0.1s,
+      transition:
+        color 0.15s ease-out 0.1s,
         transform 0.4s cubic-bezier(0.33, 0.98, 0.46, 1.68);
     }
 

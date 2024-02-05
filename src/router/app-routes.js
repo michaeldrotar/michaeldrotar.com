@@ -23,7 +23,7 @@ export default [
           component: ResumePage,
         },
       ],
-      ClickerHeroes2Routes
+      ClickerHeroes2Routes,
     ),
   },
 ];

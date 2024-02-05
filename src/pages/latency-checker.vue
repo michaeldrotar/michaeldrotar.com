@@ -27,9 +27,9 @@
       &nbsp;
       <span>{{ state[0].num - state[1].num }}</span> -->
     </div>
-    <div class="block" style="top: 10px;" id="block-1"></div>
-    <div class="block" style="top: 20px;" id="block-2"></div>
-    <div class="block" style="top: 30px;" id="block-3"></div>
+    <div class="block" style="top: 10px" id="block-1"></div>
+    <div class="block" style="top: 20px" id="block-2"></div>
+    <div class="block" style="top: 30px" id="block-3"></div>
   </div>
 </template>
 
@@ -115,7 +115,9 @@ export default {
   height: 10px;
   width: 10px;
   background-color: red;
-  transition: left 0.1s, transform 0.1s;
+  transition:
+    left 0.1s,
+    transform 0.1s;
 }
 
 .diff {

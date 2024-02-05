@@ -9,8 +9,8 @@ export default class Tanks extends Game {
         {
           scenes: [MainScene],
         },
-        options
-      )
+        options,
+      ),
     );
   }
 }

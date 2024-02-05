@@ -5,9 +5,7 @@
       <section
         class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start"
       >
-        <span class="mdc-top-app-bar__title">
-          michaeldrotar.com
-        </span>
+        <span class="mdc-top-app-bar__title"> michaeldrotar.com </span>
       </section>
       <section
         class="mdc-top-app-bar__section mdc-top-appbar__section--align-end"
