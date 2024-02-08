@@ -3,6 +3,8 @@ import { inter } from './ui/fonts'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import { Analytics } from '@vercel/analytics/react'
 import { Metadata } from 'next'
+import { Room } from './Room'
+import Cursors from './Cursors'
 
 export const metadata: Metadata = {
   title: {
@@ -21,7 +23,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} antialiased`}>
-        {children}
+        <Room>
+          <Cursors>{children}</Cursors>
+        </Room>
         <Analytics />
         <SpeedInsights />
       </body>
