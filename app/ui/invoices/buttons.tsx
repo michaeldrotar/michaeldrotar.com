@@ -1,6 +1,6 @@
-import { deleteInvoice } from '@/app/lib/actions';
-import { PencilIcon, PlusIcon, TrashIcon } from '@heroicons/react/24/outline';
-import Link from 'next/link';
+import { deleteInvoice } from '@/app/lib/actions'
+import { PencilIcon, PlusIcon, TrashIcon } from '@heroicons/react/24/outline'
+import Link from 'next/link'
 
 export function CreateInvoice() {
   return (
@@ -11,7 +11,7 @@ export function CreateInvoice() {
       <span className="hidden md:block">Create Invoice</span>{' '}
       <PlusIcon className="h-5 md:ml-4" />
     </Link>
-  );
+  )
 }
 
 export function UpdateInvoice({ id }: { id: string }) {
@@ -22,7 +22,7 @@ export function UpdateInvoice({ id }: { id: string }) {
     >
       <PencilIcon className="w-5" />
     </Link>
-  );
+  )
 }
 
 export function DeleteInvoice({ id }: { id: string }) {
@@ -33,5 +33,5 @@ export function DeleteInvoice({ id }: { id: string }) {
         <TrashIcon className="w-5" />
       </button>
     </form>
-  );
+  )
 }
