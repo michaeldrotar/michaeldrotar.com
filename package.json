@@ -14,6 +14,9 @@
     "start": "next start"
   },
   "dependencies": {
+    "@builder.io/dev-tools": "^0.2.13",
+    "@builder.io/react": "^3.2.2",
+    "@builder.io/sdk": "^2.2.1",
     "@heroicons/react": "^2.0.18",
     "@tailwindcss/forms": "^0.5.7",
     "@types/node": "20.5.7",
