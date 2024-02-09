@@ -147,7 +147,7 @@ function Example({ children }: { children?: ReactNode }) {
   return (
     <>
       <div
-        className="relative flex h-screen w-full touch-none items-center justify-center overflow-hidden"
+        className="relative flex min-h-screen w-full touch-none overflow-hidden"
         style={{
           cursor:
             state.mode === CursorMode.Chat
@@ -285,7 +285,7 @@ function Example({ children }: { children?: ReactNode }) {
             />
           )
         })}
-        {children}
+        <div>{children}</div>
       </div>
     </>
   )
