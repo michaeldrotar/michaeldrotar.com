@@ -1,8 +1,8 @@
 {
   "name": "michaeldrotar.com",
-  "license": "MIT",
   "private": true,
   "description": "My personal website",
+  "license": "MIT",
   "author": "Michael Drotar <michaeldrotar@gmail.com>",
   "scripts": {
     "build": "next build",

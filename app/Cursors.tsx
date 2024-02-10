@@ -207,7 +207,7 @@ function Example({ children }: { children?: ReactNode }) {
         })}
         {cursor && (
           <div
-            className="absolute top-0 left-0"
+            className="absolute left-0 top-0"
             style={{
               transform: `translateX(${cursor.x}px) translateY(${cursor.y}px)`,
             }}
@@ -217,7 +217,7 @@ function Example({ children }: { children?: ReactNode }) {
                 <img src="cursor.svg" />
 
                 <div
-                  className="absolute top-5 left-2 bg-blue-500 px-4 py-2 text-sm leading-relaxed text-white"
+                  className="absolute left-2 top-5 bg-blue-500 px-4 py-2 text-sm leading-relaxed text-white"
                   onKeyUp={(e) => e.stopPropagation()}
                   style={{
                     borderRadius: 20,
@@ -263,7 +263,7 @@ function Example({ children }: { children?: ReactNode }) {
               />
             )}
             {state.mode === CursorMode.Reaction && (
-              <div className="pointer-events-none absolute top-3.5 left-1 select-none">
+              <div className="pointer-events-none absolute left-1 top-3.5 select-none">
                 {state.reaction}
               </div>
             )}
@@ -306,21 +306,21 @@ export default function Cursors({ children }: { children?: ReactNode }) {
       <div className="inset-0 flex select-none items-center justify-center bg-white">
         <div className="max-w-sm text-center">
           <ul className="mt-4 flex items-center justify-center space-x-2">
-            <li className="flex items-center space-x-2 rounded-md bg-gray-100 py-2 px-3 text-sm">
+            <li className="flex items-center space-x-2 rounded-md bg-gray-100 px-3 py-2 text-sm">
               <span>Reactions</span>
               <span className="block rounded border border-gray-300 px-1 text-xs font-medium uppercase text-gray-500">
                 E
               </span>
             </li>
 
-            <li className="flex items-center space-x-2 rounded-md bg-gray-100 py-2 px-3 text-sm">
+            <li className="flex items-center space-x-2 rounded-md bg-gray-100 px-3 py-2 text-sm">
               <span>Chat</span>
               <span className="block rounded border border-gray-300 px-1 text-xs font-medium uppercase text-gray-500">
                 /
               </span>
             </li>
 
-            <li className="flex items-center space-x-2 rounded-md bg-gray-100 py-2 px-3 text-sm">
+            <li className="flex items-center space-x-2 rounded-md bg-gray-100 px-3 py-2 text-sm">
               <span>Escape</span>
               <span className="block rounded border border-gray-300 px-1 text-xs font-medium uppercase text-gray-500">
                 esc

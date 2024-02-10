@@ -28,7 +28,7 @@ export function ThemeToggleButton() {
 
   return (
     <button
-      className="flex w-16 items-center gap-2 p-2 h-16 rounded-full bg-transparent text-gray-800 border-gray-300 border-2 shadow-sm hover:bg-gray-200 transition-colors"
+      className="flex h-16 w-16 items-center gap-2 rounded-full border-2 border-gray-300 bg-transparent p-2 text-gray-800 shadow-sm transition-colors hover:bg-gray-200"
       onClick={() => {
         let newTheme = resolvedTheme === 'light' ? 'dark' : 'light'
         if (systemTheme === newTheme) newTheme = 'system'
