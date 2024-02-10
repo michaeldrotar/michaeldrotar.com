@@ -5,6 +5,8 @@ import { Analytics } from '@vercel/analytics/react'
 import { Metadata } from 'next'
 import { Room } from './Room'
 import Cursors from './Cursors'
+import { ThemeProvider } from '@/theme/ThemeProvider/ThemeProvider'
+import { ThemeToggleButton } from '@/theme/ThemeToggleButton/ThemeToggleButton'
 
 export const metadata: Metadata = {
   title: {
@@ -21,13 +23,18 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={`${inter.className} antialiased`}>
-        <Room>
-          <Cursors>{children}</Cursors>
-        </Room>
-        <Analytics />
-        <SpeedInsights />
+        <ThemeProvider>
+          <Room>
+            <Cursors>
+              <ThemeToggleButton />
+              {children}
+            </Cursors>
+          </Room>
+          <Analytics />
+          <SpeedInsights />
+        </ThemeProvider>
       </body>
     </html>
   )
