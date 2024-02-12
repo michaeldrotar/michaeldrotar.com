@@ -7,6 +7,7 @@ import { Room } from './Room'
 import Cursors from './Cursors'
 import { ThemeProvider } from '@/theme/ThemeProvider/ThemeProvider'
 import { TopNavigation } from '@/components/TopNavigation/TopNavigation'
+import { BottomFooter } from '@/components/BottomFooter/BottomFooter'
 
 export const metadata: Metadata = {
   title: {
@@ -31,6 +32,7 @@ export default function RootLayout({
           {/* <Cursors> */}
           <TopNavigation />
           {children}
+          <BottomFooter />
           {/* </Cursors> */}
           {/* </Room> */}
           <Analytics />
