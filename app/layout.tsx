@@ -10,11 +10,10 @@ import { TopNavigation } from '@/components/TopNavigation/TopNavigation'
 
 export const metadata: Metadata = {
   title: {
-    template: '%s | Acme Dashboard',
-    default: 'Acme Dashboard',
+    template: '%s | Michael Drotar',
+    default: 'Michael Drotar',
   },
-  description: 'The official Next.js Course Dashboard, built with App Router.',
-  metadataBase: new URL('https://next-learn-dashboard.vercel.sh'),
+  description: 'The man, the myth, the dragon.',
 }
 
 export default function RootLayout({
