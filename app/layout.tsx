@@ -15,6 +15,7 @@ export const metadata: Metadata = {
     default: 'Michael Drotar',
   },
   description: 'The man, the myth, the dragon.',
+  metadataBase: new URL('https://www.michaeldrotar.com'),
 }
 
 export default function RootLayout({
