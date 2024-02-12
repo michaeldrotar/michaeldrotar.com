@@ -6,7 +6,7 @@ import { Metadata } from 'next'
 import { Room } from './Room'
 import Cursors from './Cursors'
 import { ThemeProvider } from '@/theme/ThemeProvider/ThemeProvider'
-import { ThemeToggleButton } from '@/theme/ThemeToggleButton/ThemeToggleButton'
+import { TopNavigation } from '@/components/TopNavigation/TopNavigation'
 
 export const metadata: Metadata = {
   title: {
@@ -30,7 +30,7 @@ export default function RootLayout({
         <ThemeProvider>
           {/* <Room> */}
           {/* <Cursors> */}
-          <ThemeToggleButton />
+          <TopNavigation />
           {children}
           {/* </Cursors> */}
           {/* </Room> */}
