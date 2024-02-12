@@ -28,12 +28,12 @@ export default function RootLayout({
         className={`${inter.className} bg-white text-neutral-800 antialiased transition-colors duration-500 dark:bg-neutral-800 dark:text-white`}
       >
         <ThemeProvider>
-          <Room>
-            <Cursors>
-              <ThemeToggleButton />
-              {children}
-            </Cursors>
-          </Room>
+          {/* <Room> */}
+          {/* <Cursors> */}
+          <ThemeToggleButton />
+          {children}
+          {/* </Cursors> */}
+          {/* </Room> */}
           <Analytics />
           <SpeedInsights />
         </ThemeProvider>
