@@ -7,6 +7,7 @@ export function BottomFooter() {
         href="https://github.com/michaeldrotar"
         target="_blank"
         aria-label="Visit my Github page"
+        className="flex items-center justify-center rounded-full"
       >
         <FaGithub size={32} />
       </a>
@@ -14,6 +15,7 @@ export function BottomFooter() {
         href="https://linkedin.com/in/michaeldrotar"
         target="_blank"
         aria-label="Visit my LinkedIn page"
+        className="flex items-center justify-center"
       >
         <FaLinkedin size={32} />
       </a>
