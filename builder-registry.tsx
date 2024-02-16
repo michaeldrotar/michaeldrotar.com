@@ -7,7 +7,18 @@ import { Button } from './components/Button/Button'
 initBuilder()
 
 Builder.registerComponent(
-  ({ text, link, openLinkInNewTab, attributes, ...rest }) => (
+  ({
+    text,
+    link,
+    openLinkInNewTab,
+    attributes,
+    ...rest
+  }: {
+    text: string
+    link: string
+    openLinkInNewTab: boolean
+    attributes: Record<string, unknown>
+  }) => (
     <Button
       href={link}
       target={openLinkInNewTab ? '_blank' : undefined}
