@@ -12,22 +12,24 @@ Builder.registerComponent(
     link,
     openLinkInNewTab,
     attributes,
-    ...rest
   }: {
     text: string
     link: string
     openLinkInNewTab: boolean
-    attributes: Record<string, unknown>
-  }) => (
-    <Button
-      href={link}
-      target={openLinkInNewTab ? '_blank' : undefined}
-      {...attributes}
-      {...rest}
-    >
-      {text}
-    </Button>
-  ),
+    attributes: Record<string, unknown> & { key?: string }
+  }) => {
+    const { key, 'builder-id': builderId, ...safeAttributes } = attributes
+    return (
+      <Button
+        key={key}
+        href={link}
+        target={openLinkInNewTab ? '_blank' : undefined}
+        {...safeAttributes}
+      >
+        {text}
+      </Button>
+    )
+  },
   {
     name: 'Core:Button',
     image:
