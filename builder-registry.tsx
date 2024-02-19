@@ -18,7 +18,7 @@ Builder.registerComponent(
     openLinkInNewTab: boolean
     attributes: Record<string, unknown> & { key?: string }
   }) => {
-    const { key, 'builder-id': builderId, ...safeAttributes } = attributes
+    const { key, ...safeAttributes } = attributes
     return (
       <Button
         key={key}
