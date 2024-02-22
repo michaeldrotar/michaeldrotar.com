@@ -15,7 +15,7 @@ import React, {
   ReactNode,
 } from 'react'
 import { useRouter } from 'next/router'
-import Cursor from '../components/Cursor'
+import Cursor from '../components/Cursor/Cursor'
 import FlyingReaction from '../components/FlyingReaction'
 import ReactionSelector from '../components/ReactionSelector'
 import useInterval from '../hooks/useInterval'

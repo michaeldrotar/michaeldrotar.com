@@ -9,6 +9,7 @@ import { ThemeProvider } from '@/theme/ThemeProvider/ThemeProvider'
 import { TopNavigation } from '@/components/TopNavigation/TopNavigation'
 import { BottomFooter } from '@/components/BottomFooter/BottomFooter'
 import { FocusTracker } from '@/components/FocusTracker/FocusTracker'
+import { UserCursor } from '@/components/UserCursor/UserCursor'
 
 export const metadata: Metadata = {
   title: {
@@ -37,6 +38,7 @@ export default function RootLayout({
           <BottomFooter />
           {/* </Cursors> */}
           {/* </Room> */}
+          <UserCursor />
           <FocusTracker />
           <Analytics />
           <SpeedInsights />
