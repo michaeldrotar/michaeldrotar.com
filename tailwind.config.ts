@@ -21,6 +21,7 @@ const config: Config = {
   },
   plugins: [
     require('@tailwindcss/forms'),
+    require('@tailwindcss/typography'),
     plugin(({ addUtilities, matchUtilities, theme }) => {
       matchUtilities(
         {
