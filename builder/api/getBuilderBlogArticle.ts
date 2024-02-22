@@ -1,6 +1,3 @@
-import { ArticlePageProps } from '@/builder/ArticlePage/ArticlePageProps'
-import { initBuilder } from '@/builder/initBuilder'
-import { ArticlePage } from '@/builder/ArticlePage/ArticlePage'
 import { BuilderBlogArticle } from './BuilderBlogArticle'
 import { builder } from '@builder.io/sdk'
 

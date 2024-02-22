@@ -1,4 +1,3 @@
-import { BuilderBlock } from '@builder.io/react/dist/types/src/components/builder-block.component'
 import { BuilderContentReference } from './BuilderContentReference'
 import { BuilderContentAuthor } from './BuilderContentAuthor'
 import { BuilderContent } from '@builder.io/sdk'

@@ -1,7 +1,7 @@
 'use client'
 
 import { BuilderComponent, useIsPreviewing } from '@builder.io/react'
-import { BuilderContent, builder } from '@builder.io/sdk'
+import { BuilderContent } from '@builder.io/sdk'
 import DefaultErrorPage from 'next/error'
 import '../builder-registry'
 import { initBuilder } from '@/builder/initBuilder'

@@ -1,7 +1,6 @@
 'use client'
 
 import {
-  RoomProvider,
   useBroadcastEvent,
   useEventListener,
   useMyPresence,
@@ -11,10 +10,8 @@ import React, {
   useState,
   useCallback,
   useEffect,
-  useMemo,
   ReactNode,
 } from 'react'
-import { useRouter } from 'next/router'
 import Cursor from '../components/Cursor/Cursor'
 import FlyingReaction from '../components/FlyingReaction'
 import ReactionSelector from '../components/ReactionSelector'

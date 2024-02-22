@@ -1,5 +1,5 @@
 'use client'
-import { builder, Builder } from '@builder.io/react'
+import { Builder } from '@builder.io/react'
 import Counter from './components/Counter/Counter'
 import { initBuilder } from './builder/initBuilder'
 import { Button } from './components/Button/Button'
