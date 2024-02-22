@@ -8,13 +8,13 @@ export const formatCurrency = (amount: number) => {
 }
 
 export const formatDateToLocal = (
-  dateStr: string,
+  dateStr: string | Date | number,
   locale: string = 'en-US',
 ) => {
   const date = new Date(dateStr)
   const options: Intl.DateTimeFormatOptions = {
     day: 'numeric',
-    month: 'short',
+    month: 'long',
     year: 'numeric',
   }
   const formatter = new Intl.DateTimeFormat(locale, options)
