@@ -25,7 +25,9 @@ async function getArticle(props: BlogPageProps) {
   return await getBuilderBlogArticle(id, { includeRefs: true })
 }
 
-export async function generateMetadata(props: BlogPageProps): Metadata {
+export async function generateMetadata(
+  props: BlogPageProps,
+): Promise<Metadata> {
   const article = await getArticle(props)
   if (!article) return notFound()
 

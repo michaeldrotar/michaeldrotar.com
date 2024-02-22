@@ -6,12 +6,7 @@ import {
   useMyPresence,
   useOthers,
 } from '../liveblocks.config'
-import React, {
-  useState,
-  useCallback,
-  useEffect,
-  ReactNode,
-} from 'react'
+import React, { useState, useCallback, useEffect, ReactNode } from 'react'
 import Cursor from '../components/Cursor/Cursor'
 import FlyingReaction from '../components/FlyingReaction'
 import ReactionSelector from '../components/ReactionSelector'
@@ -276,8 +271,6 @@ function Example({ children }: { children?: ReactNode }) {
             <Cursor
               key={connectionId}
               color={COLORS[connectionId % COLORS.length]}
-              x={presence.cursor.x}
-              y={presence.cursor.y}
               message={presence.message}
             />
           )
