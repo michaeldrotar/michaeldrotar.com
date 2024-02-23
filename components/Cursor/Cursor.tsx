@@ -9,7 +9,7 @@ type Props = {
 export default function Cursor({ color, message, cursorRef }: Props) {
   return (
     <div
-      className="pointer-events-none fixed left-0 top-0 scale-125 fill-red-400 stroke-black stroke-1 dark:stroke-white"
+      className="pointer-events-none fixed left-0 top-0 z-50 scale-125 fill-red-400 stroke-black stroke-1 dark:stroke-white"
       style={{ visibility: 'hidden' }}
       ref={cursorRef}
     >
