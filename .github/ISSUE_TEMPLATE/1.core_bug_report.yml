@@ -1,6 +1,7 @@
 name: Core package Bug Report
 description: Create a bug report for the Next.js commerce core package
-labels: 'template: core bug'
+labels:
+  - 'template: core bug'
 body:
   - type: markdown
     attributes:
@@ -8,7 +9,7 @@ body:
   - type: checkboxes
     attributes:
       label: Verify latest commit
-      description: `main` is the latest version of Next.js Commerce.
+      description: '`main` is the latest version of Next.js Commerce.'
       options:
         - label: I verified that the issue exists on `main`
           required: true
