@@ -139,7 +139,7 @@ export function FocusTracker() {
       `}</style>
       <div
         ref={focusTrackerEl}
-        className="ring-blur-8 pointer-events-none absolute z-50 border-2 border-red-400 ring-1 ring-red-500 transition-all duration-200"
+        className="pointer-events-none absolute z-50 border-2 border-red-400 ring-1 ring-red-500 transition-all duration-200 ring-blur-8"
         style={{ opacity: 0 }}
       ></div>
     </>
