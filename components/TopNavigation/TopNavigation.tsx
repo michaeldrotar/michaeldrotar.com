@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 export function TopNavigation() {
   return (
-    <nav className="m-auto flex h-32 max-w-7xl items-center justify-between px-6">
+    <nav className="relative z-10 m-auto flex h-32 max-w-7xl items-center justify-between px-6">
       <div>
         <h1 className="flex flex-row items-center gap-2 text-2xl font-bold">
           <Image

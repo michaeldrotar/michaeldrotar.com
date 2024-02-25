@@ -1,7 +1,7 @@
 import clsx from 'clsx'
 import { ReactNode } from 'react'
 
-export function Article({
+export function ArticleContent({
   children,
   className,
 }: {
@@ -9,13 +9,13 @@ export function Article({
   className?: string
 }) {
   return (
-    <article
+    <div
       className={clsx(
-        'prose prose-neutral max-w-none dark:prose-invert sm:prose-lg',
+        'mx-auto w-full max-w-5xl px-4 sm:px-6 lg:px-8',
         className,
       )}
     >
       {children}
-    </article>
+    </div>
   )
 }

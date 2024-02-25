@@ -8,6 +8,7 @@ import { ArticleHeader } from '@/components/ArticleHeader/ArticleHeader'
 import { Metadata } from 'next'
 import { getBuilderContentTextHtml } from '@/builder/getBuilderContentTextHtml/getBuilderContentTextHtml'
 import { calculateReadingTimeMinutes } from '@/utils/calculateReadingTimeMinutes/calculateReadingTimeMinutes'
+import { ArticleContent } from '@/components/ArticleContent/ArticleContent'
 
 initBuilder()
 
@@ -68,7 +69,7 @@ export default async function BlogPage(props: BlogPageProps) {
 
   return (
     <>
-      <Article>
+      <Article className="-mt-32">
         <ArticleHeader
           title={article.data.title}
           description={article.data.description}
@@ -79,7 +80,11 @@ export default async function BlogPage(props: BlogPageProps) {
           authorImageUrl={article.data.author.value?.data.avatar}
           readingTimeMinutes={readingTimeMinutes}
         />
-        <RenderBuilderContent content={article} model="blog-article" />
+        <div className="px-4">
+          <ArticleContent className="relative z-20 bg-neutral-200 dark:bg-neutral-800">
+            <RenderBuilderContent content={article} model="blog-article" />
+          </ArticleContent>
+        </div>
       </Article>
     </>
   )
