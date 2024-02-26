@@ -13,3 +13,13 @@ export type BuilderBlogArticle = BuilderContent & {
     }
   }
 }
+
+export type BuilderBlogArticlePreview = {
+  firstPublished?: number
+  lastUpdated?: number
+  description?: string
+  heroImage?: string
+  title?: string
+  fullName?: string
+  avatar?: string
+}

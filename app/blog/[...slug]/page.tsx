@@ -9,12 +9,16 @@ import { Metadata } from 'next'
 import { getBuilderContentTextHtml } from '@/builder/getBuilderContentTextHtml/getBuilderContentTextHtml'
 import { calculateReadingTimeMinutes } from '@/utils/calculateReadingTimeMinutes/calculateReadingTimeMinutes'
 import { ArticleContent } from '@/components/ArticleContent/ArticleContent'
+import { BuilderBlogArticlePreview } from '@/builder/api/BuilderBlogArticle'
 
 initBuilder()
 
 interface BlogPageProps {
   params: {
     slug: string[]
+  }
+  searchParams: {
+    preview?: string
   }
 }
 
@@ -26,11 +30,18 @@ async function getArticle(props: BlogPageProps) {
   return await getBuilderBlogArticle(id, { includeRefs: true })
 }
 
+function getArticlePreview(props: BlogPageProps) {
+  if (!props.searchParams.preview) return
+  return JSON.parse(props.searchParams.preview) as BuilderBlogArticlePreview
+}
+
 export async function generateMetadata(
   props: BlogPageProps,
 ): Promise<Metadata> {
   const article = await getArticle(props)
-  if (!article) return notFound()
+  const preview = getArticlePreview(props)
+  if (!article && !preview) return notFound()
+  if (!article) return { title: preview?.title }
 
   const author = article.data.author.value?.data.fullName
 
@@ -59,25 +70,28 @@ export async function generateMetadata(
 
 export default async function BlogPage(props: BlogPageProps) {
   const article = await getArticle(props)
-  if (!article) return notFound()
+  const preview = getArticlePreview(props)
+  if (!article && !preview) return notFound()
 
   // Approximate the reading time of the article (does not filter out HTML tags)
-  const text = getBuilderContentTextHtml(article)
+  const text = article ? getBuilderContentTextHtml(article) : ''
   const readingTimeMinutes = calculateReadingTimeMinutes(text)
-
-  console.log(text)
 
   return (
     <>
       <Article className="-mt-32">
         <ArticleHeader
-          title={article.data.title}
-          description={article.data.description}
-          heroImageUrl={article.data.heroImage}
-          publishedAt={article.firstPublished}
-          updatedAt={article.lastUpdated}
-          authorName={article.data.author.value?.data.fullName}
-          authorImageUrl={article.data.author.value?.data.avatar}
+          title={preview?.title || article?.data.title || ''}
+          description={preview?.description || article?.data.description || ''}
+          heroImageUrl={preview?.heroImage || article?.data.heroImage || ''}
+          publishedAt={preview?.firstPublished || article?.firstPublished}
+          updatedAt={preview?.lastUpdated || article?.lastUpdated}
+          authorName={
+            preview?.fullName || article?.data.author.value?.data.fullName || ''
+          }
+          authorImageUrl={
+            preview?.avatar || article?.data.author.value?.data.avatar || ''
+          }
           readingTimeMinutes={readingTimeMinutes}
         />
         <div className="px-4">

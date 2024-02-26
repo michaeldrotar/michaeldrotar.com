@@ -12,7 +12,7 @@ export async function getBuilderBlogArticle(
   const article = await builder
     .get('blog-article', {
       query: { id },
-      options: { includeRefs: true },
+      options: { includeRefs },
     })
     .toPromise()
   if (!article) return undefined
