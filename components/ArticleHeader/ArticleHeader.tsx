@@ -63,7 +63,8 @@ export function ArticleHeader({
                 {updatedString && updatedString !== publishedString && (
                   <> (updated: {updatedString})</>
                 )}
-                {readingTimeMinutes && <> - {readingTimeMinutes} minutes </>}
+                {publishedString && readingTimeMinutes && <> - </>}
+                {readingTimeMinutes && <>{readingTimeMinutes} minutes </>}
               </div>
             </div>
           </div>

@@ -57,11 +57,11 @@ export async function generateMetadata(
         },
       ],
       type: 'article',
-      ...(article.firstPublished
-        ? { publishedTime: new Date(article.firstPublished).toISOString() }
+      ...(article.data.publishedDate
+        ? { publishedTime: new Date(article.data.publishedDate).toISOString() }
         : undefined),
-      ...(article.lastUpdated
-        ? { modifiedTime: new Date(article.lastUpdated).toISOString() }
+      ...(article.data.updatedDate
+        ? { modifiedTime: new Date(article.data.updatedDate).toISOString() }
         : undefined),
       ...(author ? { authors: [author] } : undefined),
     },
@@ -84,8 +84,8 @@ export default async function BlogPage(props: BlogPageProps) {
           title={preview?.title || article?.data.title || ''}
           description={preview?.description || article?.data.description || ''}
           heroImageUrl={preview?.heroImage || article?.data.heroImage || ''}
-          publishedAt={preview?.firstPublished || article?.firstPublished}
-          updatedAt={preview?.lastUpdated || article?.lastUpdated}
+          publishedAt={preview?.publishedDate || article?.data.publishedDate}
+          updatedAt={preview?.updatedDate || article?.data.updatedDate}
           authorName={
             preview?.fullName || article?.data.author.value?.data.fullName || ''
           }

@@ -3,23 +3,26 @@ import { BuilderContentAuthor } from './BuilderContentAuthor'
 import { BuilderContent } from '@builder.io/sdk'
 
 export type BuilderBlogArticle = BuilderContent & {
-  firstPublished?: number
   data: {
-    description: string
-    heroImage: string
     title: string
+    heroImage: string
+    description: string
     author: BuilderContentReference<'content-author'> & {
       value?: BuilderContentAuthor
     }
+    slug: string
+    publishedDate?: number
+    updatedDate?: number
   }
 }
 
 export type BuilderBlogArticlePreview = {
-  firstPublished?: number
-  lastUpdated?: number
-  description?: string
-  heroImage?: string
   title?: string
+  heroImage?: string
+  description?: string
   fullName?: string
   avatar?: string
+  slug?: string
+  publishedDate?: number
+  updatedDate?: number
 }

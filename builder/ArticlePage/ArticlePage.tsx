@@ -10,13 +10,6 @@ import { ArticleHeader } from '@/components/ArticleHeader/ArticleHeader'
 initBuilder()
 
 export async function ArticlePage(props: ArticlePageProps) {
-  // const url = Array.isArray(props.url) ? '/' + props.url.join('/') : props.url
-  // const articles = await builder.getAll('blog-article', {
-  //   options: { includeRefs: true },
-  //   query: {},
-  // })
-  // .toPromise()
-
   const { id } = parseArticleUrl(
     Array.isArray(props.url) ? props.url.join('/') : props.url,
   )
@@ -32,8 +25,8 @@ export async function ArticlePage(props: ArticlePageProps) {
           title={article.data.title}
           description={article.data.description}
           heroImageUrl={article.data.heroImage}
-          publishedAt={article.firstPublished}
-          updatedAt={article.lastUpdated}
+          publishedAt={article.data.publishedDate}
+          updatedAt={article.data.updatedDate}
           authorName={article.data.author.value?.data.fullName}
           authorImageUrl={article.data.author.value?.data.avatar}
         />
