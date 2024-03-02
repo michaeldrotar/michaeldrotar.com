@@ -138,17 +138,6 @@ export function FocusTracker() {
 
   return (
     <>
-      <style jsx>{`
-        *:focus-visible {
-          outline: 2px solid red !important;
-        }
-
-        *:focus,
-        *:focus-visible,
-        :focus-visible {
-          /* outline: none !important; */
-        }
-      `}</style>
       <div
         ref={focusTrackerEl}
         className="pointer-events-none absolute z-50 border-2 border-red-400 ring-1 ring-red-500 transition-all duration-200 ring-blur-8"
