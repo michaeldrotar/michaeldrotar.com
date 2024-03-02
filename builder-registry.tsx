@@ -3,6 +3,7 @@ import { Builder } from '@builder.io/react'
 import Counter from './components/Counter/Counter'
 import { initBuilder } from './builder/initBuilder'
 import { Button } from './components/Button/Button'
+import { registerBuilderCarousel } from './builder/BuilderCarousel/registerBuilderCarousel'
 
 initBuilder()
 
@@ -74,3 +75,5 @@ Builder.registerComponent(Counter, {
     },
   ],
 })
+
+registerBuilderCarousel()
