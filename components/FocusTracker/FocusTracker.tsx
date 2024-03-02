@@ -16,6 +16,18 @@ export function FocusTracker() {
       return activeElement
     }
 
+    const getVisuallyFocusedElement = () => {
+      const focusedElement = getFocusedElement()
+      if (!focusedElement) return undefined
+      // find self or parent element that has data-focus-tracker--parent attribute defined
+      let parent: HTMLElement | null = focusedElement
+      while (parent) {
+        if (parent.hasAttribute('data-focus-tracker--parent')) return parent
+        parent = parent.parentElement
+      }
+      return focusedElement
+    }
+
     const getAbsolutePosition = (element: HTMLElement) => {
       const position = { x: 0, y: 0 }
       while (element && element !== document.body) {
@@ -77,7 +89,7 @@ export function FocusTracker() {
 
     const updateFocus = () => {
       if (isKeyboard) {
-        const focusedElement = getFocusedElement()
+        const focusedElement = getVisuallyFocusedElement()
         if (!focusedElement) {
           removeTracker()
         } else if (!target && focusedElement) {
