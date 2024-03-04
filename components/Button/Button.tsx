@@ -4,8 +4,6 @@ import Link from 'next/link'
 
 export function Button(props: ButtonProps) {
   const { children, disabled, href, target, className, ...restProps } = props
-  const css =
-    'rounded bg-red-500 px-8 py-4 font-bold text-white shadow-lg shadow-red-500/50 transition-all duration-200'
   const Tag = href ? Link : 'button'
   return (
     <Tag
@@ -13,7 +11,10 @@ export function Button(props: ButtonProps) {
       href={href || ''}
       target={target}
       disabled={disabled}
-      className={clsx(className, css)}
+      className={clsx(
+        'rounded bg-red-500 px-8 py-4 font-bold text-white no-underline shadow-lg shadow-red-500/50 transition-all duration-200',
+        className,
+      )}
     >
       {children}
     </Tag>
