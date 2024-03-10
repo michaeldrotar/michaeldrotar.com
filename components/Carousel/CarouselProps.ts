@@ -10,4 +10,5 @@ export type CarouselProps = {
   style?: React.CSSProperties
   className?: string
   slides: Array<CarouselSlideProps>
+  slideTransition?: 'fade' | 'shove' | 'slide' | 'zoom' | 'none'
 }

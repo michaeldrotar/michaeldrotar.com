@@ -8,23 +8,59 @@ const CarouselSlide = ({
   id,
   label,
   isSelected,
+  positionRelativeToSelected,
   children,
+  carouselProps,
 }: {
   id: string
   label: string
   isSelected: boolean
+  positionRelativeToSelected: number
   children?: ReactNode
+  carouselProps: CarouselProps
 }) => {
   return (
     <div
       className={clsx(
-        'absolute inset-0 overflow-clip',
-        isSelected ? 'visible' : 'invisible',
+        'absolute inset-0 overflow-clip transition-all motion-reduce:transition-none',
+        isSelected ? 'visible z-10' : 'invisible z-0',
+        carouselProps.slideTransition === 'fade' &&
+          isSelected &&
+          'opacity-100 duration-500',
+        carouselProps.slideTransition === 'fade' &&
+          !isSelected &&
+          'opacity-0 duration-500',
+        carouselProps.slideTransition === 'shove' &&
+          positionRelativeToSelected === 0 &&
+          'translate-x-0 duration-500 ease-in-out',
+        carouselProps.slideTransition === 'shove' &&
+          positionRelativeToSelected < 0 &&
+          '-translate-x-full delay-200 duration-500 ease-out',
+        carouselProps.slideTransition === 'shove' &&
+          positionRelativeToSelected > 0 &&
+          'translate-x-full delay-200 duration-500 ease-out',
+        carouselProps.slideTransition === 'slide' &&
+          positionRelativeToSelected === 0 &&
+          'translate-x-0 duration-500',
+        carouselProps.slideTransition === 'slide' &&
+          positionRelativeToSelected < 0 &&
+          '-translate-x-full duration-500',
+        carouselProps.slideTransition === 'slide' &&
+          positionRelativeToSelected > 0 &&
+          'translate-x-full duration-500',
+        carouselProps.slideTransition === 'zoom' &&
+          isSelected &&
+          'scale-100 opacity-100 duration-500 ease-[cubic-bezier(0,1.5,0.5,1)]',
+        carouselProps.slideTransition === 'zoom' &&
+          !isSelected &&
+          'scale-50 opacity-0 duration-300 ease-in',
+        carouselProps.slideTransition === 'none' && 'duration-0',
       )}
       id={id}
       role="tabpanel"
       aria-roledescription="slide"
       aria-label={label}
+      aria-hidden={isSelected ? 'false' : 'true'}
     >
       <div data-carousel-slide-content>{children}</div>
     </div>
@@ -301,7 +337,7 @@ export function Carousel(props: CarouselProps) {
         <div
           ref={slidesElementRef}
           className={clsx(
-            'border-red-400',
+            'relative z-0 overflow-clip border-red-400',
             isSlideFocused ? 'border-[3px] p-[2px]' : 'border-0 p-[5px]',
           )}
           aria-live={isPlaying || tabListHasFocus ? 'polite' : 'off'}
@@ -316,6 +352,8 @@ export function Carousel(props: CarouselProps) {
                 id={`carousel-slide-${num}-${uuid}`}
                 label={`${num} of ${props.slides.length}`}
                 isSelected={selectedIndex === index}
+                positionRelativeToSelected={index - selectedIndex}
+                carouselProps={props}
               >
                 {slide.content}
               </CarouselSlide>

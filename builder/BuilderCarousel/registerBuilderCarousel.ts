@@ -16,6 +16,12 @@ export const registerBuilderCarousel = () => {
         defaultValue: 5000,
       },
       {
+        name: 'slideTransition',
+        type: 'string',
+        enum: ['fade', 'shove', 'slide', 'zoom', 'none'],
+        defaultValue: 'slide',
+      },
+      {
         name: 'slides',
         type: 'list',
         subFields: [
