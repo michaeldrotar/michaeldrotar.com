@@ -18,15 +18,15 @@ const CarouselSlide = ({
   return (
     <div
       className={clsx(
-        'relative overflow-hidden',
-        isSelected ? 'block' : 'hidden',
+        'absolute inset-0 overflow-clip',
+        isSelected ? 'visible' : 'invisible',
       )}
       id={id}
       role="tabpanel"
       aria-roledescription="slide"
       aria-label={label}
     >
-      {children}
+      <div data-carousel-slide-content>{children}</div>
     </div>
   )
 }
@@ -79,9 +79,8 @@ const CarouselTabButton = ({
 export function Carousel(props: CarouselProps) {
   const uuid = useId()
 
-  console.log(props.slides)
-
-  const tabListRef = useRef<HTMLDivElement>(null)
+  const tabListElementRef = useRef<HTMLDivElement>(null)
+  const slidesElementRef = useRef<HTMLDivElement>(null)
   const userStateRef = useRef({ hovering: false, focusing: false })
   const [selectedIndex, setSelectedIndex] = useState(0)
   const [isPlaying, setIsPlaying] = useState(false)
@@ -114,9 +113,9 @@ export function Carousel(props: CarouselProps) {
 
   useEffect(() => {
     if (!userChangedFocus) return
-    if (!tabListRef.current) return
+    if (!tabListElementRef.current) return
 
-    const element = tabListRef.current.children[selectedIndex]
+    const element = tabListElementRef.current.children[selectedIndex]
     if (element instanceof HTMLElement) {
       element.focus()
     }
@@ -146,6 +145,29 @@ export function Carousel(props: CarouselProps) {
     }
   }, [isPlaying, userPressedPlay, props.interval, selectedIndex, props.slides])
 
+  // Auto-size the slides container to largest slide height
+  useEffect(() => {
+    if (!slidesElementRef.current) return
+    const slidesElement = slidesElementRef.current
+    const slideContentElements = Array.from(
+      slidesElement.querySelectorAll('[data-carousel-slide-content]'),
+    )
+
+    const resizeContainer = () => {
+      const maxHeight = Math.max(
+        ...slideContentElements.map((element) => element.clientHeight),
+      )
+      slidesElement.style.height = `${maxHeight}px`
+    }
+
+    const resizeObserver = new ResizeObserver((entries) => resizeContainer())
+    slideContentElements.forEach((element) => resizeObserver.observe(element))
+    resizeContainer()
+    return () => {
+      resizeObserver.disconnect()
+    }
+  })
+
   return (
     <div
       className={clsx('not-prose w-full', props.className)}
@@ -158,9 +180,9 @@ export function Carousel(props: CarouselProps) {
       onBlurCapture={() => (userStateRef.current.focusing = false)}
     >
       <div className="relative">
-        <div className="controls absolute top-4 z-10 flex w-full px-5 pt-1">
+        <div className="absolute top-4 z-10 flex w-full px-5 pt-1">
           <button
-            className="rotation group z-10 h-[30px] flex-auto flex-shrink-0 flex-grow-0 border-none bg-transparent p-0 opacity-40 outline-none hover:opacity-100 focus:opacity-100"
+            className="group z-10 h-[30px] flex-auto flex-shrink-0 flex-grow-0 border-none bg-transparent p-0 opacity-40 outline-none hover:opacity-100 focus:opacity-100"
             type="button"
             onClick={() => {
               setIsPlaying((isPlaying) => !isPlaying)
@@ -222,7 +244,7 @@ export function Carousel(props: CarouselProps) {
           </button>
           <div className="h-[30] flex-auto text-center">
             <div
-              ref={tabListRef}
+              ref={tabListElementRef}
               role="tablist"
               aria-label="Slides"
               className={clsx(
@@ -277,6 +299,7 @@ export function Carousel(props: CarouselProps) {
           </div>
         </div>
         <div
+          ref={slidesElementRef}
           className={clsx(
             'border-red-400',
             isSlideFocused ? 'border-[3px] p-[2px]' : 'border-0 p-[5px]',
