@@ -5,6 +5,7 @@ import { BuilderContent } from '@builder.io/sdk'
 import DefaultErrorPage from 'next/error'
 import '../builder-registry'
 import { initBuilder } from '@/builder/initBuilder'
+import Link from 'next/link'
 
 interface BuilderPageProps {
   content?: BuilderContent
@@ -23,7 +24,13 @@ export function RenderBuilderContent({
   // If "content" has a value or the page is being previewed in Builder,
   // render the BuilderComponent with the specified content and model props.
   if (content || isPreviewing) {
-    return <BuilderComponent content={content} model={model} />
+    return (
+      <BuilderComponent
+        content={content}
+        model={model}
+        renderLink={(props) => <Link {...props} href={props.href || ''} />}
+      />
+    )
   }
   // If the "content" is falsy and the page is
   // not being previewed in Builder, render the
