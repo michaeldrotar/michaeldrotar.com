@@ -9,5 +9,5 @@ export type CarouselProps = {
   interval?: number
   style?: React.CSSProperties
   className?: string
-  slides?: Array<CarouselSlideProps>
+  slides: Array<CarouselSlideProps>
 }

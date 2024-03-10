@@ -10,7 +10,7 @@ export function BuilderCarousel(props: BuilderCarouselProps) {
   const { builderBlock, builderState, slides, ...carouselProps } = props
   const componentizedSlides = useMemo(
     () =>
-      slides?.map((slide, index) => ({
+      slides.map((slide, index) => ({
         ...slide,
         content: (
           <BuilderBlocks
