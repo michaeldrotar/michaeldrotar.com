@@ -7,6 +7,8 @@ import { ThemeProvider } from '@/theme/ThemeProvider/ThemeProvider'
 import { TopNavigation } from '@/components/TopNavigation/TopNavigation'
 import { BottomFooter } from '@/components/BottomFooter/BottomFooter'
 import { FocusTracker } from '@/components/FocusTracker/FocusTracker'
+import { PostHogProvider } from '@/integrations/PostHog/PostHogProvider'
+import PostHogPageViewTracker from '@/integrations/PostHog/PostHogPageViewTracker'
 
 export const metadata: Metadata = {
   title: {
@@ -24,23 +26,26 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body
-        className={`${inter.className} bg-white text-neutral-800 antialiased transition-colors duration-500 dark:bg-neutral-800 dark:text-white`}
-      >
+      <PostHogProvider>
+        <PostHogPageViewTracker />
         <ThemeProvider>
-          {/* <Room> */}
-          {/* <Cursors> */}
-          <TopNavigation />
-          {children}
-          <BottomFooter />
-          {/* </Cursors> */}
-          {/* </Room> */}
-          {/* <UserCursor /> */}
-          <FocusTracker />
-          <Analytics />
-          <SpeedInsights />
+          <body
+            className={`${inter.className} bg-white text-neutral-800 antialiased transition-colors duration-500 dark:bg-neutral-800 dark:text-white`}
+          >
+            {/* <Room> */}
+            {/* <Cursors> */}
+            <TopNavigation />
+            {children}
+            <BottomFooter />
+            {/* </Cursors> */}
+            {/* </Room> */}
+            {/* <UserCursor /> */}
+            <FocusTracker />
+            <Analytics />
+            <SpeedInsights />
+          </body>
         </ThemeProvider>
-      </body>
+      </PostHogProvider>
     </html>
   )
 }
