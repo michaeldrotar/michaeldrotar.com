@@ -15,13 +15,14 @@ export function Action(props: ButtonProps) {
     ...restProps
   } = props
 
-  const Component = href
-    ? (props: AnchorHTMLAttributes<HTMLAnchorElement>) => (
-        <Link {...props} {...{ href, target, prefetch, replace, scroll }} />
-      )
-    : (props: ButtonHTMLAttributes<HTMLButtonElement>) => (
-        <button {...props} {...{ disabled, type: type || 'button' }} />
-      )
+  const Component =
+    href && !disabled
+      ? (props: AnchorHTMLAttributes<HTMLAnchorElement>) => (
+          <Link {...props} {...{ href, target, prefetch, replace, scroll }} />
+        )
+      : (props: ButtonHTMLAttributes<HTMLButtonElement>) => (
+          <button {...props} {...{ disabled, type: type || 'button' }} />
+        )
 
   return <Component {...restProps}>{children}</Component>
 }
