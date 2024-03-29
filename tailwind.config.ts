@@ -22,6 +22,7 @@ const config: Config = {
   plugins: [
     require('@tailwindcss/forms'),
     require('@tailwindcss/typography'),
+    // Add ring-blur, override ring to use it
     plugin(({ addUtilities, matchUtilities, theme }) => {
       matchUtilities(
         {
