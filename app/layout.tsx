@@ -7,8 +7,8 @@ import { ThemeProvider } from '@/theme/ThemeProvider/ThemeProvider'
 import { TopNavigation } from '@/components/TopNavigation/TopNavigation'
 import { BottomFooter } from '@/components/BottomFooter/BottomFooter'
 import { FocusTracker } from '@/components/FocusTracker/FocusTracker'
-import { PostHogProvider } from '@/integrations/PostHog/PostHogProvider'
-import PostHogPageViewTracker from '@/integrations/PostHog/PostHogPageViewTracker'
+import { AnalyticsProvider } from '@/analytics/AnalyticsProvider/AnalyticsProvider'
+import { PageTracker } from '@/analytics/PageTracker/PageTracker'
 
 export const metadata: Metadata = {
   title: {
@@ -26,8 +26,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <PostHogProvider>
-        <PostHogPageViewTracker />
+      <AnalyticsProvider debug={process.env.NODE_ENV === 'development'}>
         <ThemeProvider>
           <body
             className={`${inter.className} bg-white text-neutral-800 antialiased transition-colors duration-500 dark:bg-neutral-800 dark:text-white`}
@@ -45,7 +44,8 @@ export default function RootLayout({
             <SpeedInsights />
           </body>
         </ThemeProvider>
-      </PostHogProvider>
+        <PageTracker />
+      </AnalyticsProvider>
     </html>
   )
 }
