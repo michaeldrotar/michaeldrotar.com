@@ -1,11 +1,24 @@
-import { ReactNode } from 'react'
+import { LinkProps } from 'next/link'
+import { AnchorHTMLAttributes, ButtonHTMLAttributes } from 'react'
+import { buttonVariants } from './buttonVariants'
+import { VariantProps } from 'class-variance-authority'
 
-export type ButtonProps = {
-  href?: string
-  target?: '_blank' | '_self' | '_parent' | '_top'
-  type?: 'button' | 'submit' | 'reset'
-  disabled?: boolean
-  onClick?: () => void
-  children?: ReactNode
-  className?: string
-}
+type RawButtonProps = Pick<
+  ButtonHTMLAttributes<HTMLButtonElement>,
+  'children' | 'className' | 'disabled' | 'onClick' | 'type'
+>
+
+type RawLinkProps = Pick<
+  AnchorHTMLAttributes<HTMLAnchorElement>,
+  'children' | 'className' | 'href' | 'onClick' | 'target'
+>
+
+type NextLinkProps = Pick<
+  LinkProps,
+  'onClick' | 'prefetch' | 'replace' | 'scroll'
+> & { href?: LinkProps['href'] }
+
+type BaseProps = VariantProps<typeof buttonVariants>
+
+export type ButtonProps = BaseProps &
+  (RawButtonProps & (Omit<RawLinkProps, keyof NextLinkProps> & NextLinkProps))
