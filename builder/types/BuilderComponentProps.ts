@@ -8,7 +8,12 @@ export type BuilderComponentProps = {
    * @example
    * <MyComponent {...attributes} />
    */
-  attributes?: Record<string, unknown>
+  attributes?: {
+    'builder-id'?: string
+    className?: string
+    key?: string
+    style: Record<string, unknown>
+  } & Record<string, unknown>
   builderBlock?: BuilderElement
   builderState?: Record<string, unknown>
 }
