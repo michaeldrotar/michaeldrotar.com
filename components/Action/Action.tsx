@@ -1,8 +1,8 @@
-import { ButtonProps } from './ButtonProps'
+import { ActionProps } from './ActionProps'
 import Link from 'next/link'
 import React, { AnchorHTMLAttributes, ButtonHTMLAttributes } from 'react'
 
-export function Action(props: ButtonProps) {
+export function Action(props: ActionProps) {
   const {
     children,
     disabled,
