@@ -34,7 +34,7 @@ export const registerBuilderButton = () => {
         name: 'size',
         type: 'string',
         enum: ['sm', 'md', 'lg'],
-        defaultValue: 'medium',
+        defaultValue: 'md',
       },
     ],
     noWrap: true,
