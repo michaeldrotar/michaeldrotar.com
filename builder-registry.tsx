@@ -4,6 +4,7 @@ import Counter from './components/Counter/Counter'
 import { initBuilder } from './builder/initBuilder'
 import { registerBuilderCarousel } from './builder/BuilderCarousel/registerBuilderCarousel'
 import { registerBuilderButton } from './builder/BuilderButton/registerBuilderButton'
+import { registerBuilderCodeSample } from './builder/BuilderCodeSample/registerBuilderCodeSample'
 
 initBuilder()
 
@@ -27,3 +28,4 @@ Builder.registerComponent(Counter, {
 
 registerBuilderButton()
 registerBuilderCarousel()
+registerBuilderCodeSample()
