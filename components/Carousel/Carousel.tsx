@@ -3,6 +3,7 @@
 import { ReactNode, useEffect, useId, useRef, useState } from 'react'
 import { CarouselProps } from './CarouselProps'
 import clsx from 'clsx'
+import { focusTracker } from '@michaeldrotar/focus-tracker-js'
 
 const CarouselSlide = ({
   id,
@@ -131,6 +132,11 @@ export function Carousel(props: CarouselProps) {
   // useEffect(() => console.log({ isSlideFocused }), [isSlideFocused])
   // useEffect(() => console.log({ userChangedFocus }), [userChangedFocus])
   // useEffect(() => console.log({ userPressedPlay }), [userPressedPlay])
+
+  useEffect(() => {
+    if (!tabListElementRef.current) return
+    focusTracker.register(tabListElementRef.current, { target: 'self' })
+  }, [])
 
   useEffect(() => {
     if (selectedIndex >= props.slides.length) {
@@ -314,7 +320,6 @@ export function Carousel(props: CarouselProps) {
                   event.preventDefault()
                 }
               }}
-              data-focus-tracker--parent
             >
               {props.slides.map((slide, index) => {
                 const num = index + 1
