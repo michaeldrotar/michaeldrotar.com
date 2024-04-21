@@ -11,7 +11,15 @@ export type BuilderButtonProps = BuilderComponentProps &
   }
 
 export function BuilderButton(props: BuilderButtonProps) {
-  const { attributes, link, openLinkInNewTab, text, ...restProps } = props
+  const {
+    attributes,
+    builderBlock,
+    builderState,
+    link,
+    openLinkInNewTab,
+    text,
+    ...restProps
+  } = props
   const { key, ...safeAttributes } = attributes || {}
   return (
     <Button
