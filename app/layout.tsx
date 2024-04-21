@@ -27,23 +27,28 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <AnalyticsProvider debug={process.env.NODE_ENV === 'development'}>
-        <ThemeProvider>
+        <FocusTracker
+          boxShadow="0 0 8px 1px currentColor"
+          thickness={2}
+          color="rgb(248 113 113"
+        >
           <body
             className={`${inter.className} bg-white text-neutral-800 antialiased transition-colors duration-500 dark:bg-neutral-800 dark:text-white`}
           >
-            {/* <Room> */}
-            {/* <Cursors> */}
-            <TopNavigation />
-            {children}
-            <BottomFooter />
-            {/* </Cursors> */}
-            {/* </Room> */}
-            {/* <UserCursor /> */}
-            <FocusTracker />
-            <Analytics />
-            <SpeedInsights />
+            <ThemeProvider>
+              {/* <Room> */}
+              {/* <Cursors> */}
+              <TopNavigation />
+              {children}
+              <BottomFooter />
+              {/* </Cursors> */}
+              {/* </Room> */}
+              {/* <UserCursor /> */}
+              <Analytics />
+              <SpeedInsights />
+            </ThemeProvider>
           </body>
-        </ThemeProvider>
+        </FocusTracker>
         <PageTracker />
       </AnalyticsProvider>
     </html>

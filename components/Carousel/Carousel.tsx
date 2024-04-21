@@ -3,7 +3,7 @@
 import { ReactNode, useEffect, useId, useRef, useState } from 'react'
 import { CarouselProps } from './CarouselProps'
 import clsx from 'clsx'
-import { focusTracker } from '@michaeldrotar/focus-tracker-js'
+import { FocusTracker } from '../FocusTracker/FocusTracker'
 
 const CarouselSlide = ({
   id,
@@ -132,11 +132,6 @@ export function Carousel(props: CarouselProps) {
   // useEffect(() => console.log({ isSlideFocused }), [isSlideFocused])
   // useEffect(() => console.log({ userChangedFocus }), [userChangedFocus])
   // useEffect(() => console.log({ userPressedPlay }), [userPressedPlay])
-
-  useEffect(() => {
-    if (!tabListElementRef.current) return
-    focusTracker.register(tabListElementRef.current, { target: 'self' })
-  }, [])
 
   useEffect(() => {
     if (selectedIndex >= props.slides.length) {
@@ -285,58 +280,61 @@ export function Carousel(props: CarouselProps) {
             </svg>
           </button>
           <div className="h-[30] flex-auto text-center">
-            <div
-              ref={tabListElementRef}
-              role="tablist"
-              aria-label="Slides"
-              className={clsx(
-                'inline-block h-[30px] rounded-xl border-0 border-transparent bg-black bg-opacity-60 pt-[2] hover:opacity-100',
-                tabListHasFocus ? 'opacity-100' : 'opacity-40',
-              )}
-              onFocusCapture={() => setTabListHasFocus(true)}
-              onBlurCapture={() => setTabListHasFocus(false)}
-              onKeyDownCapture={(event) => {
-                if (!props.slides) return
+            <FocusTracker target="self">
+              <div
+                ref={tabListElementRef}
+                role="tablist"
+                aria-label="Slides"
+                className={clsx(
+                  'inline-block h-[30px] rounded-xl border-0 border-transparent bg-black bg-opacity-60 pt-[2] hover:opacity-100',
+                  tabListHasFocus ? 'opacity-100' : 'opacity-40',
+                )}
+                onFocusCapture={() => setTabListHasFocus(true)}
+                onBlurCapture={() => setTabListHasFocus(false)}
+                onKeyDownCapture={(event) => {
+                  if (!props.slides) return
 
-                const handlers: Record<string, () => void> = {
-                  ArrowRight: () =>
-                    setSelectedIndex(
-                      (index) => (index + 1) % props.slides.length,
-                    ),
-                  ArrowLeft: () =>
-                    setSelectedIndex(
-                      (index) =>
-                        (index - 1 + props.slides.length) % props.slides.length,
-                    ),
-                  Home: () => setSelectedIndex(0),
-                  End: () => setSelectedIndex(props.slides.length - 1),
-                }
+                  const handlers: Record<string, () => void> = {
+                    ArrowRight: () =>
+                      setSelectedIndex(
+                        (index) => (index + 1) % props.slides.length,
+                      ),
+                    ArrowLeft: () =>
+                      setSelectedIndex(
+                        (index) =>
+                          (index - 1 + props.slides.length) %
+                          props.slides.length,
+                      ),
+                    Home: () => setSelectedIndex(0),
+                    End: () => setSelectedIndex(props.slides.length - 1),
+                  }
 
-                const handler = handlers[event.key]
-                if (handler) {
-                  handler()
-                  setUserChangedFocus(true)
-                  setIsPlaying(false)
-                  event.preventDefault()
-                }
-              }}
-            >
-              {props.slides.map((slide, index) => {
-                const num = index + 1
-                return (
-                  <CarouselTabButton
-                    key={index}
-                    label={`Slide ${num}`}
-                    isSelected={selectedIndex === index}
-                    slideId={`carousel-slide-${num}-${uuid}`}
-                    onClick={() => {
-                      setSelectedIndex(index)
-                      setIsPlaying(false)
-                    }}
-                  />
-                )
-              })}
-            </div>
+                  const handler = handlers[event.key]
+                  if (handler) {
+                    handler()
+                    setUserChangedFocus(true)
+                    setIsPlaying(false)
+                    event.preventDefault()
+                  }
+                }}
+              >
+                {props.slides.map((slide, index) => {
+                  const num = index + 1
+                  return (
+                    <CarouselTabButton
+                      key={index}
+                      label={`Slide ${num}`}
+                      isSelected={selectedIndex === index}
+                      slideId={`carousel-slide-${num}-${uuid}`}
+                      onClick={() => {
+                        setSelectedIndex(index)
+                        setIsPlaying(false)
+                      }}
+                    />
+                  )
+                })}
+              </div>
+            </FocusTracker>
           </div>
         </div>
         <div
