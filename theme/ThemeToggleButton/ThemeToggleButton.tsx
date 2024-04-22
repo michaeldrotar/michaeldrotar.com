@@ -5,9 +5,6 @@ import clsx from 'clsx'
 import { useTheme } from 'next-themes'
 import { useEffect, useState } from 'react'
 
-const shimmer =
-  'before:absolute before:inset-0 before:-translate-x-full before:animate-[shimmer_2s_infinite] before:bg-gradient-to-r before:from-transparent before:via-white/60 before:to-transparent'
-
 export function ThemeToggleButton() {
   const { theme, systemTheme, setTheme, resolvedTheme } = useTheme()
   const [clientTheme, setClientTheme] = useState<string>()

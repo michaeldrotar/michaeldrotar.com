@@ -1,7 +1,11 @@
+'use client'
+
 import { Light as SyntaxHighlighter } from 'react-syntax-highlighter'
 import ts from 'react-syntax-highlighter/dist/esm/languages/hljs/typescript'
 import { atomOneDark as darkTheme } from 'react-syntax-highlighter/dist/esm/styles/hljs'
+import { atomOneLight as lightTheme } from 'react-syntax-highlighter/dist/esm/styles/hljs'
 import { CodeSampleProps } from './CodeSampleProps'
+import { useTheme } from 'next-themes'
 
 // NOTE: The demo does way better highlighting of React components.
 // https://highlightjs.org/demo
@@ -19,13 +23,14 @@ SyntaxHighlighter.registerLanguage('typescript', ts)
  */
 export function CodeSample(props: CodeSampleProps) {
   const { ...restProps } = props
+  const { resolvedTheme } = useTheme()
   return (
-    <div className="not-prose drop-shadow-lg ">
+    <div className="not-prose drop-shadow-lg">
       <SyntaxHighlighter
         {...restProps}
         showLineNumbers
         wrapLongLines
-        style={darkTheme}
+        style={resolvedTheme === 'light' ? lightTheme : darkTheme}
       />
     </div>
   )

@@ -93,7 +93,7 @@ export default async function BlogPage(props: BlogPageProps) {
           readingTimeMinutes={readingTimeMinutes}
         />
         <div className="px-4">
-          <ArticleContent className="relative z-20 bg-neutral-200 dark:bg-neutral-800">
+          <ArticleContent className="relative z-20 bg-white dark:bg-neutral-800">
             <RenderBuilderContent content={article} model="blog-article" />
           </ArticleContent>
         </div>
