@@ -1,6 +1,5 @@
 import { initBuilder } from '@/builder/initBuilder'
 import { RenderBuilderContent } from '@/components/builder'
-import { parseArticleUrl } from '@/builder/ArticlePage/parseArticleUrl'
 import { notFound } from 'next/navigation'
 import { getBuilderBlogArticle } from '@/builder/api/getBuilderBlogArticle'
 import { Article } from '@/components/Article/Article'
@@ -23,11 +22,10 @@ interface BlogPageProps {
 }
 
 async function getArticle(props: BlogPageProps) {
-  const slug = props.params.slug.join('/')
-  const { id } = parseArticleUrl(slug)
-  if (!id) return
+  const slug = props.params.slug[0]
+  if (!slug) return
 
-  return await getBuilderBlogArticle(id, { includeRefs: true })
+  return await getBuilderBlogArticle(slug, { includeRefs: true })
 }
 
 function getArticlePreview(props: BlogPageProps) {

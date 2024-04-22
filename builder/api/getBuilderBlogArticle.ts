@@ -6,12 +6,12 @@ type Options = {
 }
 
 export async function getBuilderBlogArticle(
-  id: string,
+  slug: string,
   { includeRefs = false }: Options = {},
 ) {
   const article = await builder
     .get('blog-article', {
-      query: { id },
+      query: { 'data.slug': slug },
       options: { includeRefs },
     })
     .toPromise()
