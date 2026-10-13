@@ -1,7 +1,7 @@
 {
   "extends": ["next/core-web-vitals"],
   "plugins": ["unused-imports"],
-  "ignorePatterns": ["node_modules", "dist", "vue"],
+  "ignorePatterns": ["node_modules", "dist", "vue", "public/projects/tabby"],
   "rules": {
     "unused-imports/no-unused-imports": "error"
   }
