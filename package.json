@@ -74,6 +74,9 @@
     "typescript": "5.5.3"
   },
   "engines": {
-    "node": "18.x"
+    "node": "22.x"
+  },
+  "overrides": {
+    "node-gyp": "^10.3.1"
   }
 }
