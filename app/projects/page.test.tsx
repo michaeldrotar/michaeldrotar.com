@@ -11,7 +11,7 @@ it('lists Tabby with its website, source, and extension while keeping existing p
   expect(screen.getByRole('heading', { name: 'Tabby' })).toBeTruthy()
   expect(
     screen.getByRole('link', { name: 'Website' }).getAttribute('href'),
-  ).toBe('/projects/tabby')
+  ).toBe('https://www.gettabby.org/')
   expect(
     screen.getByRole('link', { name: 'GitHub' }).getAttribute('href'),
   ).toBe('https://github.com/michaeldrotar/tabby')
