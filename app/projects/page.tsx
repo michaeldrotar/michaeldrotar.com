@@ -29,7 +29,7 @@ export default function ProjectsPage() {
           </p>
           <div className="flex flex-wrap gap-4">
             <a
-              href="/projects/tabby"
+              href="https://www.gettabby.org/"
               className={buttonVariants({ size: 'sm' })}
             >
               Website
