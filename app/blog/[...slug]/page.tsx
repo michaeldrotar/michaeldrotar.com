@@ -13,31 +13,29 @@ import { BuilderBlogArticlePreview } from '@/builder/api/BuilderBlogArticle'
 initBuilder()
 
 interface BlogPageProps {
-  params: {
-    slug: string[]
-  }
-  searchParams: {
-    preview?: string
-  }
+  params: Promise<{ slug: string[] }>
+  searchParams: Promise<{ preview?: string }>
 }
 
 async function getArticle(props: BlogPageProps) {
-  const slug = props.params.slug[0]
+  const routeParams = await props.params
+  const slug = routeParams.slug[0]
   if (!slug) return
 
   return await getBuilderBlogArticle(slug, { includeRefs: true })
 }
 
-function getArticlePreview(props: BlogPageProps) {
-  if (!props.searchParams.preview) return
-  return JSON.parse(props.searchParams.preview) as BuilderBlogArticlePreview
+async function getArticlePreview(props: BlogPageProps) {
+  const searchParams = await props.searchParams
+  if (!searchParams.preview) return
+  return JSON.parse(searchParams.preview) as BuilderBlogArticlePreview
 }
 
 export async function generateMetadata(
   props: BlogPageProps,
 ): Promise<Metadata> {
   const article = await getArticle(props)
-  const preview = getArticlePreview(props)
+  const preview = await getArticlePreview(props)
   if (!article && !preview) return notFound()
   if (!article) return { title: preview?.title }
 
@@ -68,7 +66,7 @@ export async function generateMetadata(
 
 export default async function BlogPage(props: BlogPageProps) {
   const article = await getArticle(props)
-  const preview = getArticlePreview(props)
+  const preview = await getArticlePreview(props)
   if (!article && !preview) return notFound()
 
   // Approximate the reading time of the article (does not filter out HTML tags)

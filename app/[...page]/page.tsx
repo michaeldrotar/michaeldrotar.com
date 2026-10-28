@@ -1,15 +1,15 @@
 import { BuilderPage } from '@/builder/BuilderPage/BuilderPage'
 
 interface PageProps {
-  params: {
-    page: string[]
-  }
+  params: Promise<{ page: string[] }>
 }
 
 export default async function Page(props: PageProps) {
+  const { page } = await props.params
+
   return (
     <>
-      <BuilderPage url={props.params.page || ''} />
+      <BuilderPage url={page || ''} />
     </>
   )
 }
